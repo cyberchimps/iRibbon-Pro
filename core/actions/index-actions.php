@@ -45,8 +45,11 @@ function response_index_content() {
 		<!--End @response index entry hook-->
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			
+			<div class="post_outer_container">
+    	<div class="ribbon-top-end">
+      </div>
 			<div class="post_container">
+      
 				<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 		
 				<!--Begin @response index loop hook-->
@@ -71,7 +74,9 @@ function response_index_content() {
 				
 				</div><!--end post_class-->
 			</div><!--end post container-->
-			
+      <div class="ribbon-bottom-end">
+      </div><!-- ribbon bottom end -->
+			</div><!-- end post outer container -->
 			<?php if (is_single() && $options->get($themeslug.'_post_pagination') == "1") : ?>
 			<div id="post_pagination"><div class="pagination_text">
 				<!--Begin @response post pagination hook-->

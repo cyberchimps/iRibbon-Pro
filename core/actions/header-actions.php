@@ -43,10 +43,10 @@ add_action( 'response_banner', 'response_banner_content');
 */
 function response_font() {
 	global $themeslug, $options; //Call global variables
-	$family = apply_filters( 'response_default_font_family', 'Helvetica, sans-serif' );
+	$family = apply_filters( 'response_default_font_family', 'Georgia, "Times New Roman", Times, serif' );
 	
 	if ($options->get($themeslug.'_font') == "" ) {
-		$font = apply_filters( 'response_default_font', 'Arial' );
+		$font = apply_filters( 'response_default_font', 'Georgia' );
 	}		
 	else {
 		$font = $options->get($themeslug.'_font'); 
@@ -156,7 +156,7 @@ global $themeslug, $options; //Call global variables
 	$favicon = $options->get($themeslug.'_favicon'); //Calls the favicon URL from the theme options 
 	
 	if ($options->get($themeslug.'_font') == "" AND $options->get($themeslug.'_custom_font') == "") {
-		$font = apply_filters( 'response_default_font', 'Arial' );
+		$font = apply_filters( 'response_default_font', 'Georgia' );
 	}		
 	elseif ($options->get($themeslug.'_custom_font') != "" && $options->get($themeslug.'_font') == 'custom') {
 		$font = $options->get($themeslug.'_custom_font');	
@@ -180,6 +180,7 @@ global $themeslug, $options; //Call global variables
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/elements.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/color/<?php echo $color; ?>.css" type="text/css" />
+<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lobster' type='text/css'>
 
 <?php if (is_child_theme()) :  //add support for child themes?>
 	<link rel="stylesheet" href="<?php echo bloginfo('stylesheet_directory') ; ?>/style.css" type="text/css" />
@@ -216,7 +217,7 @@ function response_header_site_description_content() {
 	global $themeslug, $options; ?>
 	
 	<div id="description">
-		<h1 class="description"><?php bloginfo('description'); ?>&nbsp;</h1>
+		<h2 class="description"><?php bloginfo('description'); ?>&nbsp;</h2>
 	</div> <?php
 }
 
@@ -330,14 +331,19 @@ function response_header_social_icons_content() {
 function response_nav() {
 	global $options, $themeslug; //call globals 
 		
-	?>
-		
-	<div class="container">
-		<div class="row">
-
-			<div class="twelve columns" id="menu">
-
-			<div id="nav" class="twelve columns">
+	?>		
+<div class="container">
+	<div class="row">    
+			<div class="twelve columns no-padding" id="menu">
+<div class="ribbon-left-cut">
+</div><!-- ribbon left cut -->
+<div class="ribbon-left">
+</div><!-- ribbon left -->
+<div class="ribbon-right">
+</div><!-- ribbon right --> 
+<div class="ribbon-right-cut">
+</div><!-- ribbon right cut -->
+					<div id="nav">
 		    <?php wp_nav_menu( array(
 		    'theme_location' => 'header-menu', // Setting up the location for the main-menu, Main Navigation.
 		    'fallback_cb' => 'response_menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
@@ -345,10 +351,12 @@ function response_nav() {
 			    )
 			);
 	    	?>
-   			</div>
-		</div>
-	</div>
-</div>
+        	<div class="nav-shadow">
+          </div><!-- nav shadow -->
+          </div><!-- nav -->
+      </div><!-- id menu -->
+ 	</div><!-- row -->
+</div><!-- container -->
  <?php
 }
 
@@ -394,7 +402,7 @@ global $current_user;
 		
 			</div>	
 			
-			<div id="register" class="five columns">
+			<div id="register" class="push five columns">
 			
 			<?php if(!is_user_logged_in()) :?>
 
