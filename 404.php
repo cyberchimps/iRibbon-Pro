@@ -27,7 +27,8 @@
 		<?php response_before_content_sidebar(); ?>
 	<!--End @response before content sidebar hook-->
 	<div id="content" class="<?php echo $content_grid; ?>">
-		<div class="content_padding">
+  
+		<div class="post_container">
 		
 			<!-- Begin @response before_404 hook content-->
       			<?php response_before_404(); ?>

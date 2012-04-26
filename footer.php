@@ -22,20 +22,17 @@
 <?php if ($options->get($themeslug.'_disable_footer') != "0"):?>	
 
 </div><!--end container wrap-->
-
-    <div id="footer" class="container">
-     		<div class="row" id="footer_container">
-    			<div id="footer_wrap">	
+<footer class="footer-container">
+    <div class="container">
+     		<div class="row">
 	<!-- Begin @response footer hook content-->
 		<?php response_footer(); ?>
 	<!-- End @response footer hook content-->
-				</div>
 	<?php endif;?>
 	
 
-			</div><!--end footer_wrap-->
-	</div><!--end footer-->
-</div> 
+			</div><!--row-->
+      </div><!-- container -->
 
 <?php if ($options->get($themeslug.'_disable_afterfooter') != "0"):?>
 
@@ -46,7 +43,8 @@
 		<!-- End @response afterfooter hook content-->
 				
 		</div> <!--end afterfooter-->	
-	</div> 	
+  </footer>
+  </div> 	
 	<?php endif;?>
 	
 	<?php wp_footer(); ?>	

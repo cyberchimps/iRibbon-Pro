@@ -35,7 +35,6 @@ function response_page_section_content() {
 
 
 ?>
-<div class="row">
 	<!--Begin @response before content sidebar hook-->
 		<?php response_before_content_sidebar(); ?>
 	<!--End @response before content sidebar hook-->
@@ -45,14 +44,21 @@ function response_page_section_content() {
 		<?php response_page_content_slider(); ?>
 		
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		
+      <?php if ($hidetitle == "on" OR $hidetitle == ""): ?>
+			<div class="post_outer_container">
+        <div class="ribbon-top-end">
+        </div>
+      <?php endif; ?>
+        
 			<div class="post_container">
 			
 				<div class="post" id="post-<?php the_ID(); ?>">
 				<?php if ($hidetitle == "on" OR $hidetitle == ""): ?>
-				
-
+				<div class="ribbon-top-cut">
+          </div><!-- ribbon-top-cut -->
+          <div class="ribbon-top">
 					<h2 class="posts_title"><?php the_title(); ?></h2>
+          </div><!-- ribbon top -->
 						<?php endif;?>
 
 					<div class="entry">
@@ -79,7 +85,6 @@ function response_page_section_content() {
 	<!--Begin @response after content sidebar hook-->
 		<?php response_after_content_sidebar(); ?>
 	<!--End @response after content sidebar hook-->
-</div>
 <?php
 }
 

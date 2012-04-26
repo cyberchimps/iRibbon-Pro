@@ -20,9 +20,10 @@
 	get_header(); // call header
 
 ?>
-
+<h2 class="widget-title">Search</h2>
 <form method="get" class="searchform" action="<?php echo home_url(); ?>/">
-	<div id="magnify"><img src="<?php echo get_template_directory_uri() ;?>/images/magnify.png" alt="magnify" /></div>
-	<div><input type="text" name="s" class="s" value="<?php printf( __( 'Search', 'response' )); ?>" id="searchsubmit" onfocus="if (this.value == 'Search') this.value = '';" /></div>
-	<div><input type="submit" class="searchsubmit" value="" /></div>
+	<div class="search-container">
+  <input type="text" name="s" class="iRibbon-search" value="<?php printf( __( 'Search', 'response' )); ?>" id="searchsubmit" onfocus="if (this.value == 'Search') this.value = '';" />
+	<button class="search-button" value="Submit search" ></button>
+  </div>
 </form>
