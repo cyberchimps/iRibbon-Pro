@@ -57,6 +57,12 @@ function response_sidebar_init_content() {
 	elseif ($sidebar == 'none' OR $sidebar == "4") {
 		$content_grid = 'twelve columns';
 	}
+	elseif ($sidebar == 'left' OR $sidebar == "1") {
+		$content_grid = 'eight columns sd_left_sidebar';
+	}
+	elseif ($sidebar == 'right' OR $sidebar == '0' OR $sidebar == '') {
+		$content_grid = 'eight columns sd_right_sidebar';
+	}
 	else {
 		$content_grid = 'eight columns';
 	}

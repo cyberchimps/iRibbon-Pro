@@ -92,10 +92,6 @@ function response_loop_content($content) {
 						}
 					 ?>
 				</div><!--end entry-->
-		<div class="ribbon-bottom">
-      </div><!-- ribbon bottom -->
-      <div class="ribbon-bottom-cut">
-      </div><!-- ribbon-bottom-cut -->
 		<div class='clear'>&nbsp;</div>
 		<?php	
 		

@@ -35,6 +35,7 @@ function response_page_section_content() {
 
 
 ?>
+<div class="row">
 	<!--Begin @response before content sidebar hook-->
 		<?php response_before_content_sidebar(); ?>
 	<!--End @response before content sidebar hook-->
@@ -59,6 +60,8 @@ function response_page_section_content() {
           <div class="ribbon-top">
 					<h2 class="posts_title"><?php the_title(); ?></h2>
           </div><!-- ribbon top -->
+          <div class="ribbon-shadow">
+      </div><!-- ribbon shadow -->
 						<?php endif;?>
 
 					<div class="entry">
@@ -79,12 +82,14 @@ function response_page_section_content() {
 
 			<?php endwhile; endif; ?>
 			</div><!--end post_container-->
-				
+				</div>
 	</div><!--end content_left-->
 	
 	<!--Begin @response after content sidebar hook-->
 		<?php response_after_content_sidebar(); ?>
 	<!--End @response after content sidebar hook-->
+  
+</div><!-- row -->
 <?php
 }
 

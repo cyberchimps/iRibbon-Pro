@@ -74,8 +74,6 @@ function response_index_content() {
 				
 				</div><!--end post_class-->
 			</div><!--end post container-->
-      <div class="ribbon-bottom-end">
-      </div><!-- ribbon bottom end -->
 			</div><!-- end post outer container -->
 			<?php if (is_single() && $options->get($themeslug.'_post_pagination') == "1") : ?>
 			<div id="post_pagination"><div class="pagination_text">

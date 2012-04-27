@@ -31,8 +31,7 @@
 
 ?>
 
-<div class="container">
-	<div class="row"> 
+<div class="container"> 
 		<?php
 			foreach(explode(",", $page_section_order) as $key) {
 				$fn = 'response_' . $key;
@@ -41,6 +40,5 @@
 				}
 			}
 		?>	
-	</div><!--end row-->
 </div><!--end container-->
 <?php get_footer(); ?>
