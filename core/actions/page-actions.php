@@ -77,11 +77,11 @@ function response_page_section_content() {
 				<?php edit_post_link('Edit', '<p>', '</p>'); ?>
 
 				</div><!--end post-->
+			</div><!--end post_container-->
 		
 			<?php comments_template(); ?>
 
 			<?php endwhile; endif; ?>
-			</div><!--end post_container-->
 				</div>
 	</div><!--end content_left-->
 	

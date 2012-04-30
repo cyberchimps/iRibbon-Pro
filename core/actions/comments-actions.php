@@ -45,9 +45,17 @@ function response_comments_password_required() {
 function response_comments_loop() { 
 	global $post; ?>
 <?php if ( have_comments() ) : ?>
+<div class="post_outer_container">
+    	<div class="ribbon-top-end">
+      </div>
 	<div class="comments_container">
+  <div class="ribbon-top-cut">
+      </div><!-- ribbon-top-cut -->
+			<div class="ribbon-top">
 		<h2 class="commentsh2"><?php comments_number( __('No Responses', 'response' ), __( 'One Response', 'response' ), __('% Responses', 'response' ));?></h2>
-
+			</div><!-- ribbon top -->
+      <div class="ribbon-shadow">
+      </div><!-- ribbon shadow -->
 		<div class="navigation">
 			<div class="next-posts"><?php previous_comments_link() ?></div>
 			<div class="prev-posts"><?php next_comments_link() ?></div>
@@ -63,7 +71,7 @@ function response_comments_loop() {
 		</div>
 		
 	</div><!--end comments_container-->
-	
+	</div><!-- post outer container -->
  <?php else : // this is displayed if there are no comments so far ?>
 
 	<?php if ( comments_open() ) : ?>
@@ -76,9 +84,17 @@ function response_comments_loop() {
 <?php endif; ?>
 
 <?php if ( comments_open() ) : ?>
-
+<div class="post_outer_container">
+    	<div class="ribbon-top-end">
+      </div>
 <div class="comments_container">
-
+ <div class="ribbon-top-cut">
+      </div><!-- ribbon-top-cut -->
+			<div class="ribbon-top">
+      <h2 class="commentsh2">Leave a Reply</h2>
+      </div><!-- ribbon top -->
+      <div class="ribbon-shadow">
+      </div><!-- ribbon shadow -->
 <div id="respond">
 
 	<div class="cancel-comment-reply">
@@ -100,7 +116,7 @@ function response_comments_loop() {
 </div>
 
 </div><!--end comments_container-->
-
+</div><!-- end post outer container -->
 	<?php endif; // If registration required and not logged in ?>
 
 <?php }
