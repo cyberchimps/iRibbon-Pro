@@ -35,6 +35,8 @@
 <!-- End @response before_header hook content -->
 			
 <header>		
+	<div id="main_wrap">
+	<div class="container-fluid">
 	<?php
 		foreach(explode(",", $options->get('header_section_order')) as $fn) {
 			if(function_exists($fn)) {
@@ -42,6 +44,8 @@
 			}
 		}
 	?>
+	</div>
+</div>		
 </header>
 
 <!-- Begin @response after_header hook -->

@@ -173,9 +173,9 @@ global $themeslug, $options; //Call global variables
 	
 <link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
 
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/foundation.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/app.css" type="text/css" />
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/ie.css" type="text/css" />
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/bootstrap/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/bootstrap/bootstrap-responsive.css" type="text/css" />
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/orbit/orbit.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/shortcode.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/elements.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css" type="text/css" />
@@ -332,22 +332,22 @@ function response_nav() {
 	global $options, $themeslug; //call globals 
 		
 	?>
-<div class="show-on-phones" id="mobile-nav">
+<!--<div class="show-on-phones" id="mobile-nav">
 <a href="#" class="mobile-nav-button" data-reveal-id="mobile-nav-modal"></a>
 <div id="mobile-nav-modal" class="reveal-modal">
-    <?php wp_nav_menu( array(
+    <?php/* wp_nav_menu( array(
 		    'theme_location' => 'mobile-menu', // Setting up the location for the main-menu, Main Navigation.
 		    'fallback_cb' => 'wp_page_menu', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
 		    'items_wrap'      => '<ul id="nav_menu">%3$s</ul>',
 			    )
 			);
-	    	?>
+	    	*/?>
      <a class="close-reveal-modal">&#215;</a>
 </div>
-</div>		
-<div class="container">
-	<div class="row">    
-			<div class="show-on-desktops show-on-tablets twelve columns no-padding" id="menu">
+</div>-->		
+<div class="container-fluid">
+	<div class="row-fluid">    
+			<div class="show-on-desktops show-on-tablets span12 no-padding" id="menu">
 <div class="ribbon-left-cut">
 </div><!-- ribbon left cut -->
 <div class="ribbon-left">
@@ -368,8 +368,8 @@ function response_nav() {
           </div><!-- nav shadow -->
           </div><!-- nav -->
       </div><!-- id menu -->
- 	</div><!-- row -->
-</div><!-- container -->
+ 	</div><!-- row-fluid -->
+</div><!-- container-fluid -->
  <?php
 }
 
@@ -381,15 +381,15 @@ function response_nav() {
 function response_custom_header_element_content() { 
 	global $themeslug, $options; ?>
 	
-	<div class="container">
-		<div class="row">
+	<div class="container-fluid">
+		<div class="row-fluid">
 		
-			<div class="twelve columns">
+			<div class="span12">
 				
 				<?php echo stripslashes ($options->get($themeslug.'_custom_header_element')); 	?>
 						
 			</div>	
-		</div><!--end row-->
+		</div><!--end row-fluid-->
 	</div>	
 
 <?php	
@@ -404,10 +404,10 @@ function response_logo_register_content() {
 global $current_user;
 ?>
 
-	<div class="container">
-		<div class="row">
+	<div class="container-fluid">
+		<div class="row-fluid">
 		
-			<div class="seven columns">
+			<div class="span7">
 				
 				<!-- Begin @Core header sitename hook -->
 					<?php response_header_sitename(); ?> 
@@ -415,7 +415,7 @@ global $current_user;
 		
 			</div>	
 			
-			<div id="register" class="push five columns">
+			<div id="register" class="push span5">
 			
 			<?php if(!is_user_logged_in()) :?>
 
@@ -428,7 +428,7 @@ global $current_user;
 		<?php endif;?>
 				
 			</div>	
-		</div><!--end row-->
+		</div><!--end row-fluid-->
 	</div>
 
 <?php
@@ -441,10 +441,10 @@ global $current_user;
 */
 function response_logo_icons_content() {
 ?>
-	<div class="container">
-		<div class="row">
+	<div class="container-fluid">
+		<div class="row-fluid">
 		
-			<div class="seven columns">
+			<div class="span7">
 				
 				<!-- Begin @Core header sitename hook -->
 					<?php response_header_sitename(); ?> 
@@ -453,14 +453,14 @@ function response_logo_icons_content() {
 				
 			</div>	
 			
-			<div id ="register" class="five columns">
+			<div id ="register" class="span5">
 				
 			<!-- Begin @Core header social icon hook -->
 				<?php response_header_social_icons(); ?> 
 			<!-- End @Core header contact social icon hook -->	
 				
 			</div>	
-		</div><!--end row-->
+		</div><!--end row-fluid-->
 	</div>
 
 <?php
@@ -477,10 +477,10 @@ $banner = $options->get($themeslug.'_banner'); //Calls the logo URL from the the
 $default = "$root/images/pro/banner.jpg";
 
 ?>
-	<div class="container">
-		<div class="row">
+	<div class="container-fluid">
+		<div class="row-fluid">
 		
-			<div class="twelve columns">
+			<div class="span12">
 			<div id="banner">
 			
 			<?php if ($banner != ""):?>
@@ -493,7 +493,7 @@ $default = "$root/images/pro/banner.jpg";
 			
 			</div>		
 			</div>	
-		</div><!--end row-->
+		</div><!--end row-fluid-->
 	</div>	
 
 <?php

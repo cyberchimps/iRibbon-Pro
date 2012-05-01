@@ -21,7 +21,9 @@
 
 <?php get_header(); ?>
 
-<div class="container">
+<div id="main_wrap">
+	<div class="container-fluid">
+	
 		<?php
 			foreach(explode(",", $options->get($themeslug.'_blog_section_order')) as $fn) {
 				if(function_exists($fn)) {
@@ -29,5 +31,7 @@
 				}
 			}
 		?>
-</div><!--end container-->
+	
+	</div>
+</div><!--end main_wrap-->
 <?php get_footer(); ?>

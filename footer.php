@@ -23,8 +23,8 @@
 
 </div><!--end container wrap-->
 <footer class="footer-container">
-    <div class="container">
-     		<div class="row">
+    <div class="container-fluid">
+     		<div class="row-fluid">
 	<!-- Begin @response footer hook content-->
 		<?php response_footer(); ?>
 	<!-- End @response footer hook content-->
@@ -36,8 +36,8 @@
 
 <?php if ($options->get($themeslug.'_disable_afterfooter') != "0"):?>
 
-	<div id="afterfooter" class="container">
-		<div class="row" id="afterfooterwrap">	
+	<div id="afterfooter" class="container-fluid">
+		<div class="row-fluid" id="afterfooterwrap">	
 		<!-- Begin @response afterfooter hook content-->
 			<?php response_secondary_footer(); ?>
 		<!-- End @response afterfooter hook content-->

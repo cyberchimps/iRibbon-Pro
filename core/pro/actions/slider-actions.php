@@ -68,7 +68,7 @@ function response_slider_content() {
 	}
 
 	
-	$openrow = '<div class="row">';
+	$openrow = '<div class="row-fluid">';
 	$closerow = '</div>';
 
 ?>	

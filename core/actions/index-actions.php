@@ -33,7 +33,7 @@ function response_index_content() {
 	<!--Begin @response sidebar init-->
 		<?php response_sidebar_init(); ?>
 	<!--End @response sidebar init-->
-	<div class="row">
+	<div class="row-fluid">
 <!--Begin @response before content sidebar hook-->
 		<?php response_before_content_sidebar(); ?>
 	<!--End @response before content sidebar hook-->
