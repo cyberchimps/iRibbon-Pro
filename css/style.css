@@ -108,6 +108,8 @@ display:block;
 float:left;
 margin: 2px 2px 2px 0;
 padding:6px 9px 5px 9px;
+line-height: 13px;
+border: none;
 text-decoration:none;
 width:auto;
 color:#fff;
