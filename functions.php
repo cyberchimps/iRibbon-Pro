@@ -331,8 +331,8 @@ add_action('wp_head', 'response_custom_scripts');
 */ 
 function response_register_menus() {
 	register_nav_menus(
-	array( 'header-menu' => __( 'Header Menu' ), 'footer-menu' => __( 'Footer Menu' ), 'sub-menu' => __( 'Sub Menu' ))
-  );
+	array( 'header-menu' => __( 'Header Menu' ), 'footer-menu' => __( 'Footer Menu' ), 'sub-menu' => __( 'Sub Menu' ), 'mobile-menu' => __( 'Mobile Menu' ) )
+	);
 }
 add_action( 'init', 'response_register_menus' );
 	

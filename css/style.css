@@ -34,23 +34,55 @@ body {background: url( '../images/backgrounds/texture-background.jpg' )}
 	color:#fff;
 	line-height:20px;
 	text-decoration:none;
-	background: #0085cf; /* Old browsers */
-	background: -moz-linear-gradient(top,  #6cafd8 0%, #2593ce 44%, #0085cf 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6cafd8), color-stop(44%,#2593ce), color-stop(100%,#0085cf)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #6cafd8 0%,#2593ce 44%,#0085cf 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #6cafd8 0%,#2593ce 44%,#0085cf 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #6cafd8 0%,#2593ce 44%,#0085cf 100%); /* IE10+ */
-	background: linear-gradient(top,  #6cafd8 0%,#2593ce 44%,#0085cf 100%); /* W3C */	
+	background: #95b1a9;
+background: -moz-linear-gradient(top,  #95b1a9 0%, #7fa6a6 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#95b1a9), color-stop(100%,#7fa6a6));
+background: -webkit-linear-gradient(top,  #95b1a9 0%,#7fa6a6 100%);
+background: -o-linear-gradient(top,  #95b1a9 0%,#7fa6a6 100%);
+background: -ms-linear-gradient(top,  #95b1a9 0%,#7fa6a6 100%);
+background: linear-gradient(top,  #95b1a9 0%,#7fa6a6 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#95b1a9', endColorstr='#7fa6a6',GradientType=0 );
 	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
 	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
 	text-shadow: 0 -1px 1px rgba(0,0,0,0.28);
-	border: 1px solid #0593dc;	
+	border: 1px solid #6A8484;	
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
 	border-radius: 4px;
 }
-#halfnav ul li a:hover{	border: 1px solid #222;box-shadow:inner 0 0 5px #000;-moz-box-shadow:inset 0 0 5px #000;-webkit-box-shadow:inset 0 0 5px#000;background:#444}
-#halfnav .current-menu-item a{border: 1px solid #222;}
+#halfnav ul li a:hover{	
+background: #cd834a;
+background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd834a), color-stop(100%,#9e663d));
+background: -webkit-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+background: -o-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+background: -ms-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
+border: 1px solid #8D5C38;
+}
+#halfnav li.current_page_item a{
+  background: #cd834a;
+background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd834a), color-stop(100%,#9e663d));
+background: -webkit-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+background: -o-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+background: -ms-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
+border: 1px solid #8D5C38;}
+
+#halfnav li.current_page_item ul li a {
+  background: #95b1a9;
+background: -moz-linear-gradient(top,  #95b1a9 0%, #7fa6a6 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#95b1a9), color-stop(100%,#7fa6a6));
+background: -webkit-linear-gradient(top,  #95b1a9 0%,#7fa6a6 100%);
+background: -o-linear-gradient(top,  #95b1a9 0%,#7fa6a6 100%);
+background: -ms-linear-gradient(top,  #95b1a9 0%,#7fa6a6 100%);
+background: linear-gradient(top,  #95b1a9 0%,#7fa6a6 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#95b1a9', endColorstr='#7fa6a6',GradientType=0 );
+	border: 1px solid #6A8484;
+}
 
 #register {text-align: right; list-style: none;}
 
@@ -192,6 +224,16 @@ header {margin-top: 15px;}
 
 .icons a:hover img {opacity:1;}
 
+/* Mobile Nav */
+#mobile-nav .mobile-nav-button {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  height: 40px;
+  width: 30px;
+  background: url( '../images/backgrounds/mobile-nav-button.jpg' ) no-repeat 0 0;
+	border-radius: 4px;
+}
 /* Nav  */
 #nav{position:relative;margin-bottom: 30px;z-index:2000;text-align:right;padding-right:15px;background: #95b1a9;
 background: -moz-linear-gradient(top,  #95b1a9 0%, #7fa6a6 100%);
