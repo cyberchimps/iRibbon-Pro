@@ -46,7 +46,7 @@ function response_font() {
 	$family = apply_filters( 'response_default_font_family', 'Georgia, "Times New Roman", Times, serif' );
 	
 	if ($options->get($themeslug.'_font') == "" ) {
-		$font = apply_filters( 'response_default_font', 'Georgia' );
+		$font = apply_filters( 'response_default_font', 'Arial' );
 	}		
 	else {
 		$font = $options->get($themeslug.'_font'); 

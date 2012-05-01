@@ -18,6 +18,16 @@
 	$root = get_template_directory_uri(); 
 	
 /**
+* Assign new default font.
+*/ 
+function ribbon_default_font( $font ) {
+	$font = 'Georgia';
+	return $font;
+}
+add_filter( 'response_default_font', 'ribbon_default_font' );
+
+	
+/**
 * Basic theme setup.
 */ 
 function response_theme_setup() {
