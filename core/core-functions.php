@@ -141,7 +141,7 @@ function response_breadcrumbs() {
  
   if ( !is_home() && !is_front_page() && !is_attachment() || is_paged() ) {
  
-    echo '<div class="row"><div id="crumbs" class="twelve columns"><div class="crumbs_text">';
+    echo '<div class="row-fluid"><div id="crumbs" class="span12"><div class="crumbs_text">';
  
     global $post;
     $homeLink = get_bloginfo('url');

@@ -77,15 +77,19 @@ function response_before_content_sidebar_markup() {
 	global $options, $themeslug, $post, $sidebar; // call globals ?>
 				
 	<?php if ($sidebar == 'right-left' OR $sidebar == "2"): ?>
-	<div id="sidebar-left" class="span3">
+  <div class="span3">
+	<div id="sidebar-left">
 		<?php get_sidebar('left'); ?>
 	</div>
+  </div>
 	<?php endif; ?>
 	
 	<?php if ($sidebar == 'left' OR $sidebar == "1"): ?>
-	<div id="sidebar_left" class="span4">
+  <div class="span4">
+	<div id="sidebar_left">
 		<?php get_sidebar(); ?>
 	</div>
+  </div>
 	<?php endif;
 }
 
@@ -98,21 +102,27 @@ function response_after_content_sidebar_markup() {
 	global $options, $themeslug, $post, $sidebar; // call globals ?>
 	
 	<?php if ($sidebar == 'right' OR $sidebar == '0' OR $sidebar == '' ): ?>
-	<div id="sidebar" class="span4">
+	<div class="span4">
+  <div id="sidebar">
 		<?php get_sidebar(); ?>
 	</div>
+  </div>
 	<?php endif;?>
 	
 	<?php if ($sidebar == 'two-right' OR  $sidebar == '3' ): ?>
-	<div id="sidebar-left" class="span3">
+	<div class="span3">
+  <div id="sidebar-left">
 		<?php get_sidebar('left'); ?>
 	</div>
+  </div>
 	<?php endif;?> 
 	
 	<?php if ($sidebar == 'two-right' OR $sidebar == 'right-left' OR $sidebar == '2' OR $sidebar == '3'): ?>
-	<div id="sidebar-right" class="span3">
+  <div class="span3">
+	<div id="sidebar-right">
 		<?php get_sidebar('right'); ?>
 	</div>
+  </div>
 	<?php endif;?> <?php 
 }
 

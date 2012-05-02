@@ -332,20 +332,26 @@ function response_nav() {
 	global $options, $themeslug; //call globals 
 		
 	?>
-<!--<div class="show-on-phones" id="mobile-nav">
-<a href="#" class="mobile-nav-button" data-reveal-id="mobile-nav-modal"></a>
-<div id="mobile-nav-modal" class="reveal-modal">
-    <?php/* wp_nav_menu( array(
+<div class="visible-phone" id="mobile-nav">
+<a href="#mobile-nav-modal" class="mobile-nav-button" data-toggle="modal"></a>
+<div id="mobile-nav-modal" class="modal hide fade in" style="display: none;">
+<div class="modal-header">
+<button class="close" data-dismiss="modal">×</button>
+<h3>Navigation</h3>
+</div>
+    <?php wp_nav_menu( array(
 		    'theme_location' => 'mobile-menu', // Setting up the location for the main-menu, Main Navigation.
 		    'fallback_cb' => 'wp_page_menu', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
 		    'items_wrap'      => '<ul id="nav_menu">%3$s</ul>',
 			    )
 			);
-	    	*/?>
-     <a class="close-reveal-modal">&#215;</a>
+	   ?>
+<div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal">Close</a>
 </div>
-</div>-->		
-<div class="container-fluid">
+</div>
+</div><!-- visible phone -->	
+<div class="container-fluid hidden-phone">
 	<div class="row-fluid">    
 			<div class="show-on-desktops show-on-tablets span12 no-padding" id="menu">
 <div class="ribbon-left-cut">

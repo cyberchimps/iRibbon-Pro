@@ -35,7 +35,7 @@ function response_page_section_content() {
 
 
 ?>
-<div class="row">
+<div class="row-fluid">
 	<!--Begin @response before content sidebar hook-->
 		<?php response_before_content_sidebar(); ?>
 	<!--End @response before content sidebar hook-->

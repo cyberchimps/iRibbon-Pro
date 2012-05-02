@@ -31,7 +31,7 @@
 
 ?>
 
-<div class="container"> 
+<div class="container-fluid"> 
 		<?php
 			foreach(explode(",", $page_section_order) as $key) {
 				$fn = 'response_' . $key;
