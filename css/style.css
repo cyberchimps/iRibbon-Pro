@@ -18,7 +18,7 @@ a{outline:none}
 
 body {background: url( '../images/backgrounds/texture-background.jpg' )}
 
-#main_wrap {margin-left: 20px; margin-right: 20px;}
+#main_wrap {}
 
 .container-fluid {max-width: 980px; margin-left: auto; margin-right: auto; padding-left:0px; padding-right: 0px;}
 
@@ -334,6 +334,7 @@ box-shadow:  0px 5px 5px 0px rgba(0, 0, 0, 1);
 .row-fluid [class*="span"]:last-child {
   padding-right: 15px;
 }
+
 .sd_right_sidebar {padding-right: 15px;}
 .sd_left_sidebar {padding-left: 15px;}
 

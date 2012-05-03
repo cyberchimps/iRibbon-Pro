@@ -31,9 +31,10 @@ function response_box_section_content() {
 	$enableboxes = get_post_meta($post->ID, 'enable_box_section' , true);
 	$root = get_template_directory_uri(); ?>
 	
-<div class="row">
+<div class="row-fluid">
+<div class="span12">
 		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Left") ) : ?>
-			<div id="box1" class="four columns">
+			<div id="box1" class="span4 iribbon-box">
 				<div style="padding:15px;">
 				<h2 class="box-widget-title">Box Left</h2>
 				<p>This is the box left widgetized area.</p>
@@ -41,7 +42,7 @@ function response_box_section_content() {
 			</div><!--end box1-->
 			<?php endif; ?>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Middle") ) : ?>
-			<div id="box2" class="four columns">
+			<div id="box2" class="span4 iribbon-box">
 				<div style="padding:15px;">
 				<h2 class="box-widget-title">Box Middle</h2>
 				<p>This is the box middle widgetized area.</p>
@@ -49,14 +50,15 @@ function response_box_section_content() {
 			</div><!--end box2-->
 			<?php endif; ?>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Right") ) : ?>
-			<div id="box3" class="four columns">
+			<div id="box3" class="span4 iribbon-box">
 				<div style="padding:15px;">
 				<h2 class="box-widget-title">Box Right</h2>
 				<p>This is the box right widgetized area.</p>
 				</div>
 			</div><!--end box3-->
 		<?php endif; ?>
-</div>
+    </div><!-- span 12 -->
+</div><!-- fluid row -->
 <?php
 	}
 

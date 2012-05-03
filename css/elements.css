@@ -7,15 +7,12 @@
 /*============================*/
 /* Elastislide Style */
 .es-carousel-wrapper{
-	background: #fff;
-	border: 1px solid #DDD;
 	padding:10px 37px;
 	position:relative;
 	margin-bottom: 15px;
 }
 .es-carousel{
 	overflow:hidden;
-	background:#fff;
 }
 .es-carousel ul{
 	display:none;
@@ -24,11 +21,13 @@
 	height:100%;
 	float:left;
 	display:block;
+  border:3px solid #94B0A9;
+ -webkit-border-radius: 50%;
+	border-radius: 50%;
+  overflow:hidden;
 }
 .es-carousel ul li a{
 	display:block;
-	border-style:solid;
-	border-color:#444;
 }
 .es-carousel ul li a img{
 	display:block;
@@ -62,34 +61,100 @@
 /*============================*/
 
 #twitterbar {
-	background: #fff;
-	border: 1px solid #DDD;
 	overflow: hidden;
 	margin: auto;
 	margin-bottom: 15px;
 }
-
-#twittertext {
-	padding: 10px 15px 10px 15px;
-	font-size: 14px;
+#twitter-image {
+  float:left;
+}
+.twittertext a:link {
+  color: #CB8249; /*orange*/
+}
+.twittertext a:visited {
+  color: #CB8249; /*orange*/
+}
+.twittertext a:hover {
+  color:#94B0A9;/*blue*/
+}
+.twittertext {
+  float: left;
+ position: relative;
+padding: 15px;
+margin: 1em 0 3em;
+border: 5px solid #94B0A9;/*blue*/
+color: #333;
+background: #E9E3BB;/*yellow*/
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 0.5);
+-moz-box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 0.5);
+box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 0..5);
+}
+.twittertext:before {
+  content: "";
+position: absolute;
+bottom: -20px;
+left: 40px;
+border-width: 20px 20px 0;
+border-style: solid;
+border-color: #94B0A9 transparent;/*blue*/
+display: block;
+width: 0;
+}
+.twittertext:after {
+  content: "";
+position: absolute;
+bottom: -13px;
+left: 47px;
+border-width: 13px 13px 0;
+border-style: solid;
+border-color: #E9E3BB transparent;/*yellow*/
+display: block;
+width: 0;
+}
+.twittertriangle {
+ margin-left: 30px; 
+}
+.twittertriangle:before {
+  top: 10px;
+bottom: auto;
+left: -30px;
+border-width: 15px 30px 15px 0;
+border-color: transparent #94B0A9;/*blue*/
+}
+.twittertriangle:after {
+  top: 16px;
+bottom: auto;
+left: -21px;
+border-width: 9px 21px 9px 0;
+border-color: transparent #E9E3BB;/*yellow*/
 }
 
 /*============================*/
 /*===== Callout Section ======*/
 /*============================*/
-
+.calloutrow {
+  width:100%;
+  background: #94B0A9;
+  margin-bottom: 15px;
+  padding: 0;
+  border-top: 3px solid #6A8484;
+  border-bottom: 3px solid #6A8484;
+}
 #calloutwrap {
 	overflow: hidden;
 	position:relative;
 	display: block;
 	margin: auto;
 	margin-bottom: 15px;
-	background: #fff;
-	border: 1px solid #DDD;
 }
 
 #callout_text {
+  color:#E9ECC9;
 	font-size: 14px;
+  font-style: italic;
 	margin-left: 0;
 	padding: 15px;
 }
@@ -131,41 +196,31 @@
 /*============================*/
 /*====== Widgitized Boxes =====*/
 /*============================*/
-
-#box_container ul {
-	list-style: none;
+.iribbon-box {
+  background: #94B0A9; /*blue*/ 
 }
-
-#box2.four.columns { margin-left:2.3%;}
-#box3.four.columns { margin-left:2.1%;}
-
-#box1.four.columns, #box2.four.columns, #box3.four.columns {width: 31.7%;}
-
 .box-widget-title {
-	color: #222;
-	height: 25px;
-	font-size: 16px;
-	font-weight: bold;
+  font-family: 'Lobster', cursive;
+	color: #E9E3BB;;
+	height: 35px;
+	font-size: 26px;
 	text-align: center;
 }
 
 #box1 {
 	min-height: 200px;
-	background: #fff;
 	border: 1px solid #ddd;
 	margin-bottom: 15px;
 }
 
 #box2 {
 	min-height: 200px;
-	background: #fff;
 	border: 1px solid #ddd;
 	margin-bottom: 15px;
 }
 
 #box3 {
 	min-height: 200px;
-	background: #fff;
 	border: 1px solid #ddd;
 	right: -1px;
 	margin-bottom: 15px;

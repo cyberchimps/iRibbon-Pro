@@ -53,20 +53,18 @@ function response_twitterbar_section_content() {
 function response_display_latest_tweets( $username, $show_replies = 0 ) {
 	$latest_tweet = response_get_latest_tweets( $username, $show_replies );
 ?>
-	<div class="row">
-		<div id="twitterbar" class="twelve columns"><!--id="twitterbar"-->
-			<div id="twittertext">
+	<div class="row-fluid">
+		<div id="twitterbar" class="span12"><!--id="twitterbar"-->
 				<?php
 					if ( $latest_tweet ) {	
 						$screen_name = $latest_tweet['user']['screen_name'];
 						$user_permalink = 'http://twitter.com/#!/'.$screen_name;
 						$tweet_permalink = 'http://twitter.com/#!/'.$screen_name.'/status/'.$latest_tweet['id_str'];
-						echo '<a href="'.$user_permalink.'"> <img src="'.get_template_directory_uri().'/images/twitterbird.png" /> '. $screen_name .' - </a>'.$latest_tweet['text'].' <small><a href="'.$tweet_permalink.'">' .human_time_diff(strtotime($latest_tweet['created_at']), current_time('timestamp')).' ago</a></small>';
+						echo '<img src="'.get_template_directory_uri().'/images/backgrounds/twitter.png" id="twitter-image" /><div class="twittertext twittertriangle"><a href="'.$user_permalink.'"> '. $screen_name .' - </a>'.$latest_tweet['text'].' <small><a href="'.$tweet_permalink.'">' .human_time_diff(strtotime($latest_tweet['created_at']), current_time('timestamp')).' ago</a></small></div>';
 					} else {
-						echo '<p>No tweets to display</p>';
+						echo '<div id="twittertext"><p>No tweets to display</p></div>';
 					}
 				?>
-			</div>
 		</div><!--end twitterbar--> 
 	</div>	
 <?php

@@ -44,7 +44,7 @@ function response_carousel_section_content() {
 /* End define variables. */	 
 ?>
 
-<div class="row">
+<div class="row-fluid">
 	<div id="carousel" class="es-carousel-wrapper">
 		<div class="es-carousel"><?php 
 
@@ -118,31 +118,38 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 	      			<li>
 	      				
 	    				<img src='$default' alt='Post 1'/>
-	    				
+	    				<div class='carousel_caption'>Title 1</div>
 	    			</li>
 					<li>
 	    				<img src='$default' alt='Post 2' />
+	    				<div class='carousel_caption'>Title 2</div>
 	    			</li>
 					<li>
 	    				<img src='$default' alt='Post 3' />
+	    				<div class='carousel_caption'>Title 3</div>
 	    			</li>
 					<li>
 	    				<img src='$default' alt='Post 4' />
+	    				<div class='carousel_caption'>Title 4</div>
 	    			</li>
 					<li>
 	    				<img src='$default' alt='Post 5' />
+	    				<div class='carousel_caption'>Title 5</div>
 	    			</li>
 	    			
 	    			<li>
 	    				<img src='$default' alt='Post 6' />
+	    				<div class='carousel_caption'>Title 6</div>
 	    			</li>
 	    			
 	    			<li>
-	    				<img src='$default' alt='Post 6' />
+	    				<img src='$default' alt='Post 7' />
+	    				<div class='carousel_caption'>Title 7</div>
 	    			</li>
 
 					<li>
-	    				<img src='$default' alt='Post 6' />
+	    				<img src='$default' alt='Post 8' />
+	    				<div class='carousel_caption'>Title 8</div>
 	    			</li>
 		
 	    	</ul>

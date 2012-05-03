@@ -66,14 +66,19 @@ function response_callout_section_content() {
 /* End define Callout title. */	
 
 ?>
-	<div class="row">
-		<div id="calloutwrap"  class="twelve columns">
+</div><!-- closes container fluid -->
+	<div class="calloutrow">
+  <div class="container-fluid">
+  <div class="row-fluid">
+		<div id="calloutwrap"  class="span12">
 			<div id="callout_text">
 				<h2 class="callout_title" ><?php echo $callouttext ?></h2>
+        </div>
+        </div>
 			</div>
 		</div>
 	</div>
-
+<div class="container-fluid"><!-- opens new container fluid -->
 <?php
 	
 }
