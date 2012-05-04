@@ -21,11 +21,11 @@
 
 ?>
 
-<div class="container">
-	<div class="row">
+<div class="container-fluid">
+	<div class="row-fluid">
 		<?php if ($options->get($themeslug.'_single_breadcrumbs') == "1") { response_breadcrumbs();}?>
 	</div>
-	<div class="row">
+	<div class="row-fluid">
 	<!--Begin @Core post area-->
 		<?php response_index(); ?>
 	<!--End @Core post area-->
