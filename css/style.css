@@ -286,21 +286,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#95b1a9', end
 #nav ul ul .parent > a, #nav ul ul .parent:hover > a:hover, #nav ul ul li:hover ul .parent > a, #nav ul ul li:hover ul .parent > a:hover{background-image:url(../images/arrow-right.png);background-position:right;background-repeat:no-repeat;}
 #nav ul, #nav ul li{display:inline;list-style:none;padding:0;margin:0}
 #nav ul li a{display:inline-block;font-family:Georgia, "Times New Roman", Times, serif!important;font-style:italic;font-size:16px;color:#333;line-height:50px;text-decoration:none;padding:0 15px;}
-#nav ul li a:hover{background:#5ca9d6;color: #fff;}
-#nav .current-menu-item a{color:#555;}
-#nav .current-menu-item ul a{color:#0085CF;}
-#nav .menu > li:first-child a:hover{border-radius:0}
-#nav .menu .sub-menu li a:hover{border-radius:0}
+#nav .current_page_item a{color:#fff;}
+#nav ul.children li.current_page_item a{color:#cd834a;}
 #nav ul li{position:relative}
-#nav li ul{display:none;position:absolute;top:27px;left:7px}
+#nav ul li a:hover, #nav ul li.parent a:hover, #nav ul.children li.parent a:hover{background: #cd834a;
+background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd834a), color-stop(100%,#9e663d));
+background: -webkit-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+background: -o-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+background: -ms-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );}
+#nav li ul{display:none;position:absolute;top:33px;left:7px}
 #nav li ul a{background:#fff}
 #nav ul ul li:hover ul, #nav ul ul ul li:hover ul{left:0;margin:-37px 0 11px 180px}
 #nav ul li:hover ul{display:inline-block}
 #nav ul ul, #nav ul li:hover ul ul, #nav ul ul li:hover ul ul{display:none}
 #nav ul li:hover ul, #nav ul ul li:hover ul, #nav ul ul ul li:hover ul{display:block}
-#nav ul li:hover ul li a{border-top:#ddd 1px solid;border-right:#ddd 1px solid;border-bottom:#ddd 1px solid;border-left:#ddd 1px solid;margin:-1px 0 0 -8px}
-#nav ul ul li:hover ul li a{border-top:#ddd 1px solid;border-right:#ddd 1px solid;border-bottom:#ddd 1px solid;border-left:none;margin:-1px 0 0 -8px}
-#nav ul ul ul li:hover ul li a {border-top:#ddd 1px solid;border-right:#ddd 1px solid;border-bottom:#ddd 1px solid;border-left:none;margin:-1px 0 0 -9px}
+#nav ul li:hover ul li a{border-top:#9F673D 1px solid;border-right:#9F673D 1px solid;border-bottom:#9F673D 1px solid;border-left:#9F673D 1px solid;margin:-1px 0 0 -8px}
+#nav ul ul li:hover ul li a{border-top:#9F673D 1px solid;border-right:#9F673D 1px solid;border-bottom:#9F673D 1px solid;border-left:none;margin:-1px 0 0 -8px}
+#nav ul ul ul li:hover ul li a {border-top:#9F673D 1px solid;border-right:#9F673D 1px solid;border-bottom:#9F673D 1px solid;border-left:none;margin:-1px 0 0 -9px}
 #nav ul li:hover ul li a{width:150px;padding:0 14px}
 #nav ul ul li:hover ul li a{width:150px;padding:0 14px}
 #nav ul ul ul li:hover ul li a{width:150px;padding:0 14px;}
@@ -655,6 +660,8 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 .widget-title{position:absolute;top:0;left:10px;font-size:20px;font-family: 'Lobster', cursive;color: #e9ecc9;text-shadow:none}
 
 .widget-container ul{margin-top: 40px;margin-left: 0px;margin-bottom:10px;}
+
+
 
 /* Blog and Post Styles */
 
