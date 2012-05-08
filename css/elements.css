@@ -196,45 +196,51 @@ border-color: transparent #E9E3BB;/*yellow*/
 /*============================*/
 /*====== Widgitized Boxes =====*/
 /*============================*/
+.boxes-row {
+  margin-bottom: 15px;
+}
+.boxes-row .span4:last-child {
+	padding-right: 0!important;
+}
+.box_outer_container {
+  position: relative;
+  min-height: 200px;
+  padding-left: 15px;
+}
 .iribbon-box {
+  position: relative;
+  padding: 50px 25px 25px;
   background: #94B0A9; /*blue*/ 
+  overflow: hidden;
 }
 .box-widget-title {
   font-family: 'Lobster', cursive;
-	color: #E9E3BB;;
-	height: 35px;
+	color: #E9E3BB;/*yellow*/
+	line-height: 40px;
 	font-size: 26px;
-	text-align: center;
+  margin-left: 10px;
+}
+
+.boxes-row .textwidget {
+  color: #E9E3BB;/*yellow*/
+  margin: 0;
 }
 
 #box1 {
 	min-height: 200px;
-	border: 1px solid #ddd;
-	margin-bottom: 15px;
 }
 
 #box2 {
 	min-height: 200px;
-	border: 1px solid #ddd;
-	margin-bottom: 15px;
 }
 
 #box3 {
 	min-height: 200px;
-	border: 1px solid #ddd;
-	right: -1px;
-	margin-bottom: 15px;
 }
-
-
-
-@-moz-document url-prefix() {
-#box2.four.columns, #box3.four.columns {margin-left: 2.1%;}
-#box3 {right: -2px;}
-}
-
 
 .boxes ul { padding-left: 15px; }
+
+
 
 /*============================*/
 /*====== Tabbed Widgit =====*/

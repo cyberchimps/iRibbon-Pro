@@ -31,33 +31,43 @@ function response_box_section_content() {
 	$enableboxes = get_post_meta($post->ID, 'enable_box_section' , true);
 	$root = get_template_directory_uri(); ?>
 	
-<div class="row-fluid">
-<div class="span12">
+<div class="row-fluid boxes-row">
 		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Left") ) : ?>
-			<div id="box1" class="span4 iribbon-box">
-				<div style="padding:15px;">
-				<h2 class="box-widget-title">Box Left</h2>
-				<p>This is the box left widgetized area.</p>
-				</div>
-			</div><!--end box1-->
+			<div class="box_outer_container span4"><div class="ribbon-top-end"></div>
+      <div id="box1" class="iribbon-box">
+        <div class="ribbon-top-cut"></div><div class="ribbon-top">
+				<h3 class="box-widget-title">Box Left</h3>
+        </div><div class="ribbon-shadow"></div>
+				<div class="textwidget">This is the box left widgetized area.</div>
+				<div class="ribbon-bottom"></div><div class="ribbon-bottom-cut"></div>
+        </div>
+        <div class="ribbon-bottom-end"></div>
+        </div><!--end box1 -->
 			<?php endif; ?>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Middle") ) : ?>
-			<div id="box2" class="span4 iribbon-box">
-				<div style="padding:15px;">
-				<h2 class="box-widget-title">Box Middle</h2>
-				<p>This is the box middle widgetized area.</p>
-				</div>
-			</div><!--end box2-->
+      <div class="box_outer_container span4"><div class="ribbon-top-end"></div>
+			<div id="box2" class="iribbon-box">
+        <div class="ribbon-top-cut"></div><div class="ribbon-top">
+				<h3 class="box-widget-title">Box Middle</h3>
+        </div><div class="ribbon-shadow"></div>
+				<div class="textwidget">This is the box middle widgetized area.</div>
+				<div class="ribbon-bottom"></div><div class="ribbon-bottom-cut"></div>
+        </div>
+        <div class="ribbon-bottom-end"></div>
+        </div><!--end box2-->
 			<?php endif; ?>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Right") ) : ?>
-			<div id="box3" class="span4 iribbon-box">
-				<div style="padding:15px;">
-				<h2 class="box-widget-title">Box Right</h2>
-				<p>This is the box right widgetized area.</p>
-				</div>
-			</div><!--end box3-->
+      <div class="box_outer_container span4"><div class="ribbon-top-end"></div>
+			<div id="box3" class="iribbon-box">
+        <div class="ribbon-top-cut"></div><div class="ribbon-top">
+				<h3 class="box-widget-title">Box Right</h3>
+        </div><div class="ribbon-shadow"></div>
+				<div class="textwidget">This is the box right widgetized area.</div>
+				<div class="ribbon-bottom"></div><div class="ribbon-bottom-cut"></div>
+        </div>
+        <div class="ribbon-bottom-end"></div>
+        </div><!--end box3-->
 		<?php endif; ?>
-    </div><!-- span 12 -->
 </div><!-- fluid row -->
 <?php
 	}

@@ -334,6 +334,7 @@ function response_nav() {
 	?>
 <div class="visible-phone" id="mobile-nav">
 <a href="#mobile-nav-modal" class="mobile-nav-button" data-toggle="modal"></a>
+</div><!-- visible phone -->	
 <div id="mobile-nav-modal" class="modal hide fade in" style="display: none;">
 <div class="modal-header">
 <button class="close" data-dismiss="modal">×</button>
@@ -349,8 +350,7 @@ function response_nav() {
 <div class="modal-footer">
     <a href="#" class="btn" data-dismiss="modal">Close</a>
 </div>
-</div>
-</div><!-- visible phone -->	
+</div><!-- mobile nav modal -->
 <div class="container-fluid hidden-phone">
 	<div class="row-fluid">    
 			<div class="show-on-desktops show-on-tablets span12 no-padding" id="menu">
