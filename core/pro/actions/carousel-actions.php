@@ -97,7 +97,7 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 	    	$out .= "
 	    	
 				<li>
-	    			<a href='$link'>	
+	    			<a href='$link' class='image-container'>	
 	    				<img src='$image' alt='$title'/>
 	    			</a>
 	    			<div class='carousel_caption'>$title</div>
@@ -116,39 +116,54 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 	      	$out .= "	
 	    	<ul>
 	      			<li>
-	      				
+	      			<a href='#' class='image-container'>
 	    				<img src='$default' alt='Post 1'/>
+							</a>
 	    				<div class='carousel_caption'>Title 1</div>
 	    			</li>
 					<li>
+							<a href='#' class='image-container'>
 	    				<img src='$default' alt='Post 2' />
+							</a>
 	    				<div class='carousel_caption'>Title 2</div>
 	    			</li>
 					<li>
+							<a href='#' class='image-container'>
 	    				<img src='$default' alt='Post 3' />
+							</a>
 	    				<div class='carousel_caption'>Title 3</div>
 	    			</li>
 					<li>
+							<a href='#' class='image-container'>
 	    				<img src='$default' alt='Post 4' />
+							</a>
 	    				<div class='carousel_caption'>Title 4</div>
 	    			</li>
 					<li>
+							<a href='#' class='image-container'>
 	    				<img src='$default' alt='Post 5' />
+							</a>
 	    				<div class='carousel_caption'>Title 5</div>
 	    			</li>
 	    			
 	    			<li>
+							<a href='#' class='image-container'>
 	    				<img src='$default' alt='Post 6' />
+							</a>
 	    				<div class='carousel_caption'>Title 6</div>
 	    			</li>
 	    			
 	    			<li>
+							<a href='#' class='image-container'>
 	    				<img src='$default' alt='Post 7' />
+							</a>
 	    				<div class='carousel_caption'>Title 7</div>
 	    			</li>
 
 					<li>
+							<a href='#' class='image-container'>
 	    				<img src='$default' alt='Post 8' />
+							</a>
 	    				<div class='carousel_caption'>Title 8</div>
 	    			</li>
 		

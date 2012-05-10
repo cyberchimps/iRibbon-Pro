@@ -46,7 +46,7 @@ function response_font() {
 	$family = apply_filters( 'response_default_font_family', 'Georgia, "Times New Roman", Times, serif' );
 	
 	if ($options->get($themeslug.'_font') == "" ) {
-		$font = apply_filters( 'response_default_font', 'Arial' );
+		$font = apply_filters( 'response_default_font', 'Georgia' );
 	}		
 	else {
 		$font = $options->get($themeslug.'_font'); 
@@ -173,6 +173,7 @@ global $themeslug, $options; //Call global variables
 	
 <link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
 
+<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lobster' type='text/css'>
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/bootstrap/bootstrap.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/bootstrap/bootstrap-responsive.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/core/css/orbit/orbit.css" type="text/css" />
@@ -180,7 +181,6 @@ global $themeslug, $options; //Call global variables
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/elements.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/color/<?php echo $color; ?>.css" type="text/css" />
-<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lobster' type='text/css'>
 
 <?php if (is_child_theme()) :  //add support for child themes?>
 	<link rel="stylesheet" href="<?php echo bloginfo('stylesheet_directory') ; ?>/style.css" type="text/css" />

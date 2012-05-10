@@ -285,18 +285,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#95b1a9', end
 #nav .parent > a, #nav .parent > a:hover{background-image:url(../images/arrow.png);background-position:right;background-repeat:no-repeat}
 #nav ul ul .parent > a, #nav ul ul .parent:hover > a:hover, #nav ul ul li:hover ul .parent > a, #nav ul ul li:hover ul .parent > a:hover{background-image:url(../images/arrow-right.png);background-position:right;background-repeat:no-repeat;}
 #nav ul, #nav ul li{display:inline;list-style:none;padding:0;margin:0}
-#nav ul li a{display:inline-block;font-family:Georgia, "Times New Roman", Times, serif!important;font-style:italic;font-size:16px;color:#333;line-height:50px;text-decoration:none;padding:0 15px;}
-#nav .current_page_item a{color:#fff;}
-#nav ul.children li.current_page_item a{color:#cd834a;}
+#nav ul li a{display:inline-block;font-style:italic;font-size:16px;color:#333;line-height:50px;text-decoration:none;padding:0 15px;}
+#nav .current_page_item a{color:#E9E3BB;/*yellow*/}
+#nav ul.children li.current_page_item a,#nav ul.children a:hover{color:#94B0A9;/*blue*/}
 #nav ul li{position:relative}
-#nav ul li a:hover, #nav ul li.parent a:hover, #nav ul.children li.parent a:hover{background: #cd834a;
-background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd834a), color-stop(100%,#9e663d));
-background: -webkit-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-background: -o-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-background: -ms-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );}
+#nav ul li > a:hover{color:#E9E3BB/*yellow*/}
+#nav ul.children a {color:#cd834a;/*orange*/}
 #nav li ul{display:none;position:absolute;top:33px;left:7px}
 #nav li ul a{background:#fff}
 #nav ul ul li:hover ul, #nav ul ul ul li:hover ul{left:0;margin:-37px 0 11px 180px}
@@ -657,7 +651,7 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 
 #sidebar240 .widget-container th {padding-right: 18px}
 
-.widget-title{position:absolute;top:0;left:10px;font-size:20px;font-family: 'Lobster', cursive;color: #e9ecc9;text-shadow:none}
+.widget-title{position:absolute;top:0;left:10px;font-size:1.5em;font-family: 'Lobster', cursive;color: #e9ecc9;text-shadow:none}
 
 .widget-container ul{margin-top: 40px;margin-left: 0px;margin-bottom:10px;}
 
@@ -668,7 +662,6 @@ ol, ul {list-style-position: inside;margin-left: 21px;}
 .post{}
 .entry-title{margin-bottom:2px}
 .single .entry-title{text-align:left;line-height:30px;margin-top:12px;margin-bottom:10px}
-.entry-title a{font-size:22px}
 .nav-previous{text-align:left}
 .nav-next{text-align:right}
 .entry-meta, .entry-utility, .entry-meta a, .entry-utility a{font-size:12px}
@@ -945,7 +938,6 @@ h6 {
   color: #e9ecc9;
   margin-left:10px;
 	text-decoration: none;
-	font-weight: 400;
 }
 .sd_left_sidebar .posts_title, .sd_left_sidebar .posts_title a, .sd_left_sidebar .commentsh2 {
   margin-left:10%;
