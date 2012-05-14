@@ -37,21 +37,23 @@
 	border:none;
 	max-height:100%;
 	max-width:100%;
+ -webkit-border-radius: 50%;
+	border-radius: 50%;
 }
 .es-nav span{
 	position:absolute;
 	top:50%;
-	left:12px;
-	background:transparent url(../images/nav.png) no-repeat top left;
-	width:14px;
-	height:26px;
-	margin-top:-13px;
+	left:-25px;
+	background:transparent url(../images/carousel-nav.png) no-repeat top left;
+	width:50px;
+	height:42px;
+	margin-top:-35px;
 	text-indent:-9000px;
 	cursor:pointer;
 	opacity:0.8;
 }
 .es-nav span.es-nav-next{
-	right:12px;
+	right:-25px;
 	left:auto;
 	background-position:top right;
 }
@@ -213,7 +215,7 @@ border-color: transparent #E9E3BB;/*yellow*/
 }
 .iribbon-box {
   position: relative;
-  padding: 50px 25px 25px;
+  padding: 50px 25px 50px 25px;
   background: #94B0A9; /*blue*/ 
   overflow: hidden;
 }
@@ -221,7 +223,7 @@ border-color: transparent #E9E3BB;/*yellow*/
   font-family: 'Lobster', cursive;
 	color: #E9E3BB;/*yellow*/
 	line-height: 40px;
-	font-size: 26px;
+	font-size: 18px;
   margin-left: 10px;
 }
 

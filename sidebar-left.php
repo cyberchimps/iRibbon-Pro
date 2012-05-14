@@ -1,11 +1,11 @@
 <div id="sidebar_left">
-	<div id="sidebar240">
 
     <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Sidebar Left')) : else : ?>
     
         <!-- All this stuff in here only shows up if you DON'T have any widgets active in this zone -->
     
-		<div class="widget-container">      
+		<div class="widget-container">
+    <div class="ribbon-cut-blue"></div><div class="ribbon-bg-blue"><div class="ribbon-left-blue"></div><div class="ribbon-shadow"></div><div class="ribbon-right-blue"></div></div>      
 		<h2 class="widget-title">Sidebar Left</h2>
     	<ul>
 						<li>Thank you for purchasing Response Pro.</li>
@@ -18,12 +18,16 @@
 					</ul>
     	</div>
 		
-		<div class="widget-container">     
+		<div class="widget-container">
+    <div class="ribbon-cut-blue"></div><div class="ribbon-bg-blue"><div class="ribbon-left-blue"></div><div class="ribbon-shadow"></div><div class="ribbon-right-blue"></div></div>     
 		<h2 class="widget-title">Pages</h2>
+    <ul>
     	<?php wp_list_pages('title_li=' ); ?>
+      </ul>
     	</div>
     	
     	<div class="widget-container">
+      <div class="ribbon-cut-blue"></div><div class="ribbon-bg-blue"><div class="ribbon-left-blue"></div><div class="ribbon-shadow"></div><div class="ribbon-right-blue"></div></div>
     	<h2 class="widget-title">Subscribe</h2>
     	<ul>
     		<li><a href="<?php bloginfo('rss2_url'); ?>">Entries (RSS)</a></li>
@@ -32,5 +36,4 @@
     	</div>
 	
 	<?php endif; ?>
-	</div><!--end sidebar150-->
 </div><!--end sidebar_left-->

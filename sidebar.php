@@ -2,7 +2,8 @@
     
         <!-- All this stuff in here only shows up if you DON'T have any widgets active in this zone -->
     
-		<div class="widget-container">    
+		<div class="widget-container"> 
+    <div class="ribbon-cut-blue"></div><div class="ribbon-bg-blue"><div class="ribbon-left-blue"></div><div class="ribbon-shadow"></div><div class="ribbon-right-blue"></div></div>   
 		<h2 class="widget-title">Welcome to Response Pro</h2>
     	<ul>
 						<li>Thank you for purchasing Response Pro.</li>
@@ -15,28 +16,32 @@
 					</ul>
     	</div>
 		
-		<div class="widget-container">    
+		<div class="widget-container">
+    <div class="ribbon-cut-blue"></div><div class="ribbon-bg-blue"><div class="ribbon-left-blue"></div><div class="ribbon-shadow"></div><div class="ribbon-right-blue"></div></div>   
 		<h2 class="widget-title"><?php printf( __('Pages', 'response' )); ?></h2>
 		<ul>
     	<?php wp_list_pages('title_li=' ); ?>
     	</ul>
     	</div>
     
-		<div class="widget-container">    
+		<div class="widget-container">
+    <div class="ribbon-cut-blue"></div><div class="ribbon-bg-blue"><div class="ribbon-left-blue"></div><div class="ribbon-shadow"></div><div class="ribbon-right-blue"></div></div>    
     	<h2 class="widget-title"><?php printf( __( 'Archives', 'response' )); ?></h2>
     	<ul>
     		<?php wp_get_archives('type=monthly'); ?>
     	</ul>
     	</div>
         
-		<div class="widget-container">    
+		<div class="widget-container">
+    <div class="ribbon-cut-blue"></div><div class="ribbon-bg-blue"><div class="ribbon-left-blue"></div><div class="ribbon-shadow"></div><div class="ribbon-right-blue"></div></div>    
        <h2 class="widget-title"><?php printf( __('Categories', 'response' )); ?></h2>
         <ul>
     	   <?php wp_list_categories('show_count=1&title_li='); ?>
         </ul>
         </div>
         
-		<div class="widget-container">    
+		<div class="widget-container">
+    <div class="ribbon-cut-blue"></div><div class="ribbon-bg-blue"><div class="ribbon-left-blue"></div><div class="ribbon-shadow"></div><div class="ribbon-right-blue"></div></div>  
     	<h2 class="widget-title"><?php printf( __('WordPress', 'response' )); ?></h2>
     	<ul>
     		<?php wp_register(); ?>
@@ -47,6 +52,7 @@
     	</div>
     	
     	<div class="widget-container">
+      <div class="ribbon-cut-blue"></div><div class="ribbon-bg-blue"><div class="ribbon-left-blue"></div><div class="ribbon-shadow"></div><div class="ribbon-right-blue"></div></div>
     	<h2 class="widget-title"><?php printf( __('Subscribe', 'response' )); ?></h2>
     	<ul>
     		<li><a href="<?php bloginfo('rss2_url'); ?>"><?php printf( __('Entries (RSS)', 'response' )); ?></a></li>

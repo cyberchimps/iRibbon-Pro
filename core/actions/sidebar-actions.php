@@ -52,7 +52,7 @@ function response_sidebar_init_content() {
 	}
 	
 	if ($sidebar == 'two-right' OR $sidebar == 'right-left' OR $sidebar == "2" OR $sidebar == "3") {
-		$content_grid = 'span6';
+		$content_grid = 'span6 sd_left_sidebar two_sidebars';
 	}
 	elseif ($sidebar == 'none' OR $sidebar == "4") {
 		$content_grid = 'span12';
@@ -119,7 +119,7 @@ function response_after_content_sidebar_markup() {
 	
 	<?php if ($sidebar == 'two-right' OR $sidebar == 'right-left' OR $sidebar == '2' OR $sidebar == '3'): ?>
   <div class="span3">
-	<div id="sidebar-right">
+	<div id="sidebar">
 		<?php get_sidebar('right'); ?>
 	</div>
   </div>
