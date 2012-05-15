@@ -246,6 +246,70 @@ border-color: transparent #E9E3BB;/*yellow*/
 
 .boxes ul { padding-left: 15px; }
 
+.boxes-row div.ribbon-top {
+  position:absolute;
+  top: 0;
+  left:46px;
+  height:41px;
+  width:100%;
+  padding-top:5px;
+  background: #cd834a;
+  background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd834a), color-stop(100%,#9e663d));
+  background: -webkit-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: -o-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: -ms-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
+}
+
+.boxes-row div.ribbon-shadow {
+  position:absolute;
+  top: 44px;
+  left: 5px;
+  height: 1px;
+  width: 100%;
+  -webkit-box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 1);
+  box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 1);
+}
+
+.boxes-row div.ribbon-top-cut {
+  position:absolute;
+  top:0;
+  left:0;
+  width: 46px;
+  height: 46px;
+  background: url( '../images/backgrounds/ribbon-left.png' ) no-repeat 0 0 transparent;
+}
+
+.boxes-row div.ribbon-top-end {
+  position:absolute;
+  top:0;
+  right:-15px;
+  height:46px;
+  width:15px;
+  background: #cd834a;
+  background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd834a), color-stop(100%,#9e663d));
+  background: -webkit-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: -o-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: -ms-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
+}
+
+.boxes-row div.ribbon-top-end:after {
+  content: ' ';
+  position:absolute;
+  width:0;
+  height:0;
+  top:100%;
+  right:0;
+  border-width:0 0 15px 15px;
+  border-style: solid;
+  border-color: transparent transparent transparent #8d5c38;
+}
 
 
 /*============================*/

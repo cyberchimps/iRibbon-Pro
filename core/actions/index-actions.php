@@ -46,8 +46,6 @@ function response_index_content() {
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="post_outer_container">
-    	<div class="ribbon-top-end">
-      </div>
 			<div class="post_container">
       
 				<div <?php post_class() ?> id="post-<?php the_ID(); ?>">

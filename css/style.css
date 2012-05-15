@@ -505,28 +505,14 @@ header {
   -moz-box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 1);
   box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 1);
 }
-.sd_left_sidebar div.ribbon-top-end {
-  position:absolute;
-  top:0;
-  left:-15px;
-  height:46px;
-  width:15px;
-  background: #cd834a;
-  background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd834a), color-stop(100%,#9e663d));
-  background: -webkit-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  background: -o-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  background: -ms-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
-}
-.sd_left_sidebar div.ribbon-top-end:after { 
+
+.sd_left_sidebar div.ribbon-top:after { 
 	content: ' ';
   position:absolute;
   width:0;
   height:0;
   top:100%;
-  right:0;
+  left: 30px;
   border-width:15px 0 0 15px;
   border-style: solid;
   border-color: #8d5c38 transparent transparent transparent;
@@ -539,10 +525,50 @@ header {
   height: 46px;
   background: url( '../images/backgrounds/ribbon-right.png' ) no-repeat 0 0 transparent;
 }
-
+.sd_left_sidebar div.ribbon-more {
+  position:absolute;
+  top: 0;
+  right:-15px;
+  height:41px;
+  width:105%;
+  padding-top:5px;
+  background: #cd834a;
+  background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd834a), color-stop(100%,#9e663d));
+  background: -webkit-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: -o-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: -ms-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
+}
+.sd_left_sidebar div.ribbon-more h2 {
+  margin-left: 0px!important;
+}
+.sd_left_sidebar div.ribbon-more:before {
+ 	 content: ' ';
+  position:absolute;
+  width:0;
+  height:0;
+  top:100%;
+  left:0;
+  border-width:15px 0 0 15px;
+  border-style: solid;
+  border-color: #8d5c38 transparent transparent transparent;
+}
+.sd_left_sidebar div.ribbon-more:after {
+  content: ' ';
+  position:absolute;
+  width:0;
+  height:0;
+  top:-15px;
+  right:0;
+  border-width:0 15px 15px 0;
+  border-style: solid;
+  border-color: transparent transparent #8d5c38 transparent;
+}
 /* content ribbons with right sidebar */
 
-.sd_right_sidebar div.ribbon-top, .boxes-row div.ribbon-top {
+.sd_right_sidebar div.ribbon-top {
   position:absolute;
   top: 0;
   left:46px;
@@ -558,30 +584,14 @@ header {
   background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
 }
-#nav .ribbon-shadow, .sd_right_sidebar div.ribbon-shadow, .boxes-row div.ribbon-shadow {
+.sd_right_sidebar div.ribbon-more {
   position:absolute;
-  top: 44px;
-  left: 5px;
-  height: 1px;
-  width: 100%;
-  -webkit-box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 1);
-  -moz-box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 1);
-  box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 1);
-}
-.sd_right_sidebar div.ribbon-top-cut, .boxes-row div.ribbon-top-cut {
-  position:absolute;
-  top:0;
-  left:0;
-  width: 46px;
-  height: 46px;
-  background: url( '../images/backgrounds/ribbon-left.png' ) no-repeat 0 0 transparent;
-}
-.sd_right_sidebar div.ribbon-top-end, .boxes-row div.ribbon-top-end {
-  position:absolute;
-  top:0;
-  right:-15px;
-  height:46px;
-  width:15px;
+  top: 0;
+  left:-15px;
+  height:41px;
+  width:100%;
+  padding-top:5px;
+  padding-left: 65px;
   background: #cd834a;
   background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd834a), color-stop(100%,#9e663d));
@@ -591,13 +601,70 @@ header {
   background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
 }
-.sd_right_sidebar div.ribbon-top-end:after, .boxes-row div.ribbon-top-end:after {
+.sd_right_sidebar div.ribbon-more:before {
+  content: ' ';
+  position:absolute;
+  width:0;
+  height:0;
+  top:-15px;
+  left:0;
+  border-width:15px 15px 0 0;
+  border-style: solid;
+  border-color: transparent #8d5c38 transparent transparent;
+}
+.sd_right_sidebar div.ribbon-extra {
+  position:absolute;
+  top: 0;
+  right:-15px;
+  height:41px;
+  width:15px;
+  padding-top:5px;
+  background: #cd834a;
+  background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd834a), color-stop(100%,#9e663d));
+  background: -webkit-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: -o-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: -ms-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
+}
+.sd_right_sidebar div.ribbon-extra:after {
   content: ' ';
   position:absolute;
   width:0;
   height:0;
   top:100%;
-  right:0;
+  right:50px;
+  border-width:0 0 15px 15px;
+  border-style: solid;
+  border-color: transparent transparent transparent #8d5c38;
+}
+.sd_right_sidebar div.ribbon-shadow {
+  position:absolute;
+  top: 44px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  -webkit-box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 1);
+  box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 1);
+}
+.sd_right_sidebar div.ribbon-top-cut {
+  position:absolute;
+  top:0;
+  left:0;
+  width: 46px;
+  height: 46px;
+  background: url( '../images/backgrounds/ribbon-left.png' ) no-repeat 0 0 transparent;
+}
+
+.sd_right_sidebar div.ribbon-top:after {
+  content: ' ';
+  position:absolute;
+  width:0;
+  height:0;
+  top:100%;
+  right:30px;
   border-width:0 0 15px 15px;
   border-style: solid;
   border-color: transparent transparent transparent #8d5c38;
@@ -609,7 +676,7 @@ header {
   padding-left: 0!important;
 }
 
-/* generic content ribbon styles */
+/* bottom ribbons used in boxes */ 
 
 .ribbon-bottom {
   position:absolute;
@@ -831,13 +898,13 @@ header {
 
 .post_outer_container {
   position: relative;
+  overflow: hidden;
 }
 .post_container {
   position: relative;
 	padding: 60px 15px 30px 15px;
 	background: #fff;
-	margin-bottom:25px;
-  overflow: hidden;
+	margin: 0 15px 25px 15px;
 }
 .post_container ul {
   list-style: disc;
@@ -1200,8 +1267,7 @@ blockquote p {
   position: relative;
 	background: #fff;
 	padding: 65px 15px 15px 15px;
-	margin-bottom: 15px;
-  overflow: hidden;
+	margin: 0 15px 15px 15px;
 }
 #comments .navigation {
   padding: 0 0 18px 0;
@@ -1315,7 +1381,10 @@ h6 {
 	text-decoration: none;
 }
 .sd_left_sidebar .posts_title, .sd_left_sidebar .posts_title a, .sd_left_sidebar .commentsh2 {
-  margin-left:10%;
+  margin-left:25px;
+}
+.sd_left_sidebar .commentsh2 {
+  margin-left: 55px;
 }
 .posts_title a:hover{
 	color: #5ca9d6;

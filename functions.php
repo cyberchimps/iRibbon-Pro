@@ -446,6 +446,115 @@ require_once ( get_template_directory() . '/includes/options-functions.php' ); /
 require_once ( get_template_directory() . '/includes/meta-box.php' ); // Meta options markup.
 require_once ( get_template_directory() . '/includes/update.php' ); // Notify user of theme update on "Updates" page in Dashboard.
 
+/** iRibbon title ribbon wrap **/
+function iribbon_title()
+{
+	global $content_grid;
+	$title = get_the_title();
+	$display = '';
+	/* lets make the length of the string shorter for the 2 sidebars and longer for 1 sidebar */
+	if( strpos( $content_grid, 'two_sidebars' ) )
+	{
+		$title_array = str_split( $title, 30 );
+	}
+	else {
+		$title_array = str_split( $title, 45 );
+	}
+	/* count the number of elements in the array */
+	$title_count = count( $title_array );
+	$i = 1;
+	/* lets loop through the array */
+	while( $i <= $title_count )
+	{
+		/* if there is only one element then we can just go ahead and display it */
+		if( $title_count === 1 )
+		{
+			echo '<div class="ribbon-top-cut">
+      			</div><!-- ribbon-top-cut -->
+						<div class="ribbon-top">
+      			<h2 class="posts_title"><a href="'.get_permalink().'">'.$title.'</a></h2>
+      			</div><!-- ribbon top -->
+      			<div class="ribbon-shadow">
+      			</div><!-- ribbon shadow -->';
+		}
+		else{
+			/* lets style it for a right sidebar */
+			if( strpos( $content_grid, 'sd_right_sidebar' ) )
+			{
+				/* styling for the last element */
+				if( $title_count === $i )
+				{
+					/* the last padding statement makes room on the post for the larger title */
+					$display .= '<div class="ribbon-more" style="top:'.(($i-1)*65).'px;">
+											<h2 class="posts_title"><a href="'.get_permalink().'">'.$title_array[$i-1].'</a></h2>
+											<div class="ribbon-extra"></div><!-- ribbon extra -->
+											</div><!-- ribbon top -->
+											<div class="ribbon-shadow" style="top:'.(($i-1)*65 + 44).'px">
+											</div><!-- ribbon shadow -->
+											<div style="padding-top:'.(($i-1)*65).'px"></div>';
+				}
+				/* lets style the first element */
+				elseif( $i === 1 )
+				{
+					$display .= '<div class="ribbon-top-cut">
+											</div><!-- ribbon-top-cut -->
+											<div class="ribbon-top" style="top:0;">
+											<h2 class="posts_title"><a href="'.get_permalink().'">'.$title_array[$i-1].'-</a></h2>
+											</div><!-- ribbon top -->
+											<div class="ribbon-shadow" style="top:'.(($i-1)*65 + 44).'px">
+											</div><!-- ribbon shadow -->';
+				}
+				/* and for all other ribbons */
+				else {
+					$display .= '<div class="ribbon-more" style="top:'.(($i-1)*65).'px">
+											<h2 class="posts_title"><a href="'.get_permalink().'">'.$title_array[$i-1].'-</a></h2>
+											<div class="ribbon-extra"></div><!-- ribbon extra -->
+											</div><!-- ribbon top -->
+											<div class="ribbon-shadow" style="top:'.(($i-1)*65 + 44).'px">
+											</div><!-- ribbon shadow -->';
+				}
+			}
+			elseif( strpos( $content_grid, 'sd_left_sidebar' ) )
+			{
+				/* styling for the last element */
+				if( $title_count === $i )
+				{
+					/* the last padding statement makes room on the post for the larger title */
+					$display .= '<div class="ribbon-more" style="top:'.(($i-1)*65).'px;">
+											<h2 class="posts_title"><a href="'.get_permalink().'">'.$title_array[$i-1].'</a></h2>
+											<div class="ribbon-extra"></div><!-- ribbon extra -->
+											</div><!-- ribbon top -->
+											<div class="ribbon-shadow" style="top:'.(($i-1)*65 + 44).'px">
+											</div><!-- ribbon shadow -->
+											<div style="padding-top:'.(($i-1)*65).'px"></div>';
+				}
+				/* lets style the first element */
+				elseif( $i === 1 )
+				{
+					$display .= '<div class="ribbon-top-cut">
+											</div><!-- ribbon-top-cut -->
+											<div class="ribbon-top" style="top:0;">
+											<h2 class="posts_title"><a href="'.get_permalink().'">'.$title_array[$i-1].'-</a></h2>
+											</div><!-- ribbon top -->
+											<div class="ribbon-shadow" style="top:'.(($i-1)*65 + 44).'px">
+											</div><!-- ribbon shadow -->';
+				}
+				/* and for all other ribbons */
+				else {
+					$display .= '<div class="ribbon-more" style="top:'.(($i-1)*65).'px">
+											<h2 class="posts_title"><a href="'.get_permalink().'">'.$title_array[$i-1].'-</a></h2>
+											<div class="ribbon-extra"></div><!-- ribbon extra -->
+											</div><!-- ribbon top -->
+											<div class="ribbon-shadow" style="top:'.(($i-1)*65 + 44).'px">
+											</div><!-- ribbon shadow -->';
+				}
+			}
+		}
+		$i++;
+	}
+			echo $display;
+}
+
 // Presstrends
 function presstrends() {
 
