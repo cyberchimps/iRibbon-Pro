@@ -47,14 +47,22 @@ function response_page_section_content() {
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
       <?php if ($hidetitle == "on" OR $hidetitle == ""): ?>
 			<div class="post_outer_container">
+        <div class="ribbon-top-end">
+        </div>
       <?php endif; ?>
         
 			<div class="post_container">
 			
 				<div class="post" id="post-<?php the_ID(); ?>">
 				<?php if ($hidetitle == "on" OR $hidetitle == ""): ?>
-    			<?php iribbon_title(); ?>
-				<?php endif;?>
+				<div class="ribbon-top-cut">
+          </div><!-- ribbon-top-cut -->
+          <div class="ribbon-top">
+					<h2 class="posts_title"><?php the_title(); ?></h2>
+          </div><!-- ribbon top -->
+          <div class="ribbon-shadow">
+      </div><!-- ribbon shadow -->
+						<?php endif;?>
 
 					<div class="entry">
 

@@ -530,7 +530,7 @@ header {
   top: 0;
   right:-15px;
   height:41px;
-  width:105%;
+  width:100%;
   padding-top:5px;
   background: #cd834a;
   background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
@@ -541,7 +541,7 @@ header {
   background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
 }
-.sd_left_sidebar div.ribbon-more h2 {
+.sd_left_sidebar div.ribbon-more {
   margin-left: 0px!important;
 }
 .sd_left_sidebar div.ribbon-more:before {
@@ -1380,8 +1380,8 @@ h6 {
   margin-left:10px;
 	text-decoration: none;
 }
-.sd_left_sidebar .posts_title, .sd_left_sidebar .posts_title a, .sd_left_sidebar .commentsh2 {
-  margin-left:25px;
+.sd_left_sidebar .ribbon-top .posts_title, .sd_left_sidebar .ribbon-top .posts_title a, .sd_left_sidebar .commentsh2 {
+  margin-left:50px;
 }
 .sd_left_sidebar .commentsh2 {
   margin-left: 55px;

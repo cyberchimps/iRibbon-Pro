@@ -49,12 +49,14 @@ function response_scripts() {
 	wp_register_script( 'menu' ,$path.'/js/menu.js');
 	wp_register_script( 'plusone' ,$path.'/js/plusone.js');
 	wp_register_script( 'mobilemenu' ,$path.'/js/mobilemenu.js');
+	wp_register_script( 'iribbon', $path.'/js/iribbon.js' );
 	
 	wp_enqueue_script ('orbit');
 	wp_enqueue_script ('bootstrap');
 	wp_enqueue_script ('menu');
 	wp_enqueue_script ('plusone');
 	wp_enqueue_script ('mobilemenu');
+	wp_enqueue_script ('iribbon');
 	
 	}
 	

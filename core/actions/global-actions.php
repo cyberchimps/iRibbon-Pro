@@ -58,7 +58,13 @@ function response_loop_content($content) {
 	} ?>
 		
 		<?php ob_start(); ?>
-    <?php iribbon_title(); ?>
+    <div class="ribbon-top-cut">
+      </div><!-- ribbon-top-cut -->
+			<div class="ribbon-top">
+      <h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+      </div><!-- ribbon top -->
+      <div class="ribbon-shadow">
+      </div><!-- ribbon shadow -->
 			<?php if ($post_formats != '0') : ?>
 			<div class="postformats"><!--begin format icon-->
 				<img src="<?php echo get_template_directory_uri(); ?>/images/formats/<?php echo $format ;?>.png" alt="formats" />
