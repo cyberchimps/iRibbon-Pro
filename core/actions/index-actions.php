@@ -46,7 +46,7 @@ function response_index_content() {
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="post_outer_container">
-			<div class="post_container">
+			<article class="post_container">
       
 				<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 		
@@ -71,14 +71,14 @@ function response_index_content() {
 				<!--End @response post tags hook-->
 				
 				</div><!--end post_class-->
-			</div><!--end post container-->
+			</article><!--end post container-->
 			</div><!-- end post outer container -->
 			<?php if (is_single() && $options->get($themeslug.'_post_pagination') == "1") : ?>
-			<div id="post_pagination"><div class="pagination_text">
+			<nav id="post_pagination"><div class="pagination_text">
 				<!--Begin @response post pagination hook-->
 					<?php response_post_pagination(); ?>
 				<!--End @response post pagination hook-->	
-			</div></div>		
+			</div></nav>		
 				<?php endif;?>
 
 			

@@ -341,6 +341,7 @@ function response_nav() {
 <h3>Navigation</h3>
 </div>
     <?php wp_nav_menu( array(
+				'container' => 'nav',
 		    'theme_location' => 'mobile-menu', // Setting up the location for the main-menu, Main Navigation.
 		    'fallback_cb' => 'wp_page_menu', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
 		    'items_wrap'      => '<ul id="nav_menu">%3$s</ul>',
@@ -362,8 +363,9 @@ function response_nav() {
 </div><!-- ribbon right --> 
 <div class="ribbon-right-cut">
 </div><!-- ribbon right cut -->
-					<div id="nav">
 		    <?php wp_nav_menu( array(
+				'container' => 'nav',
+				'container_id' => 'nav',
 		    'theme_location' => 'header-menu', // Setting up the location for the main-menu, Main Navigation.
 		    'fallback_cb' => 'response_menu_fallback', //if wp_nav_menu is unavailable, WordPress displays wp_page_menu function, which displays the pages of your blog.
 		    'items_wrap'      => '<ul id="nav_menu">%3$s</ul>',
@@ -372,7 +374,6 @@ function response_nav() {
 	    	?>
         	<div class="nav-shadow">
           </div><!-- nav shadow -->
-          </div><!-- nav -->
       </div><!-- id menu -->
  	</div><!-- row-fluid -->
 </div><!-- container-fluid -->

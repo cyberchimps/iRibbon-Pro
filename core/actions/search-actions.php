@@ -29,23 +29,22 @@ function response_search_content() {
 	global $options, $themeslug;
 	$results = apply_filters( 'response_search_results_message', 'Search Results For: %s' ); 
 	$noresults = apply_filters( 'response_no_search_results_message', 'No posts found.' ); ?>
-	
-	<div id="content_left">
-		<div class="content_padding">
 
+		<h5 class="iribbon-search-term"><?php printf( __( $results ), '<span>' . get_search_query() . '</span>' ); ?></h5>
 		<?php if (have_posts()) : ?>
-
-		<h3><?php printf( __( $results ), '<span>' . get_search_query() . '</span>' ); ?></h3><br />
-
+			<div class="post_outer_container">
+			<article class="post_container">
+  
 		<?php while (have_posts()) : the_post(); ?>
-		
-		<div class="post_container">
-
 			<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-
-				<h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+			<div class="ribbon-top-cut">
+      </div><!-- ribbon-top-cut -->
+			<div class="ribbon-top"> 
+				<h2 id="post-<?php the_ID(); ?>" class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+        </div><!-- ribbon top -->
+      <div class="ribbon-shadow">
+      </div><!-- ribbon shadow -->
 				<?php get_template_part('meta', 'search' ); ?>
-
 				<div class="entry">
 
 					<?php 
@@ -60,19 +59,33 @@ function response_search_content() {
 				</div>
 
 			</div>
-
-		</div><!--end post_container-->
+			
 		<?php endwhile; ?>
 
 		<?php response_pagination(); ?>
-
+		
+  </article><!-- post container -->
+  </div><!-- post outer container -->
 	<?php else : ?>
+	<div class="post_outer_container">
+			<article class="post_container">
+      <div class="ribbon-top-cut">
+      </div><!-- ribbon-top-cut -->
+			<div class="ribbon-top">
+					<h2 class="posts_title"><?php printf( __( $noresults, 'response' )) ; ?></h2>
+      </div><!-- ribbon top -->
+      <div class="ribbon-shadow">
+      </div><!-- ribbon shadow -->
+      <div class="entry">
 
-		<h2><?php printf( __( $noresults, 'response' )) ; ?></h2>
+					<p>No posts can be found for your search term <?php echo get_search_query(); ?>.</p>
+          <p>Please try again using a different term.</p>
 
+				</div>
+  </article><!-- post container -->
+  </div><!-- post outer container -->
 	<?php endif; ?>
-		</div><!--end content_padding-->
-	</div><!--end content_left--><?php
+	<?php
 }
 
 /**

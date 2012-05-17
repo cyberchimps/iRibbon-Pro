@@ -1,5 +1,9 @@
 /* Response Pro Style.css */
 
+/* HTML5 display tags */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+
 /* Reset and Design Constant Styles */
 
 *, html, body{padding:0;border:0;margin:0;}
@@ -378,8 +382,8 @@ header {
   border-top:#9F673D 1px solid;
   border-right:#9F673D 1px solid;
   border-bottom:#9F673D 1px solid;
-  border-left:none
-  ;margin:-1px 0 0 -9px
+  border-left:none;
+  margin:-1px 0 0 -9px
 }
 #nav ul li:hover ul li a{
   width:150px;
@@ -469,7 +473,7 @@ header {
   padding-left: 0!important
 }
 .row-fluid [class*="span"]:first-child {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 .row-fluid [class*="span"]:last-child {
   padding-right: 15px;
@@ -512,7 +516,7 @@ header {
   width:0;
   height:0;
   top:100%;
-  left: 30px;
+  left: 0;
   border-width:15px 0 0 15px;
   border-style: solid;
   border-color: #8d5c38 transparent transparent transparent;
@@ -894,17 +898,35 @@ header {
 
 #morefoot .searchform {float:left;}
 
+/* search results */
+
+.iribbon-search-term {
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 30px;
+  background: #ffffff url( '../images/magnify.png' ) no-repeat 5px 50%;
+  border: 1px solid #A0673E;
+}
+
+.iribbon-search-term span {
+  font-weight: normal;
+}
+
 /* Post Container Styling  */
 
 .post_outer_container {
   position: relative;
+  width: 100%;
+  margin-right: 20px;
+  margin-left: -15px;
+  padding: 0 15px 25px 15px;
   overflow: hidden;
 }
 .post_container {
   position: relative;
 	padding: 60px 15px 30px 15px;
+  margin-bottom: 30px;
 	background: #fff;
-	margin: 0 15px 25px 15px;
 }
 .post_container ul {
   list-style: disc;
@@ -1266,8 +1288,7 @@ blockquote p {
 .comments_container {
   position: relative;
 	background: #fff;
-	padding: 65px 15px 15px 15px;
-	margin: 0 15px 15px 15px;
+	padding: 65px 15px 30px 15px;
 }
 #comments .navigation {
   padding: 0 0 18px 0;
@@ -1379,9 +1400,13 @@ h6 {
   color: #e9ecc9;
   margin-left:10px;
 	text-decoration: none;
+  text-wrap: none;
 }
-.sd_left_sidebar .ribbon-top .posts_title, .sd_left_sidebar .ribbon-top .posts_title a, .sd_left_sidebar .commentsh2 {
+.sd_left_sidebar .commentsh2 {
   margin-left:50px;
+}
+.sd_left_sidebar .posts_title, .sd_left_sidebar .posts_title a {
+  margin-left: 20px;
 }
 .sd_left_sidebar .commentsh2 {
   margin-left: 55px;

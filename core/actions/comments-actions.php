@@ -45,10 +45,9 @@ function response_comments_password_required() {
 function response_comments_loop() { 
 	global $post; ?>
 <?php if ( have_comments() ) : ?>
-<div class="post_outer_container">
     	<div class="ribbon-top-end">
       </div>
-	<div class="comments_container">
+	<aside class="comments_container">
   <div class="ribbon-top-cut">
       </div><!-- ribbon-top-cut -->
 			<div class="ribbon-top">
@@ -56,22 +55,21 @@ function response_comments_loop() {
 			</div><!-- ribbon top -->
       <div class="ribbon-shadow">
       </div><!-- ribbon shadow -->
-		<div class="navigation">
+		<nav class="navigation">
 			<div class="next-posts"><?php previous_comments_link() ?></div>
 			<div class="prev-posts"><?php next_comments_link() ?></div>
-		</div>
+		</nav>
 
 		<ol class="commentlist">
 			<?php wp_list_comments('callback=response_comment'); ?>
 		</ol>
 
-		<div class="navigation">
+		<nav class="navigation">
 			<div class="next-posts"><?php previous_comments_link() ?></div>
 			<div class="prev-posts"><?php next_comments_link() ?></div>
-		</div>
+		</nav>
 		
-	</div><!--end comments_container-->
-	</div><!-- post outer container -->
+	</aside><!--end comments_container-->
  <?php else : // this is displayed if there are no comments so far ?>
 
 	<?php if ( comments_open() ) : ?>
@@ -84,10 +82,9 @@ function response_comments_loop() {
 <?php endif; ?>
 
 <?php if ( comments_open() ) : ?>
-<div class="post_outer_container">
     	<div class="ribbon-top-end">
       </div>
-<div class="comments_container">
+<aside class="comments_container">
  <div class="ribbon-top-cut">
       </div><!-- ribbon-top-cut -->
 			<div class="ribbon-top">
@@ -115,8 +112,7 @@ function response_comments_loop() {
 	
 </div>
 
-</div><!--end comments_container-->
-</div><!-- end post outer container -->
+</aside><!--end comments_container-->
 	<?php endif; // If registration required and not logged in ?>
 
 <?php }

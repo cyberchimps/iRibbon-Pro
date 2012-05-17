@@ -1,8 +1,10 @@
 /**
  * Helps iRibbon create extended titles in a responsive way
  */
+
 jQuery(document).ready(function($) {
-	
+
+/* function to break string into chunks of text */	
 function str_split(str, chunk_size)
 {
   var a_chunks = [], index = 0;
@@ -15,6 +17,7 @@ function str_split(str, chunk_size)
   return a_chunks;
 }
 
+/* function to work out ribbon size, number and how long the text should be */
 function ribbon_size()
 {
 	$( '.posts_title' ).each(function(index) {
@@ -22,10 +25,12 @@ function ribbon_size()
 		 var url = $(this).children('a').attr('href');
 		 var length = title.length;
 		 var width = parseFloat($(this).css('width'));
-		 var font_width = 15;
+		 var font_width = (parseFloat($(this).css('font-size')))/2;
 		 var chunks = parseInt(length*font_width/width);
 		 var chunk_size = parseInt(length/chunks);
 		 var chunk_array = '';
+		 
+		 $(this).css('width', width - 46 + 'px');
 		 
 		 if(chunks > 1)
 		 {
@@ -56,7 +61,10 @@ function ribbon_size()
 }
 /* run the ribbon function */
 ribbon_size();
-/* this makes the ribbon width the right width for the post container */
+/* this makes the ribbon width the right width for the post container with a left sidebar */
+var sls_rt = parseInt($('.sd_left_sidebar div.ribbon-top').css('width'));
 var sls_rm = parseInt($('.sd_left_sidebar div.ribbon-more').css('width'));
-$('.sd_left_sidebar div.ribbon-more').css('width', (sls_rm + 30) + 'px')
+$('.sd_left_sidebar div.ribbon-more').css('width', (sls_rm + 30) + 'px');
+$('.sd_left_sidebar div.ribbon-top').css('width', (sls_rt - 31) + 'px')
+
 });

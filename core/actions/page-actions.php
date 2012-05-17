@@ -51,7 +51,7 @@ function response_page_section_content() {
         </div>
       <?php endif; ?>
         
-			<div class="post_container">
+			<article class="post_container">
 			
 				<div class="post" id="post-<?php the_ID(); ?>">
 				<?php if ($hidetitle == "on" OR $hidetitle == ""): ?>
@@ -70,14 +70,14 @@ function response_page_section_content() {
 						
 					</div><!--end entry-->
 					
-					<div style=clear:both;></div>
+					<div style="clear:both;"></div>
 					<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
 
 
 				<?php edit_post_link('Edit', '<p>', '</p>'); ?>
 
 				</div><!--end post-->
-			</div><!--end post_container-->
+			</article><!--end post_container-->
 		
 			<?php comments_template(); ?>
 
