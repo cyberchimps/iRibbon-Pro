@@ -22,9 +22,9 @@
 ?>
 
 <div class="container-fluid">
-	<nav class="row-fluid">
+
 		<?php if ($options->get($themeslug.'_archive_breadcrumbs') == "1") { response_breadcrumbs();}?>
-	</nav>
+
 	<div class="row-fluid">
 	<!--Begin @response before content sidebar hook-->
 		<?php response_before_content_sidebar(); ?>
