@@ -478,6 +478,10 @@ header {
 .row-fluid [class*="span"]:last-child {
   padding-right: 15px;
 }
+/* increase margins between rows */
+.row-fluid {
+  margin-bottom: 20px;
+}
 
 /* Ribbons */
 
@@ -917,7 +921,6 @@ header {
 .post_outer_container {
   position: relative;
   width: 100%;
-  margin-right: 20px;
   margin-left: -15px;
   padding: 0 15px 25px 15px;
   overflow: hidden;
@@ -925,7 +928,6 @@ header {
 .post_container {
   position: relative;
 	padding: 60px 15px 30px 15px;
-  margin-bottom: 30px;
 	background: #fff;
 }
 .post_container ul {
@@ -997,11 +999,10 @@ header {
   padding: 5px 0 5px 0;
 }
 #crumbs {
-  margin-bottom: 15px;
   background: transparent;
 }
 .crumbs_text {
-  padding: 5px 0 5px 15px;
+  padding: 5px 0 0 15px;
 }
 #post_pagination {
   border: 1px solid #DDD;
@@ -1066,7 +1067,6 @@ ol, ul {
 }
 #sidebar_left {
   margin-bottom:15px;
-  margin-right:15px;
   background:#bebebe
 }
 .sd_right_sidebar {
@@ -1169,7 +1169,7 @@ ol, ul {
 .footer-widget-title {
 	font-size:20px;
   font-family: 'Lobster', cursive;
-  color: #e9ecc9;
+  color: #e9ecc9;/* yellow */
   font-weight: 400;
 }
 .footer-widgets ul{
@@ -1189,6 +1189,7 @@ ol, ul {
 	padding-top: 10px;
 }
 #afterfootercopyright {
+  color: #e9ecc9;/* yellow */
   text-align: right;
 }
 #credit {

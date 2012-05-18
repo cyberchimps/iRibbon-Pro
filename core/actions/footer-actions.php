@@ -84,7 +84,7 @@ function response_secondary_footer_copyright() {
 		$copyright = $options->get($themeslug.'_footer_text');
 	}
 	
-	echo "<div id='afterfootercopyright' class='six columns'>";
+	echo "<div id='afterfootercopyright' class='span6'>";
 		echo "&copy; $copyright";
 	echo "</div>";
 }
@@ -100,7 +100,7 @@ function response_secondary_footer_credit() {
 	
 	if ($options->get($themeslug.'_hide_link') == "1") {?>
 		
-		<div id="credit" class="six columns">
+		<div id="credit" class="span6">
 			<a href="http://cyberchimps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/achimps.png" alt="credit" /></a>
 		</div> 
 	

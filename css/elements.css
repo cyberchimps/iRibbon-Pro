@@ -149,6 +149,9 @@ border-color: transparent #E9E3BB;/*yellow*/
   border-top: 3px solid #6A8484;
   border-bottom: 3px solid #6A8484;
 }
+.calloutrow .row-fluid {
+  margin-bottom: 0;
+}
 #calloutwrap {
 	overflow: hidden;
 	position:relative;
