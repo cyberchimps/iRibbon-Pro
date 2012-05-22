@@ -1,4 +1,4 @@
-<div id="sidebar_left">
+<aside id="sidebar_left">
 
     <?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Sidebar Left')) : else : ?>
     
@@ -36,4 +36,4 @@
     	</div>
 	
 	<?php endif; ?>
-</div><!--end sidebar_left-->
+</aside><!--end sidebar_left-->
