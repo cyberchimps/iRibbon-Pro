@@ -24,7 +24,6 @@
   list-style: none;
 }
 .es-carousel ul li .image-container {
-  overflow: hidden;
   border:3px solid #94B0A9;
  -webkit-border-radius: 50%;
 	border-radius: 50%;
@@ -37,8 +36,8 @@
 	border:none;
 	max-height:100%;
 	max-width:100%;
- -webkit-border-radius: 50%;
-	border-radius: 50%;
+ -webkit-border-radius: 49%;
+	border-radius: 49%;
 }
 .es-nav span{
 	position:absolute;
