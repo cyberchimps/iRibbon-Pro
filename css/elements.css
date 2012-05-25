@@ -69,6 +69,8 @@
 	overflow: hidden;
 	margin: auto;
 	margin-bottom: 15px;
+  padding-left: 130px;
+  background: url('../../images/backgrounds/twitter.png') no-repeat 0 0;
 }
 #twitter-image {
   float:left;

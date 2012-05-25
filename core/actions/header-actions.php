@@ -165,7 +165,7 @@ global $themeslug, $options; //Call global variables
 		$font = $options->get($themeslug.'_font'); 
 	} 
 	if ($options->get($themeslug.'_color_scheme') == '') {
-		$color = 'blue';
+		$color = '';
 	}
 	else {
 		$color = $options->get($themeslug.'_color_scheme');

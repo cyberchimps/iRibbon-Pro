@@ -682,7 +682,7 @@ header {
 /*content ribbons with 2 sidebars */
 
 .two_sidebars {
-  padding-left: 0!important;
+  padding-right: 15px;
 }
 
 /* bottom ribbons used in boxes */ 
