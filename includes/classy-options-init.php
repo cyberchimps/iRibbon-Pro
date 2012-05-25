@@ -138,7 +138,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 			->section_order($themeslug."_blog_section_order", "Drag & Drop Blog Elements", array('options' => array("response_index" => "Post Page", "response_blog_slider" => "Feature Slider",  "response_callout_section" => "Callout Section", "response_twitterbar_section" => "Twitter Bar", "response_index_carousel_section" => "Carousel", "response_box_section" => "Boxes"), "default" => 'response_index'))
 		->close_outersection()
 		->subsection("Blog Options")
-			->images($themeslug."_blog_sidebar", "Sidebar Options", array( 'options' => array("none" => TEMPLATE_URL . '/images/options/none.png',"two-right" => TEMPLATE_URL . '/images/options/tworight.png', "right-left" => TEMPLATE_URL . '/images/options/rightleft.png', "left" => TEMPLATE_URL . '/images/options/left.png',  "right" => TEMPLATE_URL . '/images/options/right.png'), 'default' => 'right'))
+			->images($themeslug."_blog_sidebar", "Sidebar Options", array( 'options' => array("none" => TEMPLATE_URL . '/images/options/none.png', "left" => TEMPLATE_URL . '/images/options/left.png',  "right" => TEMPLATE_URL . '/images/options/right.png'), 'default' => 'right'))
 			->checkbox($themeslug."_post_formats", "Post Format Icons",  array('default' => true))
 			->checkbox($themeslug."_show_excerpts", "Post Excerpts")
 			->text($themeslug."_excerpt_link_text", "Excerpt Link Text", array('default' => '(More)…'))

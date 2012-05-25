@@ -10,8 +10,8 @@
 /**
 * Define global theme functions.
 */ 
-	$themename = 'response';
-	$themenamefull = 'Response Pro';
+	$themename = 'iribbon';
+	$themenamefull = 'iRibbon Pro';
 	$themeslug = 're';
 	$pagedocs = 'http://cyberchimps.com/question/using-the-response-pro-page-options/';
 	$sliderdocs = 'http://cyberchimps.com/question/how-to-use-the-feature-slider-in-response-pro/';
