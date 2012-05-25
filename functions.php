@@ -49,7 +49,7 @@ add_action( 'after_setup_theme', 'response_theme_setup' );
 * Redirect user to theme options page after activation.
 */ 
 if ( is_admin() && isset($_GET['activated'] ) && $pagenow =="themes.php" ) {
-	wp_redirect( 'themes.php?page=response' );
+	wp_redirect( 'themes.php?page=iribbon' );
 }
 
 /**
