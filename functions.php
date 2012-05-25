@@ -58,7 +58,7 @@ if ( is_admin() && isset($_GET['activated'] ) && $pagenow =="themes.php" ) {
 function response_admin_link() {
 	global $wp_admin_bar;
 
-	$wp_admin_bar->add_menu( array( 'id' => 'Response', 'title' => 'Response Pro Options', 'href' => admin_url('themes.php?page=response')  ) ); 
+	$wp_admin_bar->add_menu( array( 'id' => 'iRibbon', 'title' => 'iRibbon Pro Options', 'href' => admin_url('themes.php?page=iribbon')  ) ); 
 }
 add_action( 'admin_bar_menu', 'response_admin_link', 113 );
 
