@@ -168,11 +168,11 @@ div.slider-nav span {
 
 div.slider-nav span.right {
     background: url(images/right-arrow.png) no-repeat;
-    right: 0; }
+    right: -1px; }
 
 div.slider-nav span.left {
     background: url(images/left-arrow.png) no-repeat;
-    left: 0; }
+    left: 1px; }
 
 
 /* BULLET NAV

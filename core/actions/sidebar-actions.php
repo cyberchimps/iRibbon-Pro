@@ -52,7 +52,7 @@ function response_sidebar_init_content() {
 	}
 	
 	if ($sidebar == 'none' OR $sidebar == "2") {
-		$content_grid = 'span12';
+		$content_grid = 'span12 sd_left_sidebar';
 	}
 	elseif ($sidebar == 'left' OR $sidebar == "1") {
 		$content_grid = 'span8 sd_left_sidebar';
