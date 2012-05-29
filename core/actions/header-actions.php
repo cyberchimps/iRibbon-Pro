@@ -164,11 +164,11 @@ global $themeslug, $options; //Call global variables
 	else {
 		$font = $options->get($themeslug.'_font'); 
 	} 
-	if ($options->get($themeslug.'_color_scheme') == '') {
+	if ($options->get($themeslug.'_skin_color') == '') {
 		$color = '';
 	}
 	else {
-		$color = $options->get($themeslug.'_color_scheme');
+		$color = $options->get($themeslug.'_skin_color');
 	}?>
 	
 <link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
