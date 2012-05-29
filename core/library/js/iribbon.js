@@ -24,7 +24,7 @@ function ribbon_size()
 		 var title = $(this).text();
 		 var url = $(this).children('a').attr('href');
 		 var length = title.length;
-		 var width = parseFloat($(this).css('width'));
+		 var width = parseFloat($(this).parent('.ribbon-top').css('width'))-46;
 		 var font_width = (parseFloat($(this).css('font-size')))/2;
 		 var chunks = parseInt(length*font_width/width);
 		 var chunk_size = parseInt(length/chunks);
