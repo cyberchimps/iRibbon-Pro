@@ -185,9 +185,9 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 	<script type="text/javascript">
 			 jQuery(document).ready(function ($) {
 			$('#carousel').elastislide({
-				imageW 		: 145,
+				imageW 		: 140,
 				speed 		: $speed,
-				margin		: 9,
+				margin		: 8,
 				minItems 	: 5
 			});
 			});
