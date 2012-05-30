@@ -325,6 +325,7 @@ header {
   line-height:50px;
   text-decoration:none;
   padding:0 15px;
+  text-align: left;
 }
 #nav .current_page_item a{
   color:#E9E3BB;/*yellow*/
