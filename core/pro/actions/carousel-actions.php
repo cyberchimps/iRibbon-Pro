@@ -33,8 +33,8 @@ function response_carousel_section_content() {
 	$default = "$root/images/pro/carousel.jpg";
 	
 	if (is_page()) {
-		$customcategory = get_post_meta($post->ID, 'carousel_category' , true);
-		$speed = get_post_meta($post->ID, 'carousel_speed' , true);
+		$customcategory = get_post_meta($post->ID, $themeslug.'_carousel_category' , true);
+		$speed = get_post_meta($post->ID, $themeslug.'_carousel_speed' , true);
 	}
 	else {
 		$customcategory = $options->get($themeslug.'_carousel_category');
@@ -76,9 +76,9 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 
 	    	/* Post-specific variables */	
 
-	    	$image 		= get_post_meta($post->ID, 'post_image' , true);  
+	    	$image 		= get_post_meta($post->ID, $themeslug.'_post_image' , true);  
 	    	$realtitle 		= get_the_title();  
-	    	$link 		= get_post_meta($post->ID, 'post_url' , true);
+	    	$link 		= get_post_meta($post->ID, $themeslug.'_post_url' , true);
 	    	
 	    	if ($realtitle != "Untitled") {
 				$title = get_the_title();

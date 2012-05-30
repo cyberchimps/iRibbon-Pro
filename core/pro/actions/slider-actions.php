@@ -40,17 +40,17 @@ function response_slider_content() {
 	$root = get_template_directory_uri(); 
 	
 	if (is_page()) {
-		$type = get_post_meta($post->ID, 'page_slider_type' , true);
-		$category = get_post_meta($post->ID, 'slider_blog_category' , true);
-		$customcategory = get_post_meta($post->ID, 'slider_category' , true);
-		$postnumber  = get_post_meta($post->ID, 'slider_blog_posts_number' , true);
-		$sliderheight = get_post_meta($post->ID, 'slider_height' , true);
-		$sliderdelay = get_post_meta($post->ID, 'slider_delay' , true);
-		$slideranimation = get_post_meta($post->ID, 'page_slider_animation' , true);
-		$captionstyle = get_post_meta($post->ID, 'page_slider_caption_style' , true);
-		$navigationstyle = get_post_meta($post->ID, 'page_slider_navigation_style' , true);
-		$hidenav = get_post_meta($post->ID, 'hide_arrows' , true);
-		$wordenable = get_post_meta($post->ID, 'enable_wordthumb' , true);	
+		$type = get_post_meta($post->ID, $themeslug.'_page_slider_type' , true);
+		$category = get_post_meta($post->ID, $themeslug.'_slider_blog_category' , true);
+		$customcategory = get_post_meta($post->ID, $themeslug.'_slider_category' , true);
+		$postnumber  = get_post_meta($post->ID, $themeslug.'_slider_blog_posts_number' , true);
+		$sliderheight = get_post_meta($post->ID, $themeslug.'_slider_height' , true);
+		$sliderdelay = get_post_meta($post->ID, $themeslug.'_slider_delay' , true);
+		$slideranimation = get_post_meta($post->ID, $themeslug.'_page_slider_animation' , true);
+		$captionstyle = get_post_meta($post->ID, $themeslug.'_page_slider_caption_style' , true);
+		$navigationstyle = get_post_meta($post->ID, $themeslug.'_page_slider_navigation_style' , true);
+		$hidenav = get_post_meta($post->ID, $themeslug.'_hide_arrows' , true);
+		$wordenable = get_post_meta($post->ID, $themeslug.'_enable_wordthumb' , true);	
 	}
 	
 	else {
@@ -203,15 +203,15 @@ function response_slider_content() {
 
 	    	/* Post-specific variables */	
 
-	    	$customimage 		= get_post_meta($post->ID, 'slider_image' , true);  /* Gets slide custom image from page/post meta option */
+	    	$customimage 		= get_post_meta($post->ID, $themeslug.'_slider_image' , true);  /* Gets slide custom image from page/post meta option */
 	    	$customtext 		=  $post->post_content; /* Gets slide caption from custom slide meta option */
-	    	$customlink 		= get_post_meta($post->ID, 'slider_url' , true); /* Gets link from custom slide meta option */
+	    	$customlink 		= get_post_meta($post->ID, $themeslug.'_slider_url' , true); /* Gets link from custom slide meta option */
 	    	$permalink 			= get_permalink(); /* Gets post URL for blog post slides */
-	   		$blogtext 			= get_post_meta($post->ID, 'slider_text' , true); /* Gets slide caption from post meta option */  		
+	   		$blogtext 			= get_post_meta($post->ID, $themeslug.'_slider_text' , true); /* Gets slide caption from post meta option */  		
 	   		$title				= get_the_title() ; /* Gets slide title from post/custom slide title */
-	   		$hidetitlebar       = get_post_meta($post->ID, 'slider_hidetitle' , true); /* Gets page/post meta option for disabling slide title bar */
+	   		$hidetitlebar       = get_post_meta($post->ID, $themeslug.'_slider_hidetitle' , true); /* Gets page/post meta option for disabling slide title bar */
 	   		$customsized        = "$root/core/pro/library/wt/wordthumb.php?src=$customimage&a=c&$wordthumb"; /* Gets custom image from page/post meta option, applies wordthumb code  */
-	   		$customthumb 		= get_post_meta($post->ID, 'slider_custom_thumb' , true); /* Gets custom thumbnail from page/post meta option */
+	   		$customthumb 		= get_post_meta($post->ID, $themeslug.'_slider_custom_thumb' , true); /* Gets custom thumbnail from page/post meta option */
 
 			/* End variables */	
 
