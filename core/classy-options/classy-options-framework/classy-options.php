@@ -15,7 +15,7 @@ class ClassyOptions {
 	function admin_menu() {
 		global $themenamefull;
 		
-		$page = add_theme_page( $themenamefull.' Options', $themenamefull, 'edit_theme_options', $this->id, array( $this, 'render' ) );
+		$page = add_theme_page( $themenamefull.' Options', $themenamefull.' Options', 'edit_theme_options', $this->id, array( $this, 'render' ) );
 
 		add_action( "admin_print_styles-$page", array($this, 'load_styles') );
 		add_action( "admin_print_scripts-$page",  array($this, 'load_scripts') );
@@ -99,20 +99,24 @@ class ClassyOptions {
 					</p>
 				<div class="menu">
 					<ul class="buttons">
-						<li><a href="http://cyberchimps.com/" target="_blank"><?php printf( __( 'CyberChimps', 'response' )); ?></a></li>
-						<li><a href="http://cyberchimps.com/store/" target="_blank"><?php printf( __( 'Store', 'response' )); ?></a></li>
+						<li><a href="http://cyberchimps.com/store/" target="_blank"><?php printf( __( 'CyberChimps Store', 'ifeature' )); ?></a></li>
 						<li><a href="http://cyberchimps.com/support" target="_blank"><?php printf( __( 'Support', 'ifeature' )); ?></a></li>
-						<li><a href="http://cyberchimps.com/ifeaturepro/docs/" target="_blank"> <?php printf( __( 'Documentation', 'response' )); ?></a></li>
-						<li><a href="http://cyberchimps.com/forum/" target="_blank"><?php printf( __( 'Forum', 'response' )); ?></a></li>
-						<li><a href="http://twitter.com/#!/cyberchimps" target="_blank"><?php printf( __( 'Twitter', 'response' ));?></a></li>
-						<li><a href="http://facebook.com/cyberchimps/" target="_blank"><?php printf( __( 'Facebook', 'response' ));?></a></li>
+						<li><a href="http://cyberchimps.com/ifeaturepro/docs/" target="_blank"> <?php printf( __( 'Documentation', 'ifeature' )); ?></a></li>
+						<li><a href="http://cyberchimps.com/forum/" target="_blank"><?php printf( __( 'Forum', 'ifeature' )); ?></a></li>
+						<li><a href="http://twitter.com/#!/cyberchimps" target="_blank"><?php printf( __( 'Twitter', 'ifeature' ));?></a></li>
+						<li><a href="http://facebook.com/cyberchimps/" target="_blank"><?php printf( __( 'Facebook', 'ifeature' ));?></a></li>
+						<li><a href="http://cyberchimpspro.com/" target="_blank"><?php printf( __( 'CyberChimps Pro', 'ifeature' )); ?></a></li>
 					</ul>
 				</div>
 
 			</div>
 			<div id="main">
 				<?php $return = $this->fields(); ?>
-				
+				<div id="of-nav">
+					<ul class="nav">
+						<?php echo $return[1]; ?>
+					</ul>
+				</div>
 				<div id="content">
 					<?php echo $return[0]; /* Settings */ ?>
 				</div>
@@ -386,7 +390,7 @@ class ClassyOptions {
 			case "upload":
 				// $output .= optionsframework_medialibrary_uploader( $value['id'], $val, null ); // New AJAX Uploader using Media Library	
 				if(isset($val['url'])) {
-					$output .= "Preview: " . "<img src='{$val['url']}' width='350px' height='50px'/><br/>";
+					$output .= "Preview: <br /> " . "<img class='upload' src='{$val['url']}' /><br/>";
 				}
 				$output .= " &nbsp;&nbsp;&nbsp;&nbsp; URL <input type='text' name='{$value['id']}_text' size='72' value='" . (isset($val['url']) ? $val['url'] : "") . "'/>";
 				$output .= " or upload File: <input type='file' id='{$value['id']}' name='{$value['id']}'>";
@@ -511,7 +515,7 @@ class ClassyOptions {
 			// Heading for Navigation
 			case "heading":
 				if($counter >= 2){
-				   $output .= '</div></div>'."\n";
+				   $output .= '</div>'."\n";
 				}
 				
 				$jquery_click_hook = preg_replace('/\W/', '', strtolower($value['name']) );
@@ -519,9 +523,7 @@ class ClassyOptions {
 				$menu .= '<li>';
 				$icon = isset($value['icon']) ? " style=\"background-image: url({$value['icon']}); background-position: 8px center; background-repeat: no-repeat; \"" : "";
 				$menu .= '<a id="'.  esc_attr( $jquery_click_hook ) . '-tab" title="' . esc_attr( $value['name'] ) . '" href="' . esc_attr( '#'.  $jquery_click_hook ) . '"' . $icon . '>' . esc_html( $value['name'] ) . ' <span></span></a></li>';
-				$output .= '<div class="group" id="' . esc_attr( $jquery_click_hook ) . '">' . "<h2>{$value['name']}<span class='plus'>"
-					// . "<img src='" . CLASSY_OPTIONS_FRAMEWORK_URL . "/images/downarrow.png'>"
-					. "</span></h3><div class='group-items'>\n";
+				$output .= '<div class="group" id="' . esc_attr( $jquery_click_hook ) . '"><h2>' . esc_html( $value['name'] ) . '</h2>' . "\n";
 				break;
 
 			case "subsection":

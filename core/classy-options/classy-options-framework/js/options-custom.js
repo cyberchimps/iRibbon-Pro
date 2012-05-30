@@ -73,7 +73,66 @@ jQuery(document).ready(function($) {
 	}
 	});
 	}); //end color picker
-		
+	
+	// Switches option sections
+	$('.group').hide();
+	var activetab = '';
+	if (typeof(localStorage) != 'undefined' ) {
+		activetab = localStorage.getItem("activetab");
+	}
+	if (activetab != '' && $(activetab).length ) {
+		$(activetab).fadeIn();
+	} else {
+		$('.group:first').fadeIn();
+	}
+	$('.group .collapsed').each(function(){
+		$(this).find('input:checked').parent().parent().parent().nextAll().each( 
+			function(){
+				if ($(this).hasClass('last')) {
+					$(this).removeClass('hidden');
+						return false;
+					}
+				$(this).filter('.hidden').removeClass('hidden');
+			});
+	});
+	
+	if (activetab != '' && $(activetab + '-tab').length ) {
+		$(activetab + '-tab').parent('li').addClass('current');
+	}
+	else {
+		$('#of-nav li:first').addClass('current');
+	}
+	$('#of-nav li a').click(function(evt) {
+		$('#of-nav li').removeClass('current');
+		$(this).parent().addClass('current');
+		var clicked_group = $(this).attr('href');
+		if (typeof(localStorage) != 'undefined' ) {
+			localStorage.setItem("activetab", $(this).attr('href'));
+		}
+		$('.group').hide();
+		$(clicked_group).fadeIn();
+		evt.preventDefault();
+	});
+           					
+	$('.group .collapsed input:checkbox').click(unhideHidden);
+				
+	function unhideHidden(){
+		if ($(this).attr('checked')) {
+			$(this).parent().parent().parent().nextAll().removeClass('hidden');
+		}
+		else {
+			$(this).parent().parent().parent().nextAll().each( 
+			function(){
+				if ($(this).filter('.last').length) {
+					$(this).addClass('hidden');
+					return false;		
+					}
+				$(this).addClass('hidden');
+			});
+           					
+		}
+	}
+	
 	// Image Options
 	$('.of-radio-img-img').click(function(){
 		$(this).parent().parent().find('.of-radio-img-img').removeClass('of-radio-img-selected');
@@ -94,18 +153,6 @@ jQuery(document).ready(function($) {
 			$(this).find("span").addClass('minus');
 		}
 	});
-	
-	$('.group-items').hide();
-	$('.group > h2').click(function() {
-		$('span.minus').removeClass('minus');
-		if($(this).siblings('div').is(':visible')) {
-			$(this).siblings('div').fadeOut();
-		} else {
-			$(this).siblings('div').fadeIn();
-			$(this).find("span").addClass('minus');
-		}
-	});
-
 
  });	
 
