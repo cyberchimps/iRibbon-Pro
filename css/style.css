@@ -128,7 +128,6 @@ body {background: url( '../images/backgrounds/texture-background.jpg' )}
   position:relative;
   font-size:11px;
   line-height:13px;
-  margin-bottom: 38px;
   margin-top: -5px;
 }
 .pagination span, .pagination a {
@@ -479,10 +478,6 @@ header {
 .row-fluid [class*="span"]:last-child {
   padding-right: 15px;
 }
-/* increase margins between rows */
-.row-fluid {
-  margin-bottom: 20px;
-}
 
 /* Ribbons */
 
@@ -714,7 +709,7 @@ header {
   position:absolute;
   bottom:0;
   left:0px;
-  height:45px;
+  height:46px;
   width:15px;
   background: #cd834a;
   background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);

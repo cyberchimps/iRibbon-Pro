@@ -7,7 +7,7 @@
 /*============================*/
 /* Elastislide Style */
 .es-carousel-wrapper{
-	padding:10px 37px;
+	padding:0 37px;
 	position:relative;
 	margin-bottom: 15px;
 }
@@ -68,7 +68,6 @@
 #twitterbar {
 	overflow: hidden;
 	margin: auto;
-	margin-bottom: 15px;
   padding-left: 130px;
   background: url('../../images/backgrounds/twitter.png') no-repeat 0 0;
 }
