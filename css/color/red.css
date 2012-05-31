@@ -106,6 +106,9 @@ a:hover{color:#93352F;text-decoration:none}
   background: linear-gradient(top,  #93352F 0%,#701e26 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93352F', endColorstr='#701e26',GradientType=0 );
 }
+#mobile-nav-modal h3 {
+  color:#93352F;
+}
 
 /* Nav */
 #nav{
@@ -336,6 +339,9 @@ a:hover{color:#93352F;text-decoration:none}
 /* ELEMENTS */
 
 /* Callout */
+#callout_text {
+  color:#E9ECC9;
+}
 .calloutrow {
   background: #89946d;
   border-top: 3px solid #707959;

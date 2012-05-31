@@ -182,7 +182,6 @@
 /*====== Widgitized Boxes =====*/
 /*============================*/
 .boxes-row {
-  margin-bottom: 15px;
 }
 .boxes-row .span4:last-child {
 	padding-right: 0!important;
@@ -191,6 +190,7 @@
   position: relative;
   min-height: 200px;
   padding-left: 15px;
+  margin-bottom: 15px;
 }
 .iribbon-box {
   position: relative;
@@ -266,6 +266,39 @@
   top:100%;
   right:0;
   border-width:0 0 15px 15px;
+  border-style: solid;
+}
+/* bottom ribbons used in boxes */ 
+
+.ribbon-bottom {
+  position:absolute;
+  right:46px;
+  bottom: 0;
+  height:46px;
+  width:100%;
+}
+.ribbon-bottom-cut {
+  position:absolute;
+  right:0;
+  bottom:0;
+  width: 46px;
+  height: 46px;
+}
+.ribbon-bottom-end {
+  position:absolute;
+  bottom:0;
+  left:0px;
+  height:46px;
+  width:15px;
+}
+.ribbon-bottom-end:before {
+  content: ' ';
+  position:absolute;
+  width:0;
+  height:0;
+  top:-15px;
+  left:0;
+  border-width:15px 15px 0 0;
   border-style: solid;
 }
 

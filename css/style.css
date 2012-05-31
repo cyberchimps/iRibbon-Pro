@@ -191,7 +191,6 @@ header {
 }
 #mobile-nav-modal h3 {
   font-family:  'Lobster', cursive;
-  color:#CC824A;
 }
 
 /* Nav  */
@@ -228,7 +227,6 @@ header {
   line-height:50px;
   text-decoration:none;
   padding:0 15px;
-  text-align: left;
 }
 #nav ul li{
   position:relative
@@ -497,40 +495,6 @@ header {
   top:100%;
   right:30px;
   border-width:0 0 15px 15px;
-  border-style: solid;
-}
-
-/* bottom ribbons used in boxes */ 
-
-.ribbon-bottom {
-  position:absolute;
-  right:46px;
-  bottom: 0;
-  height:46px;
-  width:100%;
-}
-.ribbon-bottom-cut {
-  position:absolute;
-  right:0;
-  bottom:0;
-  width: 46px;
-  height: 46px;
-}
-.ribbon-bottom-end {
-  position:absolute;
-  bottom:0;
-  left:0px;
-  height:46px;
-  width:15px;
-}
-.ribbon-bottom-end:before {
-  content: ' ';
-  position:absolute;
-  width:0;
-  height:0;
-  top:-15px;
-  left:0;
-  border-width:15px 15px 0 0;
   border-style: solid;
 }
 

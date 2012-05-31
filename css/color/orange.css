@@ -109,6 +109,9 @@ a:hover{color:#f7820e;text-decoration:none}
   background: linear-gradient(top,  #f7820e 0%,#e1740b 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7820e', endColorstr='#e1740b',GradientType=0 );
 }
+#mobile-nav-modal h3 {
+  color:#f7820e;
+}
 
 /* Nav */
 #nav{
