@@ -24,7 +24,6 @@
   list-style: none;
 }
 .es-carousel ul li .image-container {
-  border:3px solid #94B0A9;
  -webkit-border-radius: 50%;
 	border-radius: 50%;
 }
@@ -43,7 +42,6 @@
 	position:absolute;
 	top:50%;
 	left:-25px;
-	background:transparent url(../images/carousel-nav.png) no-repeat top left;
 	width:50px;
 	height:42px;
 	margin-top:-35px;
@@ -60,7 +58,6 @@
 	opacity:1.0;
 }
 .carousel_caption {font-family: 'Lobster', cursive;font-size: 1.5em;text-align: center; margin-top: 20px;color: #333; width: 100%; position: relative; }
-.es-carousel ul li:hover div.carousel_caption {color: #CB8249; /*orange*/}
 /*============================*/
 /*======= Twitter Bar ========*/
 /*============================*/
@@ -69,28 +66,15 @@
 	overflow: hidden;
 	margin: auto;
   padding-left: 130px;
-  background: url('../../images/backgrounds/twitter.png') no-repeat 0 0;
 }
 #twitter-image {
   float:left;
-}
-.twittertext a:link {
-  color: #CB8249; /*orange*/
-}
-.twittertext a:visited {
-  color: #CB8249; /*orange*/
-}
-.twittertext a:hover {
-  color:#94B0A9;/*blue*/
 }
 .twittertext {
   float: left;
  	position: relative;
   padding: 15px;
   margin: 1em 0 3em;
-  border: 5px solid #94B0A9;/*blue*/
-  color: #333;
-  background: #E9E3BB;/*yellow*/
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -105,7 +89,6 @@
   left: 40px;
   border-width: 20px 20px 0;
   border-style: solid;
-  border-color: #94B0A9 transparent;/*blue*/
   display: block;
   width: 0;
 }
@@ -116,7 +99,6 @@
   left: 47px;
   border-width: 13px 13px 0;
   border-style: solid;
-  border-color: #E9E3BB transparent;/*yellow*/
   display: block;
   width: 0;
 }
@@ -128,14 +110,12 @@
   bottom: auto;
   left: -30px;
   border-width: 15px 30px 15px 0;
-  border-color: transparent #94B0A9;/*blue*/
 }
 .twittertriangle:after {
   top: 16px;
   bottom: auto;
   left: -21px;
   border-width: 9px 21px 9px 0;
-  border-color: transparent #E9E3BB;/*yellow*/
 }
 
 /*============================*/
@@ -143,11 +123,8 @@
 /*============================*/
 .calloutrow {
   width:100%;
-  background: #94B0A9;
   margin-bottom: 15px;
   padding: 0;
-  border-top: 3px solid #6A8484;
-  border-bottom: 3px solid #6A8484;
 }
 .calloutrow .row-fluid {
   margin-bottom: 0;
@@ -161,7 +138,6 @@
 }
 
 #callout_text {
-  color:#E9ECC9;
 	font-size: 14px;
   font-style: italic;
 	margin-left: 0;
@@ -219,19 +195,16 @@
 .iribbon-box {
   position: relative;
   padding: 50px 25px 50px 25px;
-  background: #94B0A9; /*blue*/ 
   overflow: hidden;
 }
 .box-widget-title {
   font-family: 'Lobster', cursive;
-	color: #E9E3BB;/*yellow*/
 	line-height: 40px;
 	font-size: 18px;
   margin-left: 10px;
 }
 
 .boxes-row .textwidget {
-  color: #E9E3BB;/*yellow*/
   margin: 0;
 }
 
@@ -256,14 +229,6 @@
   height:41px;
   width:100%;
   padding-top:5px;
-  background: #cd834a;
-  background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd834a), color-stop(100%,#9e663d));
-  background: -webkit-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  background: -o-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  background: -ms-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
 }
 
 .boxes-row div.ribbon-shadow {
@@ -283,23 +248,14 @@
   left:0;
   width: 46px;
   height: 46px;
-  background: url( '../images/backgrounds/ribbon-left.png' ) no-repeat 0 0 transparent;
 }
 
 .boxes-row div.ribbon-top-end {
   position:absolute;
   top:0;
   right:-15px;
-  height:46px;
+  height:45px;
   width:15px;
-  background: #cd834a;
-  background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd834a), color-stop(100%,#9e663d));
-  background: -webkit-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  background: -o-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  background: -ms-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
 }
 
 .boxes-row div.ribbon-top-end:after {
@@ -311,7 +267,6 @@
   right:0;
   border-width:0 0 15px 15px;
   border-style: solid;
-  border-color: transparent transparent transparent #8d5c38;
 }
 
 

@@ -51,7 +51,6 @@ div.orbit>img {
     /* display: none; */ }
 
 div.orbit>a {
-    border: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -141,12 +140,12 @@ span.pause.active {
     background: rgba(0,0,0,.6);
     z-index: 1000;
     color: #fff;
-	text-align: center;
-	padding: 7px 0px;
+    text-align: center;
+    padding: 7px 0px;
     font-size: 13px;
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: -3px;
+    bottom: 3px;
     width: 100%; }
 
 
@@ -168,11 +167,11 @@ div.slider-nav span {
 
 div.slider-nav span.right {
     background: url(images/right-arrow.png) no-repeat;
-    right: -1px; }
+    right: -3px; }
 
 div.slider-nav span.left {
     background: url(images/left-arrow.png) no-repeat;
-    left: 1px; }
+    left: 3px; }
 
 
 /* BULLET NAV

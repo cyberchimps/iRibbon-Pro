@@ -149,14 +149,14 @@ a:hover{color:#f7820e;text-decoration:none}
   border-right:#9F673D 1px solid;
   border-bottom:#9F673D 1px solid;
   border-left:#9F673D 1px solid;
-  border-left:none;
+  border-left:#9F673D 1px solid;
   margin:-1px 0 0 -8px
 }
 #nav ul ul ul li:hover ul li a {
   border-top:#9F673D 1px solid;
   border-right:#9F673D 1px solid;
   border-bottom:#9F673D 1px solid;
-  border-left:none;
+  border-left:#9F673D 1px solid;
   margin:-1px 0 0 -9px
 }
 #nav:before {
@@ -349,6 +349,15 @@ a:hover{color:#f7820e;text-decoration:none}
   border-top: 3px solid #097097;
   border-bottom: 3px solid #097097;
 }
+.calloutrow a {
+  color: #9f530a;
+}
+.calloutrow a:visited {
+  color: #9f530a;
+}
+.calloutrow a:hover {
+  color: #f7820e;
+}
 
 /* Carousel */
 .es-carousel ul li .image-container {
@@ -394,6 +403,9 @@ border-color: transparent #E9E3BB;/*yellow*/
 .iribbon-box {
   background: #0a91c8; /*blue*/ 
 }
+.box-widget-title {
+	color: #E9E3BB;/*yellow*/
+}
 .boxes-row div.ribbon-top {
   background: #f7820e;
   background: -moz-linear-gradient(top,  #f7820e 0%, #e1740b 100%);
@@ -417,8 +429,23 @@ border-color: transparent #E9E3BB;/*yellow*/
   background: linear-gradient(top,  #f7820e 0%,#e1740b 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7820e', endColorstr='#e1740b',GradientType=0 );
 }
-
 .boxes-row div.ribbon-top-end:after {
   border-color: transparent transparent transparent #9f530a;
 }
+.boxes-row .textwidget {
+	color: #E9E3BB;/*yellow*/
+}
+.boxes-row a {
+  color: #9f530a;
+}
+.boxes-row a:visited {
+  color: #9f530a;
+}
+.boxes-row a:hover {
+  color: #f7820e;
+}
 
+/* orbit slider border color */
+#orbitDemo {
+  border: 3px solid #229bc8;
+}

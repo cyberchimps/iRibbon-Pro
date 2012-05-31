@@ -341,6 +341,15 @@ a:hover{color:#93352F;text-decoration:none}
   border-top: 3px solid #707959;
   border-bottom: 3px solid #707959;
 }
+.calloutrow a {
+  color: #561e1e;
+}
+.calloutrow a:visited {
+  color: #561e1e;
+}
+.calloutrow a:hover {
+  color: #93352F;
+}
 
 /* Carousel */
 .es-carousel ul li .image-container {
@@ -386,6 +395,9 @@ border-color: transparent #E9E3BB;/*yellow*/
 .iribbon-box {
   background: #89946d; /*green*/
 }
+.box-widget-title {
+	color: #E9E3BB;/*yellow*/
+}
 .boxes-row div.ribbon-top {
   background: #93352F;
   background: -moz-linear-gradient(top,  #93352F 0%, #701e26 100%);
@@ -409,7 +421,22 @@ border-color: transparent #E9E3BB;/*yellow*/
   background: linear-gradient(top,  #93352F 0%,#701e26 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93352F', endColorstr='#701e26',GradientType=0 );
 }
-
 .boxes-row div.ribbon-top-end:after {
   border-color: transparent transparent transparent #561e1e;
+}
+.boxes-row .textwidget {
+	color: #E9E3BB;/*yellow*/
+}
+.boxes-row a {
+  color: #561e1e;
+}
+.boxes-row a:visited {
+  color: #561e1e;
+}
+.boxes-row a:hover {
+  color: #93352F;
+}
+/* orbit slider border color */
+#orbitDemo {
+  border: 3px solid #b5c48d;
 }

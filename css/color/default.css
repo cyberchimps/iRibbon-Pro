@@ -149,14 +149,14 @@ a:hover{color:#cd834a;text-decoration:none}
   border-right:#9F673D 1px solid;
   border-bottom:#9F673D 1px solid;
   border-left:#9F673D 1px solid;
-  border-left:none;
+  border-left:#9F673D 1px solid;
   margin:-1px 0 0 -8px
 }
 #nav ul ul ul li:hover ul li a {
   border-top:#9F673D 1px solid;
   border-right:#9F673D 1px solid;
   border-bottom:#9F673D 1px solid;
-  border-left:none;
+  border-left:#9F673D 1px solid;
   margin:-1px 0 0 -9px
 }
 #nav:before {
@@ -344,10 +344,23 @@ a:hover{color:#cd834a;text-decoration:none}
 /* ELEMENTS */
 
 /* Callout */
+
+#callout_text {
+  color:#E9ECC9;
+}
 .calloutrow {
   background: #7fa6a6;
   border-top: 3px solid #6a8484;
   border-bottom: 3px solid #6a8484;
+}
+.calloutrow a {
+  color: #8d5c38;
+}
+.calloutrow a:visited {
+  color: #8d5c38;
+}
+.calloutrow a:hover {
+  color: #cd834a;
 }
 
 /* Carousel */
@@ -394,6 +407,9 @@ border-color: transparent #E9E3BB;/*yellow*/
 .iribbon-box {
   background: #7fa6a6; /*blue*/ 
 }
+.box-widget-title {
+	color: #E9E3BB;/*yellow*/
+}
 .boxes-row div.ribbon-top {
   background: #cd834a;
   background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
@@ -417,10 +433,22 @@ border-color: transparent #E9E3BB;/*yellow*/
   background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
 }
-
 .boxes-row div.ribbon-top-end:after {
   border-color: transparent transparent transparent #8d5c38;
 }
-
-
-
+.boxes-row .textwidget {
+	color: #E9E3BB;/*yellow*/
+}
+.boxes-row a {
+  color: #8d5c38;
+}
+.boxes-row a:visited {
+  color: #8d5c38;
+}
+.boxes-row a:hover {
+  color: #cd834a;
+}
+/* orbit slider border color */
+#orbitDemo {
+  border: 3px solid #95b1a9;
+}
