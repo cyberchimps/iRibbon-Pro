@@ -44,13 +44,13 @@ function cyberchimps_store_page_init() {
 		<br /><br />
 		<div class="menu">
 		<ul>
-			<li><a href="http://cyberchimps.com/" target="_blank">CyberChimps</a></li>
-			<li><a href="http://cyberchimps.com/store/" target="_blank">Store</a></li>
+			<li><a href="http://cyberchimps.com/store/" target="_blank">CyberChimps Store</a></li>
 			<li><a href="http://cyberchimps.com/support" target="_blank">Support</a></li>
 			<li><a href="http://cyberchimps.com/ifeaturepro/docs/">Documentation</a></li>
 			<li><a href="http://cyberchimps.com/forum/" target="_blank">Forum</a></li>
 			<li><a href="http://twitter.com/#!/cyberchimps" target="_blank">Twitter</a></li>
 			<li><a href="http://www.facebook.com/CyberChimps" target="_blank">Facebook</a></li>
+			<li><a href="http://cyberchimpspro.com/" target="_blank">CyberChimps Pro</a></li>
 		</ul>
 	</div>
 	<div style="clear: both;"></div>

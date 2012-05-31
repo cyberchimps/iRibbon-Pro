@@ -12,7 +12,7 @@
 */ 
 	$themename = 'iribbon';
 	$themenamefull = 'iRibbon Pro';
-	$themeslug = 're';
+	$themeslug = 'ir';
 	$pagedocs = 'http://cyberchimps.com/question/using-the-response-pro-page-options/';
 	$sliderdocs = 'http://cyberchimps.com/question/how-to-use-the-feature-slider-in-response-pro/';
 	$root = get_template_directory_uri(); 

@@ -122,7 +122,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 			->checkbox($themeslug."_show_gplus", "Google Plus One Button")
 			->checkbox($themeslug."_post_pagination", "Post Pagination Links",  array('default' => true))
 		->subsection_end()->subsection("Blog Slider")
-			->checkbox($themeslug."_hide_slider_blog", "Index Feature Slider", array('default' => true))
+			->checkbox($themeslug."_hide_slider_blog", "Index iFeature Slider", array('default' => true))
 			->select($themeslug."_slider_size", "Select the Slider Size", array( 'options' => array("key1" => "half", "key2" => "full")))
 			->select($themeslug."_slider_type", "Select the Slider Type", array( 'options' => array("posts" => "posts", "custom" => "custom")))
 			->select($themeslug.'_slider_category', 'Select the post category', array( 'options' => $blogoptions ))

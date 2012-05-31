@@ -228,6 +228,7 @@ header {
   line-height:50px;
   text-decoration:none;
   padding:0 15px;
+  text-align: left;
 }
 #nav ul li{
   position:relative
