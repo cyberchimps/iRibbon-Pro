@@ -23,6 +23,7 @@
 
 </div><!--end container wrap-->
 <footer class="footer-container">
+<div id="main_wrap">
     <div class="container-fluid">
      		<div class="row-fluid">
 	<!-- Begin @response footer hook content-->
@@ -44,6 +45,7 @@
 				
 		</div> <!--end afterfooter-->	
   </footer>
+    </div> 	
   </div> 	
 	<?php endif;?>
 	
