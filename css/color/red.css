@@ -137,22 +137,14 @@ a:hover{color:#93352F;text-decoration:none}
 #nav li ul a:hover{
   color:#89946d;/*green*/
 }
-#nav ul li:hover ul li a{
-  border-top:#9F673D 1px solid;
-  border-right:#9F673D 1px solid;
-  border-bottom:#9F673D 1px solid;
-  border-left:#9F673D 1px solid;
+#nav > ul > li > ul {
+  border-top:#89946d 1px solid;
+  border-right:#89946d 1px solid;
+  border-bottom:#89946d 1px solid;
+  border-left:#89946d 1px solid;
 }
-#nav ul ul li:hover ul li a{
-  border-top:#9F673D 1px solid;
-  border-right:#9F673D 1px solid;
-  border-bottom:#9F673D 1px solid;
-  border-left:#9F673D 1px solid;
-}
-#nav ul ul ul li:hover ul li a {
-  border-top:#9F673D 1px solid;
-  border-right:#9F673D 1px solid;
-  border-bottom:#9F673D 1px solid;
+#nav > ul > li > ul > li {
+  border-bottom-color: #89946d;
 }
 #nav:before {
   border-color: #707959 transparent transparent transparent;
