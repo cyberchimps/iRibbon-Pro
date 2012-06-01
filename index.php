@@ -21,7 +21,6 @@
 
 <?php get_header(); ?>
 
-<div id="main_wrap">
 	<div class="container-fluid">
 	
 		<?php
@@ -33,5 +32,4 @@
 		?>
 	
 	</div>
-</div><!--end main_wrap-->
 <?php get_footer(); ?>

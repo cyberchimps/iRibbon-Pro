@@ -1188,3 +1188,51 @@ ul {
 .ui-tabs-hide {
 	display: none;
 }
+
+/* set up mobile phone styles */
+@media (max-width: 480px) {
+/* main */
+#content {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+/* sidebar */
+#sidebar {
+  margin-right: 5px;
+  margin-left: 20px;
+}
+#sidebar .ribbon-cut-blue {
+  display: none;
+}
+/* footer */
+footer .row-fluid [class*="span"]:first-child {
+  padding-left: 0;
+}
+.footer-container {
+  padding-right: 20px;
+  padding-left: 20px; 
+}
+.footer-container .footer-widgets {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px dotted #555;
+}
+/******************************************/
+/******** Elements ************************/
+/******************************************/
+
+/* widget boxes */
+.box_outer_container {
+  margin-right: 20px;
+}
+.box_outer_container .iribbon-box {
+  margin-left: 5px;
+}
+.box_outer_container .ribbon-bottom-end {
+  left: 5px;
+}
+/* twitter */
+#twitterbar {
+  margin-right: 5px;
+  margin-left:15px;
+}

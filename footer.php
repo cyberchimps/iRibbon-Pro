@@ -23,7 +23,6 @@
 
 </div><!--end container wrap-->
 <footer class="footer-container">
-<div id="main_wrap">
     <div class="container-fluid">
      		<div class="row-fluid">
 	<!-- Begin @response footer hook content-->
@@ -43,10 +42,9 @@
 			<?php response_secondary_footer(); ?>
 		<!-- End @response afterfooter hook content-->
 				
-		</div> <!--end afterfooter-->	
+		</div> <!--end afterfooter wrap-->	
+    </div> <!-- end afterfooter -->
   </footer>
-    </div> 	
-  </div> 	
 	<?php endif;?>
 	
 	<?php wp_footer(); ?>	

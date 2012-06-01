@@ -29,8 +29,7 @@
 	}
 /* End define global variables. */
 
-?>
-<div id="main_wrap">	
+?>	
 <div class="container-fluid"> 
 		<?php
 			foreach(explode(",", $page_section_order) as $key) {
@@ -41,5 +40,4 @@
 			}
 		?>	
 </div><!--end container-->
-</div>
 <?php get_footer(); ?>
