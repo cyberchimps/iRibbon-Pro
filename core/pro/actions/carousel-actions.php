@@ -28,7 +28,7 @@ function response_carousel_section_content() {
 
 /* Define variables. */	
 
-    $tmp_query = $wp_query; 
+  $tmp_query = $wp_query;
 	$root = get_template_directory_uri(); 
 	$default = "$root/images/pro/carousel.jpg";
 	
@@ -168,9 +168,9 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 	    			</li>
 		
 	    	</ul>
-	    				
-	    				
-	    			";
+				
+				
+				";
      
 	endif; 	    
 	$wp_query = $tmp_query;    
