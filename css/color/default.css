@@ -149,6 +149,9 @@ a:hover{color:#cd834a;text-decoration:none}
 #nav > ul > li > ul > li {
   border-bottom-color: #7fa6a6;
 }
+#nav > ul > li > ul > li > ul li {
+  border-top-color: #7fa6a6;
+}
 #nav:before {
   border-color: #6a8484 transparent transparent transparent;
 }
