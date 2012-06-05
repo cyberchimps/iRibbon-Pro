@@ -56,14 +56,13 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
     	
 /* Establish post counter */  
   	
-	if (have_posts()) :
-	    $out = "
-	   <ul>
+	if (have_posts()) : ?>
 	    
-	    "; 
+	   <ul><?php
+	    
+	    
 	    $i = 0;
-
-		    $no = '50';
+	    $no = '50';
 
 
 /* End post counter */	    	
@@ -94,75 +93,73 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 
 	     	/* Markup for carousel */
 
-	    	$out .= "
+	    	?>
 	    	
 				<li>
 	    			<a href='$link' class='image-container'>	
-	    				<img src='$image' alt='$title'/>
+	    				<img src='<?php echo $image; ?>' alt='$title'/>
 	    			</a>
-	    			<div class='carousel_caption'>$title</div>
+	    			<div class='carousel_caption'><?php echo $title; ?></div>
 	    		</li>
 	    	
-	    	";
+	    	<?php
 
 	    	/* End slide markup */	
 
 	      	$i++;
-	      	endwhile;
-	      	$out .= "</ul>";	 
+	      	endwhile; ?>
+	      	</ul><?php
 	      	
-	      	else:
-	      
-	      	$out .= "	
+	      	else:?>	
 	    	<ul>
 	      			<li>
 	      			<a href='#' class='image-container'>
-	    				<img src='$default' alt='Post 1'/>
+	    				<img src='<?php echo $default; ?>' alt='Post 1'/>
 							</a>
 	    				<div class='carousel_caption'>Title 1</div>
 	    			</li>
 					<li>
 							<a href='#' class='image-container'>
-	    				<img src='$default' alt='Post 2' />
+	    				<img src='<?php echo $default; ?>' alt='Post 2' />
 							</a>
 	    				<div class='carousel_caption'>Title 2</div>
 	    			</li>
 					<li>
 							<a href='#' class='image-container'>
-	    				<img src='$default' alt='Post 3' />
+	    				<img src='<?php echo $default; ?>' alt='Post 3' />
 							</a>
 	    				<div class='carousel_caption'>Title 3</div>
 	    			</li>
 					<li>
 							<a href='#' class='image-container'>
-	    				<img src='$default' alt='Post 4' />
+	    				<img src='<?php echo $default; ?>' alt='Post 4' />
 							</a>
 	    				<div class='carousel_caption'>Title 4</div>
 	    			</li>
 					<li>
 							<a href='#' class='image-container'>
-	    				<img src='$default' alt='Post 5' />
+	    				<img src='<?php echo $default; ?>' alt='Post 5' />
 							</a>
 	    				<div class='carousel_caption'>Title 5</div>
 	    			</li>
 	    			
 	    			<li>
 							<a href='#' class='image-container'>
-	    				<img src='$default' alt='Post 6' />
+	    				<img src='<?php echo $default; ?>' alt='Post 6' />
 							</a>
 	    				<div class='carousel_caption'>Title 6</div>
 	    			</li>
 	    			
 	    			<li>
 							<a href='#' class='image-container'>
-	    				<img src='$default' alt='Post 7' />
+	    				<img src='<?php echo $default; ?>' alt='Post 7' />
 							</a>
 	    				<div class='carousel_caption'>Title 7</div>
 	    			</li>
 
 					<li>
 							<a href='#' class='image-container'>
-	    				<img src='$default' alt='Post 8' />
+	    				<img src='<?php echo $default; ?>' alt='Post 8' />
 							</a>
 	    				<div class='carousel_caption'>Title 8</div>
 	    			</li>
@@ -170,37 +167,27 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 	    	</ul>
 				
 				
-				";
+				<?php
      
 	endif; 	    
 	$wp_query = $tmp_query;    
 
 /* End slide creation */		
 
-	    wp_reset_query(); /* Reset post query */ 
-
-/* Begin Carousel javascript */ 
-    
-    $out .= <<<OUT
+	    wp_reset_query(); /* Reset post query */ ?>
+	      
 	<script type="text/javascript">
 			 jQuery(document).ready(function ($) {
 			$('#carousel').elastislide({
 				imageW 		: 140,
-				speed 		: $speed,
+				speed 		: <?php echo $speed;?>,
 				margin		: 8,
 				minItems 	: 5
 			});
 			});
 			
 		</script>
-OUT;
 
-/* End Carousel javascript */ 
-
-echo $out;
-
-/* END */ 
-?>
 
 		</div>
 	</div>
