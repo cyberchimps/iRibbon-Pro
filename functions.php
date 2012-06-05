@@ -357,9 +357,11 @@ add_action( 'init', 'response_register_menus' );
 function response_menu_fallback() {
 	global $post; ?>
 	
+  <div id="nav">
 	<ul id="nav_menu">
 		<?php wp_list_pages( 'title_li=&sort_column=menu_order&depth=3'); ?>
-	</ul><?php
+	</ul>
+	</div><?php
 }
 /**
 * Register widgets.
