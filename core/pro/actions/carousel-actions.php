@@ -28,7 +28,7 @@ function response_carousel_section_content() {
 
 /* Define variables. */	
 
-  $tmp_query = $wp_query;
+    $tmp_query = $wp_query;
 	$root = get_template_directory_uri(); 
 	$default = "$root/images/pro/carousel.jpg";
 	
@@ -46,7 +46,8 @@ function response_carousel_section_content() {
 
 <div class="row-fluid">
 	<div id="carousel" class="es-carousel-wrapper">
-		<div class="es-carousel"><?php 
+		<div class="es-carousel">
+<?php 
 
 /* Query posts  */
 
@@ -56,18 +57,16 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
     	
 /* Establish post counter */  
   	
-	if (have_posts()) : ?>
-	    
-	   <ul><?php
-	    
-	    
+	if (have_posts()) : 
+?>
+	   <ul>
+<?php
 	    $i = 0;
 	    $no = '50';
-
-
+	    
 /* End post counter */	    	
 
-/* Initialize slide creation */	
+/* Initialize carousel markup */	
 
 	while (have_posts() && $i<$no) : 
 
@@ -93,88 +92,63 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 
 	     	/* Markup for carousel */
 
-	    	?>
-	    	
-				<li>
-	    			<a href='$link' class='image-container'>	
-	    				<img src='<?php echo $image; ?>' alt='$title'/>
-	    			</a>
-	    			<div class='carousel_caption'><?php echo $title; ?></div>
-	    		</li>
-	    	
-	    	<?php
+?>	    	
+			<li>
+				<a href='$link' class='image-container'><img src='<?php echo $image; ?>' alt='$title'/></a>
+	    		<div class='carousel_caption'><?php echo $title; ?></div>
+	    	</li>
+<?php
 
-	    	/* End slide markup */	
+	    	/* End carousel markup */	
 
 	      	$i++;
-	      	endwhile; ?>
-	      	</ul><?php
-	      	
-	      	else:?>	
-	    	<ul>
-	      			<li>
-	      			<a href='#' class='image-container'>
-	    				<img src='<?php echo $default; ?>' alt='Post 1'/>
-							</a>
-	    				<div class='carousel_caption'>Title 1</div>
-	    			</li>
-					<li>
-							<a href='#' class='image-container'>
-	    				<img src='<?php echo $default; ?>' alt='Post 2' />
-							</a>
-	    				<div class='carousel_caption'>Title 2</div>
-	    			</li>
-					<li>
-							<a href='#' class='image-container'>
-	    				<img src='<?php echo $default; ?>' alt='Post 3' />
-							</a>
-	    				<div class='carousel_caption'>Title 3</div>
-	    			</li>
-					<li>
-							<a href='#' class='image-container'>
-	    				<img src='<?php echo $default; ?>' alt='Post 4' />
-							</a>
-	    				<div class='carousel_caption'>Title 4</div>
-	    			</li>
-					<li>
-							<a href='#' class='image-container'>
-	    				<img src='<?php echo $default; ?>' alt='Post 5' />
-							</a>
-	    				<div class='carousel_caption'>Title 5</div>
-	    			</li>
-	    			
-	    			<li>
-							<a href='#' class='image-container'>
-	    				<img src='<?php echo $default; ?>' alt='Post 6' />
-							</a>
-	    				<div class='carousel_caption'>Title 6</div>
-	    			</li>
-	    			
-	    			<li>
-							<a href='#' class='image-container'>
-	    				<img src='<?php echo $default; ?>' alt='Post 7' />
-							</a>
-	    				<div class='carousel_caption'>Title 7</div>
-	    			</li>
-
-					<li>
-							<a href='#' class='image-container'>
-	    				<img src='<?php echo $default; ?>' alt='Post 8' />
-							</a>
-	    				<div class='carousel_caption'>Title 8</div>
-	    			</li>
-		
-	    	</ul>
-				
-				
-				<?php
-     
+	      	endwhile; 
+?>
+		</ul>
+<?php
+	else:
+?>	
+	    <ul>
+	      	<li>
+	      		<a href='#' class='image-container'><img src='<?php echo $default; ?>' alt='Post 1'/></a>
+	      		<div class='carousel_caption'>Title 1</div>
+	    	</li>
+			<li>
+				<a href='#' class='image-container'><img src='<?php echo $default; ?>' alt='Post 2' /></a>
+	    		<div class='carousel_caption'>Title 2</div>
+	    	</li>
+			<li>
+				<a href='#' class='image-container'><img src='<?php echo $default; ?>' alt='Post 3' /></a>
+	    		<div class='carousel_caption'>Title 3</div>
+	    	</li>
+			<li>
+				<a href='#' class='image-container'><img src='<?php echo $default; ?>' alt='Post 4' /></a>
+	    		<div class='carousel_caption'>Title 4</div>
+	    	</li>
+			<li>
+				<a href='#' class='image-container'><img src='<?php echo $default; ?>' alt='Post 5' /></a>
+	    		<div class='carousel_caption'>Title 5</div>
+	    	</li>
+	    	<li>
+	    		<a href='#' class='image-container'><img src='<?php echo $default; ?>' alt='Post 6' /></a>
+	    		<div class='carousel_caption'>Title 6</div>
+	    	</li>
+	    	<li>
+	    		<a href='#' class='image-container'><img src='<?php echo $default; ?>' alt='Post 7' /></a>
+	    		<div class='carousel_caption'>Title 7</div>
+	    	</li>
+	    	<li>
+	    		<a href='#' class='image-container'><img src='<?php echo $default; ?>' alt='Post 8' /></a>
+	    		<div class='carousel_caption'>Title 8</div>
+	    	</li>
+		</ul>
+<?php
 	endif; 	    
 	$wp_query = $tmp_query;    
 
 /* End slide creation */		
 
-	    wp_reset_query(); /* Reset post query */ ?>
+	wp_reset_query(); /* Reset post query */ ?>
 	      
 	<script type="text/javascript">
 			 jQuery(document).ready(function ($) {
@@ -191,8 +165,8 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 
 		</div>
 	</div>
-</div> <?php
-
+</div>
+<?php
 }
 
 /**
