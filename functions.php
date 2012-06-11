@@ -31,7 +31,9 @@ add_filter( 'iribbon_default_font', 'ribbon_default_font' );
 * Basic theme setup.
 */ 
 function iribbon_theme_setup() {
-	if ( ! isset( $content_width ) ) $content_width = 608; //Set content width
+	global $content_width;
+	
+	if ( ! isset( $content_width ) ) $content_width = 580; //Set content width
 	
 	add_theme_support(
 		'post-formats',
