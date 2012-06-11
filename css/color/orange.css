@@ -187,10 +187,7 @@ a:hover{color:#f7820e;text-decoration:none}
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7820e', endColorstr='#e1740b',GradientType=0 );
 }
 .sd_left_sidebar div.ribbon-top:after {
-  border-color: #9f530a transparent transparent transparent;
-}
-.sd_left_sidebar div.ribbon-top-cut {
-  background: url( '../../images/backgrounds/ribbon-right-orangebr.png' ) no-repeat 0 0 transparent;
+  border-color:transparent #9f530a transparent transparent;
 }
 .sd_left_sidebar div.ribbon-more {
   background: #f7820e;
@@ -202,11 +199,8 @@ a:hover{color:#f7820e;text-decoration:none}
   background: linear-gradient(top,  #f7820e 0%,#e1740b 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7820e', endColorstr='#e1740b',GradientType=0 );
 }
-.sd_left_sidebar div.ribbon-more:before {
-  border-color: #9f530a transparent transparent transparent;
-}
 .sd_left_sidebar div.ribbon-more:after {
-  border-color: transparent transparent #9f530a transparent;
+  border-color: transparent transparent transparent #9f530a;
 }
 
 /* content ribbons with right sidebar */
@@ -230,28 +224,11 @@ a:hover{color:#f7820e;text-decoration:none}
   background: linear-gradient(top,  #f7820e 0%,#e1740b 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7820e', endColorstr='#e1740b',GradientType=0 );
 }
-.sd_right_sidebar div.ribbon-more:before {
-  border-color: transparent #9f530a transparent transparent;
-}
-.sd_right_sidebar div.ribbon-extra {
-  background: #f7820e;
-  background: -moz-linear-gradient(top,  #f7820e 0%, #e1740b 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7820e), color-stop(100%,#e1740b));
-  background: -webkit-linear-gradient(top,  #f7820e 0%,#e1740b 100%);
-  background: -o-linear-gradient(top,  #f7820e 0%,#e1740b 100%);
-  background: -ms-linear-gradient(top,  #f7820e 0%,#e1740b 100%);
-  background: linear-gradient(top,  #f7820e 0%,#e1740b 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7820e', endColorstr='#e1740b',GradientType=0 );
-}
-.sd_right_sidebar div.ribbon-extra:after {
+.sd_right_sidebar div.ribbon-more:after {
   border-color: transparent transparent transparent #9f530a;
 }
-.sd_right_sidebar div.ribbon-top-cut {
-  background: url( '../../images/backgrounds/ribbon-left-orangebr.png' ) no-repeat 0 0 transparent;
-}
-
 .sd_right_sidebar div.ribbon-top:after {
-  border-color: transparent transparent transparent #9f530a;
+  border-color:transparent #9f530a transparent transparent;
 }
 
 /* bottom ribbons used in boxes */ 

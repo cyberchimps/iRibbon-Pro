@@ -40,9 +40,6 @@
 		
 		<?php while (have_posts()) : the_post(); ?>
 		<div class="post_outer_container">
-    	<div class="ribbon-top-end">
-      </div>
-		<div class="post_container">
 			<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 		
 			<!--Begin @response archive hook-->
@@ -55,7 +52,6 @@
 				<?php response_post_bar(); ?>
 			<!--End @response post bar hook-->
 			
-		</div><!--end post container--> 
 		</div><!-- end post outer container -->
 
 		 <?php endwhile; ?>

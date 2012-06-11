@@ -184,10 +184,7 @@ a:hover{color:#93352F;text-decoration:none}
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93352F', endColorstr='#701e26',GradientType=0 );
 }
 .sd_left_sidebar div.ribbon-top:after {
-  border-color: #561e1e transparent transparent transparent;
-}
-.sd_left_sidebar div.ribbon-top-cut {
-  background: url( '../../images/backgrounds/ribbon-right-red.png' ) no-repeat 0 0 transparent;
+  border-color: transparent #561e1e transparent transparent;
 }
 .sd_left_sidebar div.ribbon-more {
   background: #93352F;
@@ -199,11 +196,8 @@ a:hover{color:#93352F;text-decoration:none}
   background: linear-gradient(top,  #93352F 0%,#701e26 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93352F', endColorstr='#701e26',GradientType=0 );
 }
-.sd_left_sidebar div.ribbon-more:before {
-  border-color: #561e1e transparent transparent transparent;
-}
 .sd_left_sidebar div.ribbon-more:after {
-  border-color: transparent transparent #561e1e transparent;
+  border-color: transparent transparent transparent #561e1e;
 }
 
 /* content ribbons with right sidebar */
@@ -227,28 +221,11 @@ a:hover{color:#93352F;text-decoration:none}
   background: linear-gradient(top,  #93352F 0%,#701e26 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93352F', endColorstr='#701e26',GradientType=0 );
 }
-.sd_right_sidebar div.ribbon-more:before {
-  border-color: transparent #561e1e transparent transparent;
-}
-.sd_right_sidebar div.ribbon-extra {
-  background: #93352F;
-  background: -moz-linear-gradient(top,  #93352F 0%, #701e26 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#93352F), color-stop(100%,#701e26));
-  background: -webkit-linear-gradient(top,  #93352F 0%,#701e26 100%);
-  background: -o-linear-gradient(top,  #93352F 0%,#701e26 100%);
-  background: -ms-linear-gradient(top,  #93352F 0%,#701e26 100%);
-  background: linear-gradient(top,  #93352F 0%,#701e26 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93352F', endColorstr='#701e26',GradientType=0 );
-}
-.sd_right_sidebar div.ribbon-extra:after {
+.sd_right_sidebar div.ribbon-more:after {
   border-color: transparent transparent transparent #561e1e;
 }
-.sd_right_sidebar div.ribbon-top-cut {
-  background: url( '../../images/backgrounds/ribbon-left-red.png' ) no-repeat 0 0 transparent;
-}
-
 .sd_right_sidebar div.ribbon-top:after {
-  border-color: transparent transparent transparent #561e1e;
+  border-color: transparent #561e1e transparent transparent;
 }
 
 /* bottom ribbons used in boxes */ 

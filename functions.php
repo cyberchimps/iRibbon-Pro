@@ -24,13 +24,13 @@ function ribbon_default_font( $font ) {
 	$font = 'Georgia';
 	return $font;
 }
-add_filter( 'response_default_font', 'ribbon_default_font' );
+add_filter( 'iribbon_default_font', 'ribbon_default_font' );
 
 	
 /**
 * Basic theme setup.
 */ 
-function response_theme_setup() {
+function iribbon_theme_setup() {
 	if ( ! isset( $content_width ) ) $content_width = 608; //Set content width
 	
 	add_theme_support(
@@ -43,7 +43,7 @@ function response_theme_setup() {
 	add_editor_style();
 	add_custom_background();
 }
-add_action( 'after_setup_theme', 'response_theme_setup' );
+add_action( 'after_setup_theme', 'iribbon_theme_setup' );
 
 /**
 * Redirect user to theme options page after activation.
@@ -55,28 +55,29 @@ if ( is_admin() && isset($_GET['activated'] ) && $pagenow =="themes.php" ) {
 /**
 * Add link to theme options in Admin bar.
 */ 
-function response_admin_link() {
+function iribbon_admin_link() {
 	global $wp_admin_bar;
 
 	$wp_admin_bar->add_menu( array( 'id' => 'iRibbon', 'title' => 'iRibbon Pro Options', 'href' => admin_url('themes.php?page=iribbon')  ) ); 
 }
-add_action( 'admin_bar_menu', 'response_admin_link', 113 );
+add_action( 'admin_bar_menu', 'iribbon_admin_link', 113 );
 
 /**
 * Custom markup for gallery posts in main blog index.
 */ 
-function response_custom_gallery_post_format( $content ) {
+function iribbon_custom_gallery_post_format( $content ) {
 	global $options, $themeslug, $post;
 	$root = get_template_directory_uri(); 
 	
 	ob_start();?>
-    <div class="ribbon-top-cut">
-      </div><!-- ribbon-top-cut -->
 			<div class="ribbon-top">
+      <div class="ribbon-more">
+      </div>
 				<h2 class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+      <div class="ribbon-shadow"></div><!-- ribbon shadow -->
          </div><!-- ribbon top -->
-      <div class="ribbon-shadow">
-      </div><!-- ribbon shadow -->
+			<article class="post_container">
+      <div class="ribbon-shadow"></div><!-- ribbon shadow -->
 		<?php if ($options->get($themeslug.'_post_formats') == '1') : ?>
 			<div class="postformats"><!--begin format icon-->
 				<img src="<?php echo get_template_directory_uri(); ?>/images/formats/gallery.png" />
@@ -115,19 +116,20 @@ function response_custom_gallery_post_format( $content ) {
 					<?php the_content(); ?>
 				<?php endif;?>
 				</div><!--end entry-->
-
-				<div style="clear:both;"></div>
+				
+        </article><!--end post container-->
+				<div class="clear">&nbsp;</div>
 	<?php	
 	$content = ob_get_clean();
 	
 	return $content;
 }
-add_filter('response_post_formats_gallery_content', 'response_custom_gallery_post_format' ); 
+add_filter('iribbon_post_formats_gallery_content', 'iribbon_custom_gallery_post_format' ); 
 	
 /**
 * Set custom post excerpt link text based on theme option.
 */ 
-function response_excerpt_link($more) {
+function iribbon_excerpt_link($more) {
 
 	global $themename, $themeslug, $options, $post;
     
@@ -140,12 +142,12 @@ function response_excerpt_link($more) {
 
 	return '<a href="'. get_permalink($post->ID) . '"> <br /><br /> '.$linktext.'</a>';
 }
-add_filter('excerpt_more', 'response_excerpt_link');
+add_filter('excerpt_more', 'iribbon_excerpt_link');
 
 /**
 * Set custom post excerpt length based on theme option.
 */ 
-function response_excerpt_length($length) {
+function iribbon_excerpt_length($length) {
 
 	global $themename, $themeslug, $options;
 	
@@ -158,12 +160,12 @@ function response_excerpt_length($length) {
     	
 	return $length;
 }
-add_filter('excerpt_length', 'response_excerpt_length');
+add_filter('excerpt_length', 'iribbon_excerpt_length');
 
 /**
 * Custom featured image size based on theme options.
 */ 
-function response_featured_image() {	
+function iribbon_featured_image() {	
 	if ( function_exists( 'add_theme_support' ) ) {
 	
 	global $themename, $themeslug, $options;
@@ -183,12 +185,12 @@ function response_featured_image() {
 	set_post_thumbnail_size( $featurewidth, $featureheight, true );
 	}	
 }
-add_action( 'init', 'response_featured_image', 11);	
+add_action( 'init', 'iribbon_featured_image', 11);	
 
 /**
 * Attach CSS3PIE behavior to elements
 */   
-function response_pie() { ?>
+function iribbon_pie() { ?>
 	
 	<style type="text/css" media="screen">
 		#wrapper input, textarea, #twitterbar, input[type=submit], input[type=reset], #imenu, .searchform, .post_container, .postformats, .postbar, .post-edit-link, .widget-container, .widget-title, .footer-widget-title, .comments_container, ol.commentlist li.even, ol.commentlist li.odd, .slider_nav, ul.metabox-tabs li, .tab-content, .list_item, .section-info, #of_container #header, .menu ul li a, .submit input, #of_container textarea, #of_container input, #of_container select, #of_container .screenshot img, #of_container .of_admin_bar, #of_container .subsection > h3, .subsection, #of_container #content .outersection .section, #carousel_list, #calloutwrap, #calloutbutton, .box1, .box2, .box3, .es-carousel-wrapper, #halfnav ul li a, #halfnav ul li a:hover, #halfnav li.current_page_item a, #halfnav li.current_page_item ul li a, .pagination span, .pagination a, .pagination a:hover, .pagination .current, #nav, .nav-shadow, .sd_left_sidebar div.ribbon-top, .sd_left_sidebar div.ribbon-shadow, .sd_left_sidebar div.ribbon-more, .sd_right_sidebar div.ribbon-top, .sd_right_sidebar div.ribbon-more, .sd_right_sidebar div.ribbon-extra, .sd_right_sidebar div.ribbon-shadow, .ribbon-bottom, .ribbon-bottom-end, .ribbon-bg-blue, .ribbon-bg-blue .ribbon-shadow, .ribbon-left-blue, .ribbon-right-blue, .searchform .iRibbon-search
@@ -200,12 +202,12 @@ function response_pie() { ?>
 <?php
 }
 
-add_action('wp_head', 'response_pie', 8);
+add_action('wp_head', 'iribbon_pie', 8);
 
 /**
 * Custom post types for Slider, Carousel.
 */ 
-function response_create_post_type() {
+function iribbon_create_post_type() {
 
 	global $themename, $themeslug, $options, $root;
 	
@@ -241,12 +243,12 @@ function response_create_post_type() {
 		)
 	);
 }
-add_action( 'init', 'response_create_post_type' );
+add_action( 'init', 'iribbon_create_post_type' );
 
 /**
 * Custom taxonomies for Slider, Carousel.
 */ 
-function response_custom_taxonomies() {
+function iribbon_custom_taxonomies() {
 
 	global $themename, $themeslug, $options;
 	
@@ -271,7 +273,7 @@ function response_custom_taxonomies() {
 		)
 	);
 }
-add_action('init', 'response_custom_taxonomies', 0);
+add_action('init', 'iribbon_custom_taxonomies', 0);
 
 /**
 * Assign default category for Slider, Carousel posts.
@@ -303,12 +305,12 @@ function response_custom_taxonomy_default( $post_id, $post ) {
 	}
 }
 
-add_action( 'save_post', 'response_custom_taxonomy_default', 100, 2 );
+add_action( 'save_post', 'iribbon_custom_taxonomy_default', 100, 2 );
 
 /**
 * Add TypeKit support based on theme option.
 */ 
-function response_typekit_support() {
+function iribbon_typekit_support() {
 	global $themename, $themeslug, $options;
 	
 	$embed = $options->get($themeslug.'_typekit');
@@ -316,45 +318,45 @@ function response_typekit_support() {
 	echo stripslashes($embed);
 
 }
-add_action('wp_head', 'response_typekit_support');
+add_action('wp_head', 'iribbon_typekit_support');
 
 /**
 * Add Google Analytics support based on theme option.
 */ 
-function response_google_analytics() {
+function iribbon_google_analytics() {
 	global $themename, $themeslug, $options;
 	
 	echo stripslashes ($options->get($themeslug.'_ga_code'));
 
 }
-add_action('wp_head', 'response_google_analytics');
+add_action('wp_head', 'iribbon_google_analytics');
 
 /**
 * Add custom header scripts support based on theme option.
 */ 
-function response_custom_scripts() {
+function iribbon_custom_scripts() {
 	global $themename, $themeslug, $options;
 	
 	echo stripslashes ($options->get($themeslug.'_custom_header_scripts'));
 
 }
-add_action('wp_head', 'response_custom_scripts');
+add_action('wp_head', 'iribbon_custom_scripts');
 
 	
 /**
 * Register custom menus for header, footer.
 */ 
-function response_register_menus() {
+function iribbon_register_menus() {
 	register_nav_menus(
 	array( 'header-menu' => __( 'Header Menu' ), 'footer-menu' => __( 'Footer Menu' ), 'sub-menu' => __( 'Sub Menu' ), 'mobile-menu' => __( 'Mobile Menu' ) )
 	);
 }
-add_action( 'init', 'response_register_menus' );
+add_action( 'init', 'iribbon_register_menus' );
 	
 /**
 * Menu fallback if custom menu not used.
 */ 
-function response_menu_fallback() {
+function iribbon_menu_fallback() {
 	global $post; ?>
 	
   <div id="nav">
@@ -366,7 +368,7 @@ function response_menu_fallback() {
 /**
 * Register widgets.
 */ 
-function response_widgets_init() {
+function iribbon_widgets_init() {
     register_sidebar(array(
     	'name' => 'Full Sidebar',
     	'id'   => 'sidebar-widgets',
@@ -432,7 +434,7 @@ function response_widgets_init() {
 		'after_title' => '</h3>',
 	));
 }
-add_action ('widgets_init', 'response_widgets_init');
+add_action ('widgets_init', 'iribbon_widgets_init');
 
 /**
 * Initialize response Core Framework and Pro Extension.
@@ -447,115 +449,6 @@ require_once ( get_template_directory() . '/includes/classy-options-init.php' );
 require_once ( get_template_directory() . '/includes/options-functions.php' ); // Custom functions based on theme options.
 require_once ( get_template_directory() . '/includes/meta-box.php' ); // Meta options markup.
 require_once ( get_template_directory() . '/includes/update.php' ); // Notify user of theme update on "Updates" page in Dashboard.
-
-/** iRibbon title ribbon wrap **/
-function iribbon_title()
-{
-	global $content_grid;
-	$title = get_the_title();
-	$display = '';
-	/* lets make the length of the string shorter for the 2 sidebars and longer for 1 sidebar */
-	if( strpos( $content_grid, 'two_sidebars' ) )
-	{
-		$title_array = str_split( $title, 30 );
-	}
-	else {
-		$title_array = str_split( $title, 45 );
-	}
-	/* count the number of elements in the array */
-	$title_count = count( $title_array );
-	$i = 1;
-	/* lets loop through the array */
-	while( $i <= $title_count )
-	{
-		/* if there is only one element then we can just go ahead and display it */
-		if( $title_count === 1 )
-		{
-			echo '<div class="ribbon-top-cut">
-      			</div><!-- ribbon-top-cut -->
-						<div class="ribbon-top">
-      			<h2 class="posts_title"><a href="'.get_permalink().'">'.$title.'</a></h2>
-      			</div><!-- ribbon top -->
-      			<div class="ribbon-shadow">
-      			</div><!-- ribbon shadow -->';
-		}
-		else{
-			/* lets style it for a right sidebar */
-			if( strpos( $content_grid, 'sd_right_sidebar' ) )
-			{
-				/* styling for the last element */
-				if( $title_count === $i )
-				{
-					/* the last padding statement makes room on the post for the larger title */
-					$display .= '<div class="ribbon-more" style="top:'.(($i-1)*65).'px;">
-											<h2 class="posts_title"><a href="'.get_permalink().'">'.$title_array[$i-1].'</a></h2>
-											<div class="ribbon-extra"></div><!-- ribbon extra -->
-											</div><!-- ribbon top -->
-											<div class="ribbon-shadow" style="top:'.(($i-1)*65 + 44).'px">
-											</div><!-- ribbon shadow -->
-											<div style="padding-top:'.(($i-1)*65).'px"></div>';
-				}
-				/* lets style the first element */
-				elseif( $i === 1 )
-				{
-					$display .= '<div class="ribbon-top-cut">
-											</div><!-- ribbon-top-cut -->
-											<div class="ribbon-top" style="top:0;">
-											<h2 class="posts_title"><a href="'.get_permalink().'">'.$title_array[$i-1].'-</a></h2>
-											</div><!-- ribbon top -->
-											<div class="ribbon-shadow" style="top:'.(($i-1)*65 + 44).'px">
-											</div><!-- ribbon shadow -->';
-				}
-				/* and for all other ribbons */
-				else {
-					$display .= '<div class="ribbon-more" style="top:'.(($i-1)*65).'px">
-											<h2 class="posts_title"><a href="'.get_permalink().'">'.$title_array[$i-1].'-</a></h2>
-											<div class="ribbon-extra"></div><!-- ribbon extra -->
-											</div><!-- ribbon top -->
-											<div class="ribbon-shadow" style="top:'.(($i-1)*65 + 44).'px">
-											</div><!-- ribbon shadow -->';
-				}
-			}
-			elseif( strpos( $content_grid, 'sd_left_sidebar' ) )
-			{
-				/* styling for the last element */
-				if( $title_count === $i )
-				{
-					/* the last padding statement makes room on the post for the larger title */
-					$display .= '<div class="ribbon-more" style="top:'.(($i-1)*65).'px;">
-											<h2 class="posts_title"><a href="'.get_permalink().'">'.$title_array[$i-1].'</a></h2>
-											<div class="ribbon-extra"></div><!-- ribbon extra -->
-											</div><!-- ribbon top -->
-											<div class="ribbon-shadow" style="top:'.(($i-1)*65 + 44).'px">
-											</div><!-- ribbon shadow -->
-											<div style="padding-top:'.(($i-1)*65).'px"></div>';
-				}
-				/* lets style the first element */
-				elseif( $i === 1 )
-				{
-					$display .= '<div class="ribbon-top-cut">
-											</div><!-- ribbon-top-cut -->
-											<div class="ribbon-top" style="top:0;">
-											<h2 class="posts_title"><a href="'.get_permalink().'">'.$title_array[$i-1].'-</a></h2>
-											</div><!-- ribbon top -->
-											<div class="ribbon-shadow" style="top:'.(($i-1)*65 + 44).'px">
-											</div><!-- ribbon shadow -->';
-				}
-				/* and for all other ribbons */
-				else {
-					$display .= '<div class="ribbon-more" style="top:'.(($i-1)*65).'px">
-											<h2 class="posts_title"><a href="'.get_permalink().'">'.$title_array[$i-1].'-</a></h2>
-											<div class="ribbon-extra"></div><!-- ribbon extra -->
-											</div><!-- ribbon top -->
-											<div class="ribbon-shadow" style="top:'.(($i-1)*65 + 44).'px">
-											</div><!-- ribbon shadow -->';
-				}
-			}
-		}
-		$i++;
-	}
-			echo $display;
-}
 
 // Presstrends
 function presstrends() {

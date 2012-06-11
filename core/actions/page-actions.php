@@ -45,44 +45,33 @@ function response_page_section_content() {
 		<?php response_page_content_slider(); ?>
 		
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-      <?php if ($hidetitle == "on" OR $hidetitle == ""): ?>
-			<div class="post_outer_container">
-        <div class="ribbon-top-end">
-        </div>
-      <?php endif; ?>
-        
-			<article class="post_container">
-			
-				<div class="post" id="post-<?php the_ID(); ?>">
-				<?php if ($hidetitle == "on" OR $hidetitle == ""): ?>
-				<div class="ribbon-top-cut">
-          </div><!-- ribbon-top-cut -->
+        <div class="post" id="post-<?php the_ID(); ?>">
           <div class="ribbon-top">
+          <div class="ribbon-more">
+          </div>
 					<h2 class="posts_title"><?php the_title(); ?></h2>
-          </div><!-- ribbon top -->
           <div class="ribbon-shadow">
       </div><!-- ribbon shadow -->
-						<?php endif;?>
-
+          </div><!-- ribbon top -->
+					<article class="post_container">
 					<div class="entry">
 
 						<?php the_content(); ?>
 						
 					</div><!--end entry-->
-					
-					<div style="clear:both;"></div>
+          
+					</article><!--end post_container-->
+					<div class="clear">&nbsp</div>
+          
 					<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
 
-
-				<?php edit_post_link('Edit', '<p>', '</p>'); ?>
+					<?php edit_post_link('Edit', '<p>', '</p>'); ?>
 
 				</div><!--end post-->
-			</article><!--end post_container-->
 		
 			<?php comments_template(); ?>
 
 			<?php endwhile; endif; ?>
-				</div>
 	</div><!--end content_left-->
 	
 	<!--Begin @response after content sidebar hook-->

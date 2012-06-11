@@ -33,17 +33,16 @@ function response_search_content() {
 		<h5 class="iribbon-search-term"><?php printf( __( $results ), '<span>' . get_search_query() . '</span>' ); ?></h5>
 		<?php if (have_posts()) : ?>
 			<div class="post_outer_container">
-			<article class="post_container">
   
 		<?php while (have_posts()) : the_post(); ?>
 			<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
-			<div class="ribbon-top-cut">
-      </div><!-- ribbon-top-cut -->
-			<div class="ribbon-top"> 
+			<div class="ribbon-top">
+      <div class="ribbon-more">
+      </div>
 				<h2 id="post-<?php the_ID(); ?>" class="posts_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
         </div><!-- ribbon top -->
-      <div class="ribbon-shadow">
-      </div><!-- ribbon shadow -->
+        <article class="post_container">
+      	<div class="ribbon-shadow"></div><!-- ribbon shadow -->
 				<?php get_template_part('meta', 'search' ); ?>
 				<div class="entry">
 
@@ -56,9 +55,10 @@ function response_search_content() {
 						}
 					 ?>
 
-				</div>
-
-			</div>
+				</div><!-- end entry -->
+        
+			</article><!--end post container-->
+			</div><!-- end post -->
 			
 		<?php endwhile; ?>
 
@@ -68,12 +68,12 @@ function response_search_content() {
   </div><!-- post outer container -->
 	<?php else : ?>
 	<div class="post_outer_container">
-			<article class="post_container">
-      <div class="ribbon-top-cut">
-      </div><!-- ribbon-top-cut -->
 			<div class="ribbon-top">
+      <div class="ribbon-more">
+      </div>
 					<h2 class="posts_title"><?php printf( __( $noresults, 'response' )) ; ?></h2>
       </div><!-- ribbon top -->
+			<article class="post_container">
       <div class="ribbon-shadow">
       </div><!-- ribbon shadow -->
       <div class="entry">
@@ -81,7 +81,7 @@ function response_search_content() {
 					<p>No posts can be found for your search term <?php echo get_search_query(); ?>.</p>
           <p>Please try again using a different term.</p>
 
-				</div>
+				</div><!-- end entry -->
   </article><!-- post container -->
   </div><!-- post outer container -->
 	<?php endif; ?>
