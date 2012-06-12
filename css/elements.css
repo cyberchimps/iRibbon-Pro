@@ -179,21 +179,13 @@
 /*============================*/
 /*====== Widgitized Boxes =====*/
 /*============================*/
+
 .boxes-row {
+  
 }
-.boxes-row .span4:last-child {
-	padding-right: 0!important;
-}
-.box_outer_container {
-  position: relative;
-  min-height: 200px;
+.box_outer_container.span4 {
   padding-left: 15px;
   margin-bottom: 15px;
-}
-.iribbon-box {
-  position: relative;
-  padding: 50px 25px 50px 25px;
-  overflow: hidden;
 }
 .box-widget-title {
   font-family: 'Lobster', cursive;
@@ -203,58 +195,51 @@
   text-shadow: 1px 2px 2px rgba(0,0,0,0.5);
   filter: dropshadow(color=rgba(0,0,0,0.5), offx=1, offy=2);
 }
-
-.boxes-row .textwidget {
+.box_outer_container .textwidget {
   margin: 0;
-}
-
-#box1 {
-	min-height: 200px;
-}
-
-#box2 {
-	min-height: 200px;
-}
-
-#box3 {
-	min-height: 200px;
+  padding: 15px;
+  min-height: 200px;
 }
 
 .boxes ul { padding-left: 15px; }
 
 .boxes-row div.ribbon-top {
-  position:absolute;
-  top: 0;
-  left:46px;
-  height:41px;
+  position:relative;
   width:100%;
+  margin-left: -15px;
   padding-top:5px;
+  padding-left: 15px;
+  z-index: 100;
 }
 
-.boxes-row div.ribbon-shadow {
+.boxes-row div.ribbon-top:after {
+  content: ' ';
   position:absolute;
-  top: 44px;
+  width:0;
+  height:0;
+  top:100%;
+  left: 0;
+  border-width: 0 15px 15px 0;
+  border-style: solid;
+}
+
+.boxes-row div.ribbon-top div.ribbon-shadow {
+  position: absolute;
+  top: 100%;
   left: 5px;
-  height: 1px;
+  margin-top: -5px;
+  height: 5px;
   width: 100%;
-  -webkit-box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 1);
-  -moz-box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 1);
-  box-shadow:  0px 3px 3px 0px rgba(0, 0, 0, 1);
-}
-
-.boxes-row div.ribbon-top-cut {
-  position:absolute;
-  top:0;
-  left:0;
-  width: 46px;
-  height: 46px;
+  -webkit-box-shadow:  0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow:  0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow:  0px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .boxes-row div.ribbon-top-end {
   position:absolute;
   top:0;
   right:-15px;
-  height:45px;
+  height:100%;
   width:15px;
 }
 
@@ -271,24 +256,37 @@
 /* bottom ribbons used in boxes */ 
 
 .ribbon-bottom {
-  position:absolute;
-  right:46px;
-  bottom: 0;
-  height:46px;
+  position:relative;
+  height:45px;
   width:100%;
+  margin-left: -15px;
+  padding-left: 15px;
 }
-.ribbon-bottom-cut {
+.ribbon-bottom:before {
+  content: ' ';
   position:absolute;
-  right:0;
-  bottom:0;
-  width: 46px;
-  height: 46px;
+  width:0;
+  height:0;
+  top:-15px;
+  left:0;
+  border-width:15px 15px 0 0;
+  border-style: solid;
+}
+.ribbon-bottom div.ribbon-shadow {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  height: 5px;
+  width: 100%;
+  -webkit-box-shadow:  0px -5px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow:  0px -5px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow:  0px -5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 .ribbon-bottom-end {
   position:absolute;
-  bottom:0;
-  left:0px;
-  height:46px;
+  top:0;
+  right:-15px;
+  height:45px;
   width:15px;
 }
 .ribbon-bottom-end:before {
@@ -298,7 +296,7 @@
   height:0;
   top:-15px;
   left:0;
-  border-width:15px 15px 0 0;
+  border-width: 0 15px 15px 0;
   border-style: solid;
 }
 

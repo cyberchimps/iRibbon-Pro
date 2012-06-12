@@ -235,6 +235,7 @@ header {
 #nav > ul > li  ul{
   list-style: none;
   margin: 0;
+  z-index: 2001;
 }
 #nav > ul > li > ul{
   display:none;
@@ -372,7 +373,7 @@ header {
   position: absolute;
   top: 100%;
   left: 5px;
-  margin-top: -6px;
+  margin-top: -5px;
   height: 5px;
   width: 100%;
   -webkit-box-shadow:  0px 5px 5px 0px rgba(0, 0, 0, 0.5);
@@ -383,7 +384,7 @@ header {
   position: absolute;
   top: 100%;
   left: 5px;
-  margin-top: -6px;
+  margin-top: -5px;
   height: 5px;
   width: 100%;
   -webkit-box-shadow:  0px 5px 5px 0px rgba(0, 0, 0, 0.5);
@@ -1132,8 +1133,16 @@ ul {
 	display: none;
 }
 
+/* set up padding for screen sizes 1000px width */
+@media (max-width: 1040px) {
+/* where ever this is placed the element get padding left and right of 25px */
+.row-margin {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+}
 /* set up mobile phone styles */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
 /* main */
 #content {
   padding-right: 25px;
@@ -1165,15 +1174,19 @@ footer .row-fluid [class*="span"]:first-child {
 /******************************************/
 
 /* widget boxes */
+.boxes-row .span4:last-child {
+	padding-right: 0!important;
+}
+.boxes-row {
+  margin-right: 0;
+}
 .box_outer_container {
   margin-right: 25px;
 }
 .box_outer_container .iribbon-box {
   margin-left: 10px;
 }
-.box_outer_container .ribbon-bottom-end {
-  left: 10px;
-}
+
 /* twitter */
 #twitterbar {
   margin-right: 5px;

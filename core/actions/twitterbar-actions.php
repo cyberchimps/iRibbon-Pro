@@ -53,6 +53,7 @@ function response_twitterbar_section_content() {
 function response_display_latest_tweets( $username, $show_replies = 0 ) {
 	$latest_tweet = response_get_latest_tweets( $username, $show_replies );
 ?>
+<div class="row-margin">
 	<div class="row-fluid">
 		<div id="twitterbar" class="span12"><!--id="twitterbar"-->
 				<?php
@@ -66,7 +67,8 @@ function response_display_latest_tweets( $username, $show_replies = 0 ) {
 					}
 				?>
 		</div><!--end twitterbar--> 
-	</div>	
+	</div><!-- row fluid -->
+  </div><!-- row margin -->	
 <?php
 }
 

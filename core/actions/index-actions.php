@@ -33,6 +33,7 @@ function response_index_content() {
 	<!--Begin @response sidebar init-->
 		<?php response_sidebar_init(); ?>
 	<!--End @response sidebar init-->
+  <div class="row-margin">
 	<div class="row-fluid">
 <!--Begin @response before content sidebar hook-->
 		<?php response_before_content_sidebar(); ?>
@@ -103,7 +104,8 @@ function response_index_content() {
 		<?php response_after_content_sidebar(); ?>
 	<!--End @response after content sidebar hook-->
 
-</div>
+</div><!-- row fluid -->
+</div><!-- row margin -->
 <?php }
 
 /**

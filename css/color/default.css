@@ -187,7 +187,7 @@ a:hover{color:#cd834a;text-decoration:none}
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
 }
 .sd_left_sidebar div.ribbon-top:after {
-  border-color: transparent #8d5c38 transparent transparent;
+  border-color: transparent #70482b transparent transparent;
 }
 .sd_left_sidebar div.ribbon-more {
   background: #cd834a;
@@ -200,7 +200,7 @@ a:hover{color:#cd834a;text-decoration:none}
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
 }
 .sd_left_sidebar div.ribbon-more:after {
-  border-color: transparent transparent transparent #8d5c38;
+  border-color: transparent transparent transparent #70482b;
 }
 
 /* content ribbons with right sidebar */
@@ -225,39 +225,10 @@ a:hover{color:#cd834a;text-decoration:none}
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
 }
 .sd_right_sidebar div.ribbon-more:after {
-  border-color: transparent transparent transparent #8d5c38;
+  border-color: transparent transparent transparent #70482b;
 }
 .sd_right_sidebar div.ribbon-top:after {
-  border-color: transparent #8d5c38 transparent transparent;
-}
-
-/* bottom ribbons used in boxes */ 
-
-.ribbon-bottom {
-  background: #cd834a;
-  background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd834a), color-stop(100%,#9e663d));
-  background: -webkit-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  background: -o-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  background: -ms-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
-}
-.ribbon-bottom-cut {
-  background: url( '../../images/backgrounds/ribbon-right.png' ) no-repeat 0 0 transparent;
-}
-.ribbon-bottom-end {
-  background: #cd834a;
-  background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd834a), color-stop(100%,#9e663d));
-  background: -webkit-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  background: -o-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  background: -ms-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
-}
-.ribbon-bottom-end:before {
-  border-color: transparent #8d5c38 transparent transparent;
+  border-color: transparent #70482b transparent transparent;
 }
 
 /* sidebar ribbons */
@@ -375,7 +346,6 @@ border-color: transparent #E9E3BB;/*yellow*/
 
 /* Widget Box */
 .iribbon-box {
-  background: #7fa6a6; /*blue*/ 
 }
 .box-widget-title {
 	color: #E9E3BB;/*yellow*/
@@ -390,8 +360,8 @@ border-color: transparent #E9E3BB;/*yellow*/
   background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
 }
-.boxes-row div.ribbon-top-cut {
-  background: url( '../../images/backgrounds/ribbon-left.png' ) no-repeat 0 0 transparent;
+.boxes-row div.ribbon-top:after {
+  border-color: transparent #70482b transparent transparent;
 }
 .boxes-row div.ribbon-top-end {
   background: #cd834a;
@@ -404,10 +374,40 @@ border-color: transparent #E9E3BB;/*yellow*/
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
 }
 .boxes-row div.ribbon-top-end:after {
-  border-color: transparent transparent transparent #8d5c38;
+  border-color: transparent transparent transparent #70482b;
 }
 .boxes-row .textwidget {
 	color: #E9E3BB;/*yellow*/
+  background: #7fa6a6; /*blue*/ 
+}
+
+/* bottom ribbons used in boxes */ 
+
+.ribbon-bottom {
+  background: #cd834a;
+  background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd834a), color-stop(100%,#9e663d));
+  background: -webkit-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: -o-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: -ms-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
+}
+.ribbon-bottom:before {
+  border-color: transparent #70482b transparent transparent;
+}
+.ribbon-bottom-end {
+  background: #cd834a;
+  background: -moz-linear-gradient(top,  #cd834a 0%, #9e663d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd834a), color-stop(100%,#9e663d));
+  background: -webkit-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: -o-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: -ms-linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  background: linear-gradient(top,  #cd834a 0%,#9e663d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd834a', endColorstr='#9e663d',GradientType=0 );
+}
+.ribbon-bottom-end:before {
+  border-color: transparent transparent #70482b transparent;
 }
 .boxes-row a {
   color: #8d5c38;

@@ -43,7 +43,7 @@ function response_carousel_section_content() {
 	
 /* End define variables. */	 
 ?>
-
+<div class="row-margin">
 <div class="row-fluid">
 	<div id="carousel" class="es-carousel-wrapper">
 		<div class="es-carousel">
@@ -144,6 +144,7 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 
 		</div>
 	</div>
+</div>
 </div>
 <?php
 }

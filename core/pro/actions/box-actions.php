@@ -30,45 +30,59 @@ function response_box_section_content() {
 	
 	$enableboxes = get_post_meta($post->ID, 'enable_box_section' , true);
 	$root = get_template_directory_uri(); ?>
-	
+
+<div class="row-margin">	
 <div class="row-fluid boxes-row">
 		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Left") ) : ?>
-			<div class="box_outer_container span4"><div class="ribbon-top-end"></div>
+			<div class="box_outer_container span4">
       <div id="box1" class="iribbon-box">
-        <div class="ribbon-top-cut"></div><div class="ribbon-top">
+      <div class="ribbon-top">
+      <div class="ribbon-top-end"></div>
 				<h3 class="box-widget-title">Box Left</h3>
-        </div><div class="ribbon-shadow"></div>
+        <div class="ribbon-shadow"></div>
+        </div><!-- ribbon top -->
 				<div class="textwidget">This is the box left widgetized area.</div>
-				<div class="ribbon-bottom"></div><div class="ribbon-bottom-cut"></div>
-        </div>
+				<div class="ribbon-bottom">
+        <div class="ribbon-shadow"></div>
         <div class="ribbon-bottom-end"></div>
+        </div><!-- ribbon bottom -->
+        </div><!-- iribbon box -->
         </div><!--end box1 -->
 			<?php endif; ?>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Middle") ) : ?>
       <div class="box_outer_container span4"><div class="ribbon-top-end"></div>
 			<div id="box2" class="iribbon-box">
-        <div class="ribbon-top-cut"></div><div class="ribbon-top">
+        <div class="ribbon-top">
+      <div class="ribbon-top-end"></div>
 				<h3 class="box-widget-title">Box Middle</h3>
-        </div><div class="ribbon-shadow"></div>
+        <div class="ribbon-shadow"></div>
+        </div><!-- ribbon top -->
 				<div class="textwidget">This is the box middle widgetized area.</div>
-				<div class="ribbon-bottom"></div><div class="ribbon-bottom-cut"></div>
-        </div>
+				<div class="ribbon-bottom">
+        <div class="ribbon-shadow"></div>
         <div class="ribbon-bottom-end"></div>
+        </div><!-- ribbon bottom -->
+        </div><!-- iribbon box -->
         </div><!--end box2-->
 			<?php endif; ?>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Right") ) : ?>
       <div class="box_outer_container span4"><div class="ribbon-top-end"></div>
 			<div id="box3" class="iribbon-box">
-        <div class="ribbon-top-cut"></div><div class="ribbon-top">
-				<h3 class="box-widget-title">Box Right</h3>
-        </div><div class="ribbon-shadow"></div>
+        <div class="ribbon-top">
+      <div class="ribbon-top-end"></div>
+				<h3 class="box-widget-title">Box right</h3>
+        <div class="ribbon-shadow"></div>
+        </div><!-- ribbon top -->
 				<div class="textwidget">This is the box right widgetized area.</div>
-				<div class="ribbon-bottom"></div><div class="ribbon-bottom-cut"></div>
-        </div>
+				<div class="ribbon-bottom">
+        <div class="ribbon-shadow"></div>
         <div class="ribbon-bottom-end"></div>
+        </div><!-- ribbon bottom -->
+        </div><!-- iribbon box -->
         </div><!--end box3-->
 		<?php endif; ?>
 </div><!-- fluid row -->
+</div><!-- row margin -->
 <?php
 	}
 
