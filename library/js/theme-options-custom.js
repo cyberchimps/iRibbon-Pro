@@ -155,7 +155,7 @@ jQuery(function($) {
 	$("input[name='iribbon[header_section_order]']").change(function(){
 		var show = $(this).val().split(",");
 		var map = {
-			response_sitename_contact: "section-ir_header_contact",
+			response_logo_contact: "section-ir_header_contact",
 			response_custom_header_element: "section-ir_custom_header_element",
 			response_banner: "section-ir_banner"
 			// , response_box_section: ""
