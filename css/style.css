@@ -1134,25 +1134,24 @@ ul {
 }
 
 /* set up padding for screen sizes 1000px width */
-@media (max-width: 1040px) {
+@media (max-width: 1150px) {
 /* where ever this is placed the element get padding left and right of 25px */
-.row-margin {
-  padding-right: 25px;
-  padding-left: 25px;
+.iribbon-content-margin {
+  margin-right: 70px;
+  margin-left: 70px;
 }
 }
 /* set up mobile phone styles */
 @media (max-width: 768px) {
-/* main */
-#content {
-  padding-right: 25px;
-  padding-left: 25px;
+.iribbon-content-margin {
+  margin-right: 20px;
+  margin-left: 20px;
 }
 /* sidebar */
 #sidebar {
-  margin-right: 5px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
+
 #sidebar .ribbon-cut-blue {
   display: none;
 }

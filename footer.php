@@ -49,5 +49,5 @@
 	
 	<?php wp_footer(); ?>	
 </body>
-
+</div><!-- closes iribbon-content-margin found in header.php -->
 </html>

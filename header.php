@@ -25,7 +25,7 @@
 <?php wp_head(); ?> <!-- wp_head();-->
 	
 </head><!-- closing head tag-->
-
+<div class="iribbon-content-margin"><!-- creates container for whole site and creates left right margin -->
 <!-- Begin @response after_head_tag hook content-->
 	<?php response_after_head_tag(); ?>
 <!-- End @response after_head_tag hook content-->

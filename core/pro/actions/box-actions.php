@@ -30,8 +30,7 @@ function response_box_section_content() {
 	
 	$enableboxes = get_post_meta($post->ID, 'enable_box_section' , true);
 	$root = get_template_directory_uri(); ?>
-
-<div class="row-margin">	
+	
 <div class="row-fluid boxes-row">
 		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Left") ) : ?>
 			<div class="box_outer_container span4">
@@ -82,7 +81,6 @@ function response_box_section_content() {
         </div><!--end box3-->
 		<?php endif; ?>
 </div><!-- fluid row -->
-</div><!-- row margin -->
 <?php
 	}
 
