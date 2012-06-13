@@ -296,7 +296,7 @@ function add_secondary_font() {
 	
 		echo "<link href='http://fonts.googleapis.com/css?family=$font' rel='stylesheet' type='text/css' />";
 		echo '<style type="text/css">';
-		echo "#twittertext, #callout_text, .posts_title a, .sitename, .widget-title {font-family: '$fontstrip', cursive;}";
+		echo "#callout_text, .posts_title a, .posts_title, .sitename, .widget-title, .box-widget-title, .carousel_caption, .footer-widget-title, .commentsh2{font-family: '$fontstrip', cursive;}";
 		echo '</style>';
 }
 add_action( 'wp_head', 'add_secondary_font'); 
