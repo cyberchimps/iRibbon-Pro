@@ -8,7 +8,13 @@
 
 add_filter('pre_set_site_transient_update_themes', 'response_check_for_update');
 
-$theme_data = get_theme_data( TEMPLATEPATH . '/style.css');
+if ( function_exists('get_custom_header')) {
+	$theme_data = wp_get_theme();
+	} 
+else {
+	$theme_data = get_theme_data(get_stylesheet_directory() . '/style.css');	
+}
+
 $theme_version = $theme_data['Version'];
 $theme_base = get_option('stylesheet');
 
