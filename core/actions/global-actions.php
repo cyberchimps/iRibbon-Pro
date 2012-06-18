@@ -93,6 +93,22 @@ function response_loop_content($content) {
 					 ?>
 				</div><!--end entry-->
         
+        <!--Begin @response link pages hook-->
+					<?php response_link_pages(); ?>
+				<!--End @response link pages hook-->
+			
+				<!--Begin @response post edit link hook-->
+					<?php response_edit_link(); ?>
+				<!--End @response post edit link hook-->		
+							
+				<!--Begin @response post tags hook-->
+					<?php response_post_tags(); ?>
+				<!--End @response post tags hook-->
+							
+				<!--Begin @response post tags hook-->
+					<?php response_post_bar(); ?>
+				<!--End @response post tags hook-->
+        
 			</article><!--end post container-->
 		<div class='clear'>&nbsp;</div>
 		<?php	
