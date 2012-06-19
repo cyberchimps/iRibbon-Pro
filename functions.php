@@ -445,6 +445,36 @@ function iribbon_widgets_init() {
 add_action ('widgets_init', 'iribbon_widgets_init');
 
 /**
+* Returning whether any of the Post meta is turned on. Allowing for styling to be turned on and off
+*/
+
+function iRibbon_post_meta()
+{
+	global $options, $themeslug; //call globals.  
+	if (is_single()) {
+		$hidden = $options->get($themeslug.'_single_hide_byline'); 
+	}
+	elseif (is_archive()) {
+		$hidden = $options->get($themeslug.'_archive_hide_byline'); 
+	}
+	else {
+		$hidden = $options->get($themeslug.'_hide_byline'); 
+	}
+	$link_pages = wp_link_pages( array( 'echo' => 0 ) );
+	
+	if( $hidden[$themeslug.'_hide_comments'] != '0' ||
+			$link_pages != '' ||
+			$hidden[$themeslug.'_hide_tags'] != 0 && has_tag()
+		)
+		{
+			return 1;
+		}
+		else {
+			return 0;
+		}
+}
+
+/**
 * Initialize response Core Framework and Pro Extension.
 */ 
 require_once ( get_template_directory() . '/core/core-init.php' );
