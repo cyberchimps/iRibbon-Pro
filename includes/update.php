@@ -35,7 +35,7 @@ function response_check_for_update($checked_data)
 		'body' => array(
 			'action' => 'theme_update', 
 			'request' => serialize($request),
-			'api-key' => md5(get_bloginfo('url'))
+			'api-key' => md5(home_url())
 		),
 		'user-agent' => 'WordPress/' . $wp_version . '; ' . get_bloginfo('url')
 	);
