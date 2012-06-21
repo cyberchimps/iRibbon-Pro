@@ -59,19 +59,19 @@ $terms2 = get_terms('category', 'hide_empty=0');
 
 $options
 	->section("Welcome")
-		->info("<h1>Response Pro</h1>
+		->info("<h1>iRibbon Pro</h1>
 		
-<p><strong>A Responsive Starter WordPress Theme</strong></p>
+<p><strong>An elegant Responsive Wordpress Theme Framework that looks great on big and small screens alike.</strong></p>
 
-<p>Response Pro includes a Responsive Design (which magically adjusts to mobile devices such as the iPhone and iPad), Responsive Slider, Drag & Drop Header Elements, Page and Blog Elements, simplified Theme Options, and is built with HTML5 and CSS3.</p>
+<p>iRibbon Pro is based around a Responsive Design (which magically adjusts to mobile devices such as the iPhone and iPad), Responsive Navigation, Responsive Slider, Drag & Drop Header Elements, Page and Blog Elements, simplified Theme Options, and is built with HTML5 and CSS3.</p>
 
 <p>To get started simply work your way through the options below, add your content, and always remember to hit save after making any changes.</p>
 
-<p>The Response Pro Slider options are under the Response Pro Page Options which are available below the Page content entry area in WP-Admin when you edit a page. This way you can configure each page individually. You will also find the Drag & Drop Page Elements editor within the response Pro Page Options as well.</p>
+<p>The Main iRibbon Pro Slider options are under the iRibbon Blog Options in the menu to the left, this will set the Slider up for your blog page. However you can also add a Slider to every page you have by changing the options in the relevant page edit screen. This way you can configure each page individually. You will also find the Drag & Drop Page Elements editor within the iRibbon Pro Page Options as well.</p>
 
-<p>If you are using the Response Pro Slider on a Page you can upload, and edit your slides from the Feature Slides menu available in the WP-Admin menu. Look for the CyberChimps logo.</p>
+<p>If you are using the iRibbon Pro Slider on a Page you can upload, and edit your slides from the Feature Slides menu available in the WP-Admin menu. Look for the CyberChimps logo.</p>
 
-<p>We tried to make Response Pro as easy to use as possible, but if you still need help please read the <a href='http://cyberchimps.com/responsepro/docs/' target='_blank'>documentation</a>, and visit our <a href='http://cyberchimps.com/forum/pro/' target='_blank'>support forum</a>.</p>
+<p>We tried to make iRibbon Pro as easy to use as possible, but if you still need help please read the <a href='http://cyberchimps.com/iribbonpro/docs/' target='_blank'>documentation</a>, and visit our <a href='http://cyberchimps.com/forum/pro/' target='_blank'>support forum</a>.</p>
 
 <p>Thank you for using Response Pro.</p>
 ")
