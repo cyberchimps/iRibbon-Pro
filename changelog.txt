@@ -2,6 +2,9 @@ Response Changelog
 
 ****************************
 
+Version 1.0.7 (06-22-12)
+-3.4 Update API Fix.
+
 Version 1.0.6 (04-17-12)
 -Fix for third box in mobile view.
 
