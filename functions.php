@@ -286,7 +286,7 @@ add_action('init', 'iribbon_custom_taxonomies', 0);
 /**
 * Assign default category for Slider, Carousel posts.
 */ 
-function response_custom_taxonomy_default( $post_id, $post ) {
+function iribbon_custom_taxonomy_default( $post_id, $post ) {
 
 	global $themename, $themeslug, $options;	
 
