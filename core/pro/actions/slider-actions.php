@@ -68,8 +68,8 @@ function response_slider_content() {
 	}
 
 	
-	$openrow = '<div class="row-fluid">';
-	$closerow = '</div>';
+	$openrow = '<div class="row-fluid"><div class="span12 slider-padding">';
+	$closerow = '</div></div>';
 
 ?>	
 

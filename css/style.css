@@ -353,6 +353,10 @@ header {
 .row-fluid [class*="span"]:last-child {
   padding-right: 15px;
 }
+.slider-padding {
+  padding-right: 6px!important;
+  padding-left: 0!important;
+}
 
 /* Ribbons */
 
@@ -610,6 +614,10 @@ header {
 .post_container {
 	padding: 20px 15px 30px 15px;
 	background: #fff;
+  overflow: hidden;
+}
+iframe {
+  width: 100%;
 }
 .post_container ul {
   list-style: disc;
