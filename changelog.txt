@@ -2,6 +2,11 @@ Response Changelog
 
 ****************************
 
+Version 1.0.1 (07-06-12)
+-Twitter embed fix.
+-Sticky footer + push div.
+-Slider size fix.
+
 Version 1.0 (07-02-12)
 -Initial release.
 
