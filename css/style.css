@@ -34,14 +34,15 @@ html, body {
 }
 
 .wrapper {
+	overflow: hidden;
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0px auto -236px auto; /* the bottom margin is the negative value of the footer's height */
+	margin: 0px auto -238px auto; /* the bottom margin is the negative value of the footer's height */
 }
 
 .footer, .push{
-	height: 236px;
+	height: 238px;
 	clear:both;
 }
 
