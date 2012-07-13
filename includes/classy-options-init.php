@@ -191,7 +191,7 @@ TEMPLATE_URL . '/images/social/thumbs/icons-default.png' ), 'default' => 'defaul
 			->checkbox($themeslug."_post_pagination", "Post Pagination Links",  array('default' => true))
 		->subsection_end()	
 		->subsection("Archive")
-			->images($themeslug."_archive_sidebar", "Sidebar Options", array( 'options' => array("left" => TEMPLATE_URL . '/images/options/left.png', "none" => TEMPLATE_URL . '/images/options/none.png', "right" => TEMPLATE_URL . '/images/options/right.png'), 'default' => 'right'))
+			->images($themeslug."_archive_sidebar", "Sidebar Options", array( 'options' => array("left" => TEMPLATE_URL . '/images/options/left.png', "none" => TEMPLATE_URL . '/images/options/none.png', "right" => TEMPLATE_URL . '/images/options/right.png'), 'default' => "right"))
 			->checkbox($themeslug."_archive_breadcrumbs", "Breadcrumbs", array('default' => true))
 			->checkbox($themeslug."_archive_show_excerpts", "Post Excerpts", array('default' => true))
 			->checkbox($themeslug."_archive_show_featured_images", "Featured Images")
