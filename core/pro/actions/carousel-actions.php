@@ -50,7 +50,7 @@ function response_carousel_section_content() {
 
 /* Query posts  */
 
-query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 50, true, 'carousel_categories' => $customcategory ));
+query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => -1, true, 'carousel_categories' => $customcategory ));
 
 /* End query posts based on theme/meta options */
     	
@@ -67,7 +67,7 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 
 /* Initialize carousel markup */	
 
-	while (have_posts() && $i<$no) : 
+	while (have_posts()) : 
 
 		the_post(); 
 
