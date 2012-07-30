@@ -93,7 +93,7 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 
 ?>	    	
 			<li>
-				<a href='$link' class='image-container'><img src='<?php echo $image; ?>' alt='$title'/></a>
+				<a href='<?php echo $image; ?>' class='image-container'><img src='<?php echo $image; ?>' alt='$title'/></a>
 	    		<div class='carousel_caption'><?php echo $title; ?></div>
 	    	</li>
 <?php
@@ -112,7 +112,7 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 	while ($i<9) :
 ?>	
 	      	<li>
-	      		<a href='#' class='image-container'><img src='<?php echo $default; ?>' alt='Post <?php echo $i;?>'/></a>
+	      		<a href='<?php echo $default; ?>' class='image-container'><img src='<?php echo $default; ?>' alt='Post <?php echo $i;?>'/></a>
 	      		<div class='carousel_caption'>Title <?php echo $i; ?></div>
 	    	</li>
 <?php
@@ -129,15 +129,27 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 	wp_reset_query(); /* Reset post query */ ?>
 	      
 	<script type="text/javascript">
-			 jQuery(document).ready(function ($) {
-			$('#carousel').elastislide({
-				imageW 		: 140,
-				speed 		: <?php echo $speed;?>,
-				margin		: 8,
-				minItems 	: 5
-			});
-			});
+		jQuery(document).ready(function ($) {
+		$('#carousel').elastislide({
+			imageW 		: 140,
+			speed 		: <?php echo $speed;?>,
+			margin		: 8,
+			minItems 	: 5
+		});
+		});
 			
+		jQuery(document).ready(function ($) {
+			$(function() {
+				$('.es-carousel a').lightBox({
+					imageLoading:	'wp-content/themes/iRibbon-Pro/images/portfolio/lightbox-ico-loading.gif',		
+					imageBtnPrev:	'wp-content/themes/iRibbon-Pro/images/portfolio/lightbox-btn-prev.gif',			
+					imageBtnNext:	'wp-content/themes/iRibbon-Pro/images/portfolio/lightbox-btn-next.gif',			
+					imageBtnClose:	'wp-content/themes/iRibbon-Pro/images/portfolio/lightbox-btn-close.gif',		
+					imageBlank:		'wp-content/themes/iRibbon-Pro/images/portfolio/lightbox-blank.gif',			
+				});
+			});
+		});
+		
 		</script>
 
 
