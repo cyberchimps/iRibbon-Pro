@@ -238,7 +238,7 @@
 .boxes-row div.ribbon-top-end {
   position:absolute;
   top:0;
-  right:-15px;
+  right:-14px;
   height:100%;
   width:15px;
 }
@@ -285,7 +285,7 @@
 .ribbon-bottom-end {
   position:absolute;
   top:0;
-  right:-15px;
+  right:-14px;
   height:45px;
   width:15px;
 }
