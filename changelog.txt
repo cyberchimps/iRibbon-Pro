@@ -1,6 +1,15 @@
 Response Changelog
-
 ****************************
+
+
+Version 1.0.3 (08-13-12)
+-Chrome boxes fix.
+-Display ribbon fix.
+-Implemented lightbox on carousel.
+-Removed carousel limit.
+-Apple touch icon implemented.
+-Fixed title toggle.
+
 
 Version 1.0.2 (07-16-12)
 -Fixed iframe issue.
