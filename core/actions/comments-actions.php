@@ -32,7 +32,7 @@ function response_comments_password_required() {
 	
 	$password_text = apply_filters( 'response_password_required_text', 'This post is password protected. Enter the password to view comments.');
 	if ( post_password_required() ) { 
-		printf( __( $password_text, 'response' )); 
+		 _e( $password_text, 'response' ); 
 		return;
 	}
 }
@@ -95,7 +95,7 @@ function response_comments_loop() {
 	</div>
 
 	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
-		<p><?php printf (__( 'You must be', 'response' )); ?><a href="<?php echo wp_login_url( get_permalink() ); ?>"> <?php printf( __( 'logged in', 'response' ), '</a>', __('to post a comment.', 'response' )); ?></p>
+		<p><?php _e( 'You must be', 'response' ); ?><a href="<?php echo wp_login_url( get_permalink() ); ?>"> <?php _e( 'logged in', 'response' ); ?></a> <?php _e('to post a comment.', 'response' ); ?></p>
 	<?php else : ?>
 	
 	<?php comment_form(); ?>
