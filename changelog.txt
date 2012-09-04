@@ -1,6 +1,13 @@
 Response Changelog
 ****************************
 
+Version 1.0.4 (09-04-12)
+-Fixed comments error.
+-Fixed Responsive slider IE and Firefox bug.
+-Added Custom URL to logo.
+-Added Bootstrap to read me.
+-Changed Logo + menu drag and drop name.
+-Made meta tag language dynamic.
 
 Version 1.0.3 (08-13-12)
 -Chrome boxes fix.
