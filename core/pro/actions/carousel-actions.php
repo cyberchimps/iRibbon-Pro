@@ -29,12 +29,13 @@ function response_carousel_section_content() {
 /* Define variables. */	
 
     $tmp_query = $wp_query;
+		$out =''; 
 	$root = get_template_directory_uri(); 
 	$default = "$root/images/pro/carousel.jpg";
 	
 	if (is_page()) {
-		$customcategory = get_post_meta($post->ID, $themeslug.'_carousel_category' , true);
-		$speed = get_post_meta($post->ID, $themeslug.'_carousel_speed' , true);
+		$customcategory = get_post_meta($post->ID, 'carousel_category' , true);
+		$speed = get_post_meta($post->ID, 'carousel_speed' , true);
 	}
 	else {
 		$customcategory = $options->get($themeslug.'_carousel_category');
@@ -43,10 +44,10 @@ function response_carousel_section_content() {
 	
 /* End define variables. */	 
 ?>
-<div class="row-fluid">
+
+<div class="row">
 	<div id="carousel" class="es-carousel-wrapper">
-		<div class="es-carousel">
-<?php 
+		<div class="es-carousel"><?php 
 
 /* Query posts  */
 
@@ -56,16 +57,19 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
     	
 /* Establish post counter */  
   	
-	if (have_posts()) : 
-?>
+	if (have_posts()) :
+	    $out = "
 	   <ul>
-<?php
-	    $i = 0;
-	    $no = '50';
 	    
+	    "; 
+	    $i = 0;
+
+		    $no = '500';
+
+
 /* End post counter */	    	
 
-/* Initialize carousel markup */	
+/* Initialize slide creation */	
 
 	while (have_posts()) : 
 
@@ -74,89 +78,123 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 	    	/* Post-specific variables */	
 
 	    	$image 		= get_post_meta($post->ID, $themeslug.'_post_image' , true);  
-	    	$realtitle 		= get_the_title();  
-	    	$link 		= get_post_meta($post->ID, $themeslug.'_post_url' , true);
+	    	$title 		= get_post_meta($post->ID, $themeslug.'_post_title' , true);  
+	    	$link 		= ( get_post_meta($post->ID, $themeslug.'_post_url' , true) == '' ? $image : get_post_meta($post->ID, $themeslug.'_post_url' , true) );
+				
+				if ($image == '') {
+					$image = $default;
+				}
+				/* End variables */	
+	
+					/* Markup for carousel */
+
+	    	$out .= "
 	    	
-	    	if ($realtitle != "Untitled") {
-				$title = get_the_title();
-			}
-			else {
-				$title =  '';
-			}
-			
-			if ($image == '') {
-				$image = $default;
-			}
-			/* End variables */	
+				<li>
+	    			<a href='$link'>	
+	    				<img src='$image' alt='$title'/>
+	    			</a>
+	    			<div class='carousel_caption'>$title</div>
+	    		</li>
+	    	
+	    	";
 
-	     	/* Markup for carousel */
-
-?>	    	
-			<li>
-				<a href='<?php echo $image; ?>' class='image-container'><img src='<?php echo $image; ?>' alt='$title'/></a>
-	    		<div class='carousel_caption'><?php echo $title; ?></div>
-	    	</li>
-<?php
-	    	/* End carousel markup */	
+	    	/* End slide markup */	
 
 	      	$i++;
-	      	endwhile; 
-?>
-		</ul>
-		
-<?php else: ?>
- 		
- 		<ul>
-<?php	
-	$i = 1;
-	while ($i<9) :
-?>	
-	      	<li>
-	      		<a href='<?php echo $default; ?>' class='image-container'><img src='<?php echo $default; ?>' alt='Post <?php echo $i;?>'/></a>
-	      		<div class='carousel_caption'>Title <?php echo $i; ?></div>
-	    	</li>
-<?php
-	$i++;
-	endwhile;
-?>
-		</ul>
-<?php
+	      	endwhile;
+	      	$out .= "</ul>";	 
+	      	
+	      	else:
+	      
+	      	$out .= "	
+	    	<ul>
+				<li>
+					<a href='$default'>
+						<img src='$default' alt='Post 1'/>
+					</a>
+				</li>
+				<li>
+					<a href='$default'>
+						<img src='$default' alt='Post 2' />
+					</a>
+				</li>
+				<li>
+					<a href='$default'>
+						<img src='$default' alt='Post 3' />
+					</a>
+				</li>
+				<li>
+					<a href='$default'>
+						<img src='$default' alt='Post 4' />
+					</a>
+				</li>
+				<li>
+					<a href='$default'>
+						<img src='$default' alt='Post 5' />
+					</a>	
+				</li>
+				<li>
+					<a href='$default'>
+						<img src='$default' alt='Post 6' />
+					</a>	
+				</li>
+				<li>
+					<a href='$default'>
+						<img src='$default' alt='Post 6' />
+					</a>	
+				</li>
+				<li>
+					<a href='$default'>
+						<img src='$default' alt='Post 6' />
+					</a>	
+				</li>
+	    	</ul>
+	    			";
+     
 	endif; 	    
 	$wp_query = $tmp_query;    
 
 /* End slide creation */		
 
-	wp_reset_query(); /* Reset post query */ ?>
-	      
-	<script type="text/javascript">
+	    wp_reset_query(); /* Reset post query */ 
+
+/* Begin Carousel javascript */ 
+    
+    $out .= "
+	<script type='text/javascript'>
 		jQuery(document).ready(function ($) {
 		$('#carousel').elastislide({
 			imageW 		: 140,
-			speed 		: <?php echo $speed;?>,
+			speed 		: $speed,
 			margin		: 8,
 			minItems 	: 5
 		});
 		});
-			
+		
 		jQuery(document).ready(function ($) {
-			$(function() {
-				$('.es-carousel a').lightBox({
-					imageLoading:	'wp-content/themes/iRibbon-Pro/images/portfolio/lightbox-ico-loading.gif',		
-					imageBtnPrev:	'wp-content/themes/iRibbon-Pro/images/portfolio/lightbox-btn-prev.gif',			
-					imageBtnNext:	'wp-content/themes/iRibbon-Pro/images/portfolio/lightbox-btn-next.gif',			
-					imageBtnClose:	'wp-content/themes/iRibbon-Pro/images/portfolio/lightbox-btn-close.gif',		
-					imageBlank:		'wp-content/themes/iRibbon-Pro/images/portfolio/lightbox-blank.gif',			
-				});
+			$('.es-carousel li').each(function() {
+			if( $(this).children('a').attr('href') == $(this).children('a').children('img').attr('src') ) {
+				$(this).children('a').lightBox({
+					imageLoading:			'$root/images/portfolio/lightbox-ico-loading.gif',		
+					imageBtnPrev:			'$root/images/portfolio/lightbox-btn-prev.gif',			
+					imageBtnNext:			'$root/images/portfolio/lightbox-btn-next.gif',			
+					imageBtnClose:			'$root/images/portfolio/lightbox-btn-close.gif',		
+					imageBlank:				'$root/images/portfolio/lightbox-blank.gif'
+			});
+			}
 			});
 		});
-		
-		</script>
+	</script>";
 
+/* End Carousel javascript */ 
+
+echo $out;
+?>
 
 		</div>
 	</div>
-</div>
-<?php
+</div> <?php
 }
 
 /**
