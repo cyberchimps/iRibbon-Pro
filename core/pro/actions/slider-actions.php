@@ -202,8 +202,10 @@ function response_slider_content() {
 		the_post(); 
 
 	    	/* Post-specific variables */	
-
-	    	$customimage 		= get_post_meta($post->ID, $themeslug.'_slider_image' , true);  /* Gets slide custom image from page/post meta option */
+				
+				$post_thumbnail_id = get_post_thumbnail_id( $post->ID );
+				$post_image = ( $usecustomslides != 'custom' OR $type != '0' ) ? wp_get_attachment_image_src( $post_thumbnail_id, 'full' ) : '';
+	    	$customimage 		= ( $usecustomslides == 'custom' OR $type == '0' ) ? get_post_meta($post->ID, $themeslug.'_slider_image' , true) : $post_image[0]; /* Gets slide custom image from page/post meta option */
 	    	$customtext 		=  $post->post_content; /* Gets slide caption from custom slide meta option */
 	    	$customlink 		= get_post_meta($post->ID, $themeslug.'_slider_url' , true); /* Gets link from custom slide meta option */
 	    	$permalink 			= get_permalink(); /* Gets post URL for blog post slides */
