@@ -1,7 +1,15 @@
 Response Changelog
 ****************************
 
-Version 1.0.4 (09-19-12)
+Version 1.0.6 (10-12-12)
+-Slider posts fix.
+-Metabox save fix.
+-Quick edit fix.
+-Carousel fixes.
+-Pinterest fix.
+-PIE fix.
+
+Version 1.0.5 (09-19-12)
 -Fixed submenu not showing in IE9.
 
 Version 1.0.4 (09-04-12)
