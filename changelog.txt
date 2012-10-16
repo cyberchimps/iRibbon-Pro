@@ -1,6 +1,11 @@
 Response Changelog
 ****************************
 
+Version 1.0.7 (10-16-12)
+-Reverted slider fix.
+-Comments - passwords.
+-Allow \ in custom css.
+
 Version 1.0.6 (10-12-12)
 -Slider posts fix.
 -Metabox save fix.
