@@ -230,7 +230,7 @@ class ClassyOptions {
 
 	function fields() {
 
-		global $allowedtags;
+		global $allowedtags, $themeslug;
 
 		$option_name = $this->id;
 
@@ -278,8 +278,9 @@ class ClassyOptions {
 			if ( ($value['type'] != "heading") && ($value['type'] != "info" && $value['type'] != "subsection" && $value['type'] != "subsection_end") && $value['type'] != "open_outersection" && $value['type'] != "close_outersection" ) {
 				if ( isset($settings[($value['id'])]) ) {
 						$val = $settings[($value['id'])];
+						
 						// Striping slashes of non-array options
-						if (!is_array($val)) {
+						if (!is_array($val) && (($value['id']) != $themeslug . "_css_options") ) {
 							$val = stripslashes($val);
 						}
 				}
@@ -309,7 +310,10 @@ class ClassyOptions {
 					} else { $cols = '8'; }
 				}
 				
-				$val = stripslashes( $val );
+				// Avoid stripslashes if it is custom css
+				if( $value['id'] != $themeslug . "_css_options" ) {
+					$val = stripslashes( $val );
+				}
 				
 				$output .= '<textarea id="' . esc_attr( $value['id'] ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . ']' ) . '" cols="'. esc_attr( $cols ) . '" rows="8">' . esc_textarea( $val ) . '</textarea>';
 			break;
