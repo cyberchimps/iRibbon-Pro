@@ -229,7 +229,7 @@ function response_slider_content() {
 	    	/* Controls slide link */
 
 	    	if ( $type == 'custom' OR $type == '0') {
-	    		$link = get_post_meta($post->ID, 'slider_url' , true);
+	    		$link = get_post_meta($post->ID, $themeslug . '_slider_url' , true);
 	    	}
 	    	else {
 	    		$link = get_permalink();
