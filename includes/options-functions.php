@@ -267,7 +267,17 @@ function add_menu_font() {
 	
 		$fontstrip =  str_replace("+", " ", $font );
 	
-		echo "<link href='http://fonts.googleapis.com/css?family=$font' rel='stylesheet' type='text/css' />";
+		if( $font == 'Actor' ||
+			$font == 'Coda' ||
+			$font == 'Maven Pro' ||
+			$font == 'Metrophobic' ||
+			$font == 'News Cycle' ||
+			$font == 'Nobile' ||
+			$font == 'Tenor Sans' ||
+			$font == 'Quicksand' ||
+			$font == 'Ubuntu') {
+			echo "<link href='http://fonts.googleapis.com/css?family=$font' rel='stylesheet' type='text/css' />";
+		}
 		echo '<style type="text/css">';
 		echo "#nav ul li a {font-family: $fontstrip;}";
 		echo '</style>';
@@ -294,7 +304,17 @@ function add_secondary_font() {
 	
 		$fontstrip =  ereg_replace("[^A-Za-z0-9]", " ", $font );
 	
-		echo "<link href='http://fonts.googleapis.com/css?family=$font' rel='stylesheet' type='text/css' />";
+		if( $font == 'Actor' ||
+			$font == 'Coda' ||
+			$font == 'Maven Pro' ||
+			$font == 'Metrophobic' ||
+			$font == 'News Cycle' ||
+			$font == 'Nobile' ||
+			$font == 'Tenor Sans' ||
+			$font == 'Quicksand' ||
+			$font == 'Ubuntu') {
+			echo "<link href='http://fonts.googleapis.com/css?family=$font' rel='stylesheet' type='text/css' />";
+		}
 		echo '<style type="text/css">';
 		echo "#callout_text, .posts_title a, .posts_title, .sitename, .widget-title, .box-widget-title, .carousel_caption, .footer-widget-title, .commentsh2{font-family: '$fontstrip', cursive;}";
 		echo '</style>';

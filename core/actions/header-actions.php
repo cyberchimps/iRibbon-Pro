@@ -171,28 +171,41 @@ global $themeslug, $options; //Call global variables
 		$color = $options->get($themeslug.'_skin_color');
 	}?>
 	
-<link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
+	<link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
 
-<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lobster' type='text/css'>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/core/css/bootstrap/bootstrap.css" type="text/css" />
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/core/css/bootstrap/bootstrap-responsive.css" type="text/css" />
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/core/css/orbit/orbit.css" type="text/css" />
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/shortcode.css" type="text/css" />
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/elements.css" type="text/css" />
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css" type="text/css" />
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/color/<?php echo $color; ?>.css" type="text/css" />
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lobster' type='text/css'>
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/core/css/bootstrap/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/core/css/bootstrap/bootstrap-responsive.css" type="text/css" />
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/core/css/orbit/orbit.css" type="text/css" />
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/shortcode.css" type="text/css" />
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/elements.css" type="text/css" />
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/color/<?php echo $color; ?>.css" type="text/css" />
 
-<!--  For apple touch icon -->
-<?php $apple_icon = $options->get($themeslug.'_apple_touch'); ?>
-<link rel="apple-touch-icon" href="<?php echo $apple_icon['url']; ?>"/>
+	<!--  For apple touch icon -->
+	<?php $apple_icon = $options->get($themeslug.'_apple_touch'); ?>
+	<link rel="apple-touch-icon" href="<?php echo $apple_icon['url']; ?>"/>
 
-<?php if (is_child_theme()) :  //add support for child themes?>
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" type="text/css" />
-<?php endif; ?>
+	<?php if (is_child_theme()) :  //add support for child themes?>
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" type="text/css" />
+	<?php endif; ?>
 
-<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-<link href='//fonts.googleapis.com/css?family=<?php echo $font ; ?>' rel='stylesheet' type='text/css' /> <?php
+	<?php  
+		if( $font == 'Actor' ||
+			$font == 'Coda' ||
+			$font == 'Maven Pro' ||
+			$font == 'Metrophobic' ||
+			$font == 'News Cycle' ||
+			$font == 'Nobile' ||
+			$font == 'Tenor Sans' ||
+			$font == 'Quicksand' ||
+			$font == 'Ubuntu'
+		) :
+		?>
+	<link href='http://fonts.googleapis.com/css?family=<?php echo $font ; ?>' rel='stylesheet' type='text/css' />
+	<?php endif;
 }
 
 
