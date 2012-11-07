@@ -77,8 +77,12 @@ query_posts( array ('post_type' => $themeslug.'_featured_posts', 'showposts' => 
 
 	    	/* Post-specific variables */	
 
-	    	$image 		= get_post_meta($post->ID, $themeslug.'_post_image' , true);  
-	    	$title 		= get_post_meta($post->ID, $themeslug.'_post_title' , true);  
+	    	$image 	= get_post_meta($post->ID, $themeslug.'_post_image' , true);  
+	    	$title_deprecated 	= get_post_meta($post->ID, $themeslug.'_post_title' , true); 
+			$title = get_post_meta($post->ID, 'post_title' , true);
+
+			$title = $title != "" ? $title : $title_deprecated;
+			
 	    	$link 		= ( get_post_meta($post->ID, $themeslug.'_post_url' , true) == '' ? $image : get_post_meta($post->ID, $themeslug.'_post_url' , true) );
 				
 				if ($image == '') {

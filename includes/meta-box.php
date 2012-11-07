@@ -61,7 +61,7 @@ function initialize_the_meta_boxes() {
 	$mb = new Chimps_Metabox('Carousel', 'Featured Post Carousel', array('pages' => array($themeslug.'_featured_posts')));
 	$mb
 		->tab("Featured Post Carousel Options")
-			->text($themeslug.'_post_title', 'Featured Post Title', '')
+			->text('post_title', 'Featured Post Title', '')
 			->single_image($themeslug.'_post_image', 'Featured Post Image', '')
 			->text($themeslug.'_post_url', 'Featured Post URL', '')
 			->reorder($themeslug.'_reorder_id', 'Reorder Name', 'Reorder Desc' )
