@@ -243,7 +243,7 @@ function iribbon_create_post_type() {
 			),
 			'public' => true,
 			'show_ui' => true, 
-			'supports' => array('custom-fields', 'title'),
+			'supports' => array('custom-fields'),
 			'taxonomies' => array( 'carousel_categories'),
 			'has_archive' => true,
 			'menu_icon' => "$root/images/pro/carousel.png",
