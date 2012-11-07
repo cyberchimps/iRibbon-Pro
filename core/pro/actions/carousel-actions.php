@@ -34,8 +34,8 @@ function response_carousel_section_content() {
 	$default = "$root/images/pro/carousel.jpg";
 	
 	if (is_page()) {
-		$customcategory = get_post_meta($post->ID, 'carousel_category' , true);
-		$speed = get_post_meta($post->ID, 'carousel_speed' , true);
+		$customcategory = get_post_meta($post->ID, $themeslug.'_carousel_category', true);
+		$speed = get_post_meta($post->ID, $themeslug.'_carousel_speed', true);
 	}
 	else {
 		$customcategory = $options->get($themeslug.'_carousel_category');
