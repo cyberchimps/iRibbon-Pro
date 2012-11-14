@@ -57,10 +57,14 @@ function response_display_latest_tweets( $username, $show_replies = 0 ) {
 		<div id="twitterbar" class="span12"><!--id="twitterbar"-->
 				<?php
 					if ( $latest_tweet ) {	
+						// get the tweet text
+						$tweet_text = $latest_tweet['text'];
+						// look for a twitter shortened url and turn it into a link
+						$tweet_text = preg_replace("/[^^](http:\/\/+[\S]*)/", '<a href="$0">$0</a>', $tweet_text);
 						$screen_name = $latest_tweet['user']['screen_name'];
 						$user_permalink = 'http://twitter.com/#!/'.$screen_name;
 						$tweet_permalink = 'http://twitter.com/#!/'.$screen_name.'/status/'.$latest_tweet['id_str'];
-						echo '<div class="twittertext twittertriangle"><a href="'.$user_permalink.'"> '. $screen_name .' - </a>'.$latest_tweet['text'].' <small><a href="'.$tweet_permalink.'">' .human_time_diff(strtotime($latest_tweet['created_at']), current_time('timestamp')).' ago</a></small></div>';
+						echo '<div class="twittertext twittertriangle"><a href="'.$user_permalink.'"> '. $screen_name .' - </a>'.$tweet_text.' <small><a href="'.$tweet_permalink.'">' .human_time_diff(strtotime($latest_tweet['created_at']), current_time('timestamp')).' ago</a></small></div>';
 					} else {
 						echo '<div id="twittertext"><p>No tweets to display</p></div>';
 					}
