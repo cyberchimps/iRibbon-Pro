@@ -1,6 +1,14 @@
 Response Changelog
 ****************************
 
+Version 1.0.8 (11-07-12)
+-Slider URL fix.
+-Fixed Google font issue.
+-Added password protection for elements.
+-Carousel fix.
+-Broken link fix.
+-Added title as supported feature of carousel.
+
 Version 1.0.7 (10-16-12)
 -Reverted slider fix.
 -Comments - passwords.
