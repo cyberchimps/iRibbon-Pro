@@ -1,5 +1,11 @@
-Response Changelog
+iRibbon Pro Changelog
 ****************************
+
+Version 1.0.9 (11-19-12)
+-Twitter bar link fix.
+-Feed title removed.
+-Custom Post Type search fix.
+-Made unapproved comments hidden in widget.
 
 Version 1.0.8 (11-07-12)
 -Slider URL fix.
