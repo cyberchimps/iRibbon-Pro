@@ -107,6 +107,9 @@ function response_title_tag() {
 	if (function_exists('is_tag') && is_tag()) { /*Title for tags */
 		bloginfo('name'); echo ' - '; single_tag_title("Tag Archive for &quot;"); echo '&quot;  ';
 	}
+	elseif( is_feed() ) {
+		$title_tag = '';
+	}
 	elseif (is_archive()) { /*Title for archives */ 
 		bloginfo('name'); echo ' - '; wp_title(''); echo ' Archive '; 
 	}    
