@@ -488,7 +488,9 @@ require_once ( get_template_directory() . '/core/pro/pro-init.php' );
 require_once ( get_template_directory() . '/includes/classy-options-init.php' ); // Theme options markup.
 require_once ( get_template_directory() . '/includes/options-functions.php' ); // Custom functions based on theme options.
 require_once ( get_template_directory() . '/includes/meta-box.php' ); // Meta options markup.
-require_once ( get_template_directory() . '/includes/update.php' ); // Notify user of theme update on "Updates" page in Dashboard.
+// Notify user of theme update on "Updates" page in Dashboard.
+require_once( get_template_directory() . '/includes/update.php' );
+new WPUpdatesThemeUpdater( 'http://wp-updates.com/api/1/theme', 100, basename( get_template_directory() ) );
 
 // Presstrends
 function presstrends() {

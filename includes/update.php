@@ -1,65 +1,67 @@
 <?php
+/*
+WPUpdates Theme Updater Class
+http://wp-updates.com
+v1.1
 
+Example Usage:
+require_once('wp-updates-theme.php');
+new WPUpdatesThemeUpdater( 'http://wp-updates.com/api/1/theme', 1, basename(get_template_directory()) );
+*/
 
-/**/
-// TEMP: Enable update check on every request. Normally you don't need this! This is for testing only!
-//set_site_transient('update_themes', null);
+if( !class_exists('WPUpdatesThemeUpdater') ) {
+    class WPUpdatesThemeUpdater {
+    
+        var $api_url;
+    	var $theme_id;
+    	var $theme_slug;
+    
+        function __construct( $api_url, $theme_id, $theme_slug ) {
+    		$this->api_url = $api_url;
+    		$this->theme_id = $theme_id;
+    		$this->theme_slug = $theme_slug;
+    
+    		add_filter( 'pre_set_site_transient_update_themes', array(&$this, 'check_for_update') );
+    		
+    		// This is for testing only!
+    		//set_site_transient('update_themes', null);
+    	}
+    	
+    	function check_for_update( $transient ) {
+        	if (empty($transient->checked)) return $transient;
+        	
+        	$request_args = array(
+    		    'id' => $this->theme_id,
+    		    'slug' => $this->theme_slug,
+    			'version' => $transient->checked[$this->theme_slug]
+    		);
+    		$request_string = $this->prepare_request( 'theme_update', $request_args );
+    		$raw_response = wp_remote_post( $this->api_url, $request_string );
+        	
+        	$response = null;
+    		if( !is_wp_error($raw_response) && ($raw_response['response']['code'] == 200) )
+    			$response = unserialize($raw_response['body']);
+    		
+    		if( !empty($response) ) // Feed the update data into WP updater
+    			$transient->response[$this->theme_slug] = $response;
+        	
+        	return $transient;
+        }
+        
+        function prepare_request( $action, $args ) {
+    		global $wp_version;
+    		
+    		return array(
+    			'body' => array(
+    				'action' => $action, 
+    				'request' => serialize($args),
+    				'api-key' => md5(home_url())
+    			),
+    			'user-agent' => 'WordPress/'. $wp_version .'; '. home_url()
+    		);	
+    	}
 
-
-add_filter('pre_set_site_transient_update_themes', 'chimps_check_for_update');
-
-if(function_exists('wp_get_theme')){
-    $theme_data = wp_get_theme(get_option('template'));
-    $theme_version = $theme_data->Version;
-} else {
-    $theme_data = get_theme_data( TEMPLATEPATH . '/style.css');
-    $theme_version = $theme_data['Version'];
+    }
 }
-$theme_base = get_option('template');
 
-/******************Change this*******************/
-$api_url = 'http://cyberchimps.com/api/';
-/************************************************/
-	
-function chimps_check_for_update($checked_data) 
-{
-	global $wp_version, $theme_version, $theme_base, $api_url;
-	
-	$request = array(
-		'slug' => $theme_base,
-		'version' => $theme_version 
-	);
-        // Start checking for an update
-	$send_for_check = array(
-		'body' => array(
-			'action' => 'theme_update', 
-			'request' => serialize($request),
-			'api-key' => md5(get_bloginfo('url'))
-		),
-		'user-agent' => 'WordPress/' . $wp_version . '; ' . get_bloginfo('url')
-	);
-
-
-	$raw_response = wp_remote_post($api_url, $send_for_check);
-
-	if (!is_wp_error($raw_response) && ($raw_response['response']['code'] == 200))
-	{
-    $response = unserialize($raw_response['body']);
-	}
-
-
-	// Feed the update data into WP updater
-	if (!empty($response)) 
-	{
-		$checked_data->response[$theme_base] = $response;
-	}
-
-
-	return $checked_data;
-}
-
-
-if (is_admin())
-{
-	$current = get_transient('update_themes');
-}
+?>
