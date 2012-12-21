@@ -172,11 +172,14 @@ global $themeslug, $options; //Call global variables
 	}
 	else {
 		$color = $options->get($themeslug.'_skin_color');
-	}?>
+	}
+	
+	// Check if SSL is present, if so then use https othereise use http
+	$protocol = is_ssl() ? 'https' : 'http';
+	?>
 	
 	<link rel="shortcut icon" href="<?php echo stripslashes($favicon['url']); ?>" type="image/x-icon" />
-
-	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lobster' type='text/css'>
+	<link rel='stylesheet' href='<?php echo $protocol; ?>://fonts.googleapis.com/css?family=Lobster' type='text/css'>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/core/css/bootstrap/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/core/css/bootstrap/bootstrap-responsive.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/core/css/orbit/orbit.css" type="text/css" />
@@ -206,8 +209,11 @@ global $themeslug, $options; //Call global variables
 			$font == 'Quicksand' ||
 			$font == 'Ubuntu'
 		) :
+		
+		// Check if SSL is present, if so then use https othereise use http
+		$protocol = is_ssl() ? 'https' : 'http';
 		?>
-	<link href='http://fonts.googleapis.com/css?family=<?php echo $font ; ?>' rel='stylesheet' type='text/css' />
+	<link href='<?php echo $protocol; ?>://fonts.googleapis.com/css?family=<?php echo $font ; ?>' rel='stylesheet' type='text/css' />
 	<?php endif;
 }
 
