@@ -1,8 +1,10 @@
 iRibbon Pro Changelog
 ****************************
 
-Version 1.0.10 (11-29-12)
+Version 1.1.0.0 (01-04-13)
+-Added SSL for Google fonts if available
 
+Version 1.0.10 (11-29-12)
 -New updater installed
 
 Version 1.0.9 (11-19-12)
