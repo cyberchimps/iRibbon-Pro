@@ -1,6 +1,9 @@
 iRibbon Pro Changelog
 ****************************
 
+Version 1.1.0.1 (01-23-13)
+-Fix for page options not saving
+
 Version 1.1.0.0 (01-04-13)
 -Added SSL for Google fonts if available
 
