@@ -1,6 +1,12 @@
 iRibbon Pro Changelog
 ****************************
 
+Version 1.1.0.3 (2-11-13)
+-Added media uploader for blog and page options
+-Fix drag and drop issue
+-Fix excerpt link
+-Bug fixes
+
 Version 1.1.0.2 (1-25-13)
 -Fix image upload
 
