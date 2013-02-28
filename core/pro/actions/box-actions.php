@@ -49,7 +49,7 @@ function response_box_section_content() {
         </div><!--end box1 -->
 			<?php endif; ?>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Middle") ) : ?>
-      <div class="box_outer_container span4"><div class="ribbon-top-end"></div>
+      <div class="box_outer_container span4">
 			<div id="box2" class="iribbon-box">
         <div class="ribbon-top">
       <div class="ribbon-top-end"></div>
@@ -65,7 +65,7 @@ function response_box_section_content() {
         </div><!--end box2-->
 			<?php endif; ?>
 			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Box Right") ) : ?>
-      <div class="box_outer_container span4"><div class="ribbon-top-end"></div>
+      <div class="box_outer_container span4">
 			<div id="box3" class="iribbon-box">
         <div class="ribbon-top">
       <div class="ribbon-top-end"></div>
