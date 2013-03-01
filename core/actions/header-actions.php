@@ -517,7 +517,8 @@ function response_logo_icons_content() {
 */
 function response_banner_content() {
 global $themeslug, $options, $root; //Call global variables
-$banner = $options->get($themeslug.'_banner'); //Calls the logo URL from the theme options
+$banner = $options->get($themeslug.'_banner'); //Calls the banner image from the theme options
+$banner_url = $options->get($themeslug.'_banner_url'); //Calls the banner URL from the theme options
 $default = "$root/images/pro/banner.jpg";
 
 ?>
@@ -528,7 +529,7 @@ $default = "$root/images/pro/banner.jpg";
 			<div id="banner">
 			
 			<?php if ($banner != ""):?>
-				<a href="<?php echo home_url(); ?>/"><img src="<?php echo stripslashes($banner['url']); ?>" alt="logo"></a>		
+				<a href="<?php echo esc_url( $banner_url ); ?>/"><img src="<?php echo stripslashes($banner['url']); ?>" alt="logo"></a>		
 			<?php endif; ?>
 			
 			<?php if ($banner == ""):?>
