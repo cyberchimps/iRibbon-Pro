@@ -22,6 +22,7 @@ add_action ( 'response_footer', 'response_footer_widgets' );
 
 add_action ( 'response_secondary_footer', 'response_secondary_footer_credit' );
 add_action ( 'response_secondary_footer', 'response_secondary_footer_copyright' );
+add_action ( 'response_secondary_footer', 'response_secondary_footer_menu' );
 
 
 /**
@@ -105,6 +106,22 @@ function response_secondary_footer_credit() {
 		</div> 
 	
 	<?php }
+}
+/**
+* Adds the afterfooter menu.
+*
+* @since 1.0
+*/
+function response_secondary_footer_menu() {
+	
+	echo "<div id='afterfootermenu' class='span12'>";
+	wp_nav_menu( array(
+		'theme_location'	=> 'footer-menu',
+		'fallback_cb'		=> false,
+		'depth'				=> 1	
+	)); 
+	echo "</div>";
+	
 }
 /**
 * End

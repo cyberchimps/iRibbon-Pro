@@ -927,6 +927,22 @@ ol, ul {
   color: #e9ecc9;/* yellow */
   text-align: right;
 }
+
+/* After footer menu*/
+
+#afterfootermenu {
+	text-align: center;
+}
+#afterfootermenu ul {
+	margin: 0; 
+	padding: 0; 
+	list-style-type: none; 
+	list-style-image: none; 
+}
+#afterfootermenu li {
+	display: inline; 
+	margin-right: 5px;
+}
 #credit {
   text-align: left;
   margin-bottom: 3px;
