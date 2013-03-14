@@ -1,6 +1,13 @@
 iRibbon Pro Changelog
 ****************************
 
+Version 1.1.0.4 (3-14-13)
+-Added banner url in options
+-Added after footer menu
+-Removed extra bug causing div
+-Re-positioned wp_footer()
+-Added placeholder for widget class
+
 Version 1.1.0.3 (2-11-13)
 -Added media uploader for blog and page options
 -Fix drag and drop issue
