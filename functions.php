@@ -404,25 +404,7 @@ function iribbon_widgets_init() {
     	'after_widget'  => '</div>',
     	'before_title'  => '<h2 class="widget-title">',
     	'after_title'   => '</h2>'
-    ));
-    register_sidebar(array(
-    	'name' => 'Left Half Sidebar',
-    	'id'   => 'sidebar-left',
-    	'description'   => 'These are widgets for the left half sidebar.',
-    	'before_widget' => '<div id="%1$s" class="widget-container %2$s"><div class="ribbon-cut-blue"></div><div class="ribbon-bg-blue"><div class="ribbon-left-blue"></div><div class="ribbon-shadow"></div><div class="ribbon-right-blue"></div></div>',
-    	'after_widget'  => '</div>',
-    	'before_title'  => '<h2 class="widget-title">',
-    	'after_title'   => '</h2>'
-    ));    	
-    register_sidebar(array(
-    	'name' => 'Right Half Sidebar',
-    	'id'   => 'sidebar-right',
-    	'description'   => 'These are widgets for the right half sidebar.',
-    	'before_widget' => '<div id="%1$s" class="widget-container %2$s"><div class="ribbon-cut-blue"></div><div class="ribbon-bg-blue"><div class="ribbon-left-blue"></div><div class="ribbon-shadow"></div><div class="ribbon-right-blue"></div></div>',
-    	'after_widget'  => '</div>',
-    	'before_title'  => '<h2 class="widget-title">',
-    	'after_title'   => '</h2>'
-   	));
+    )); 	
     	
     register_sidebar(array(
 		'name' => 'Box Left',
